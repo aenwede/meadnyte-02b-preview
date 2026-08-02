@@ -193,7 +193,7 @@
       "<label for=\"" + instanceId + "-website\">Leave this field empty</label>",
       "<input id=\"" + instanceId + "-website\" name=\"website\" type=\"text\" tabindex=\"-1\" autocomplete=\"off\">",
       "</div>",
-      "<button class=\"house-intake__action\" type=\"submit\">" + escapeHtml(copy.submit) + "</button>",
+      "<button class=\"house-intake__action\" type=\"submit\" data-reflection=\"" + escapeHtml(copy.submit) + "\">" + escapeHtml(copy.submit) + "</button>",
       "<p class=\"house-intake__consent\">" + escapeHtml(copy.consent) + "</p>",
       "</form>",
       "<p class=\"house-intake__status\" id=\"" + statusId + "\" data-house-intake-status role=\"status\" aria-live=\"polite\" tabindex=\"-1\" hidden></p>",
