@@ -1,5 +1,6 @@
 name: Deploy 02B Preview
 
+# Temporary visual-review deployment; does not affect meadnyte.com.
 on:
   push:
     branches:
