@@ -1,0 +1,312 @@
+/*
+  File: meadnyte-site/assets/css/room-novae.css
+  Phase: 03_Global_Page_Scaffold_and_Viewport
+
+  Purpose:
+  - Makes room-novae a visible atmospheric bridge between the threshold and the room field.
+  - Supports the full-page vertical / horizontal / stage relationship without changing orbital planet design or speed.
+  - Keeps novae decorative only: no layout control, no menu control, no planet control.
+  - Allows room-novae.js to create subtle particles later without requiring structural rewrites.
+
+  Current design decision:
+  - Room-novae is no longer a fully invisible reserved layer.
+  - In this scaffold phase, it acts as atmosphere and transition texture.
+  - It must not become a replacement for the starfield.
+  - It must not imply that the room sections are overlays.
+  - It should help the threshold descend into the visible room field.
+
+  Future modification instructions:
+  - Use this file only for room-adjacent atmosphere, transition haze, and novae particles.
+  - Do not tune the main threshold starfield here; use entry-threshold.css and universe-background.js.
+  - Do not style orbital planets here; use orbital-planets.css.
+  - Do not change planet motion or speed here; reserve that for #04.
+  - Do not style the central logo/sigil here; use sigil.css.
+  - Do not style room cards here; use house-room-field.css.
+*/
+
+/* ------------------------------------------------------------
+   Shared novae layer rules
+------------------------------------------------------------ */
+
+.room-novae-layer,
+.room-novae-field,
+[data-room-novae] {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ------------------------------------------------------------
+   Threshold novae bridge
+   Existing JS currently appends .room-novae-layer inside .entry-threshold.
+------------------------------------------------------------ */
+
+.entry-threshold .room-novae-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+  opacity: 1;
+  mix-blend-mode: screen;
+}
+
+.entry-threshold .room-novae-layer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -14rem;
+  width: min(78rem, 118vw);
+  height: min(34rem, 46vh);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(226, 190, 104, 0.18), transparent 8rem),
+    radial-gradient(circle at 42% 40%, rgba(116, 91, 176, 0.18), transparent 16rem),
+    radial-gradient(circle at 58% 52%, rgba(64, 54, 116, 0.22), transparent 22rem),
+    radial-gradient(circle at 50% 50%, rgba(255, 233, 184, 0.08), transparent 28rem);
+  filter: blur(10px);
+  opacity: 0.62;
+}
+
+.entry-threshold .room-novae-layer::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: min(44rem, 80vw);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(226, 190, 104, 0.18),
+    rgba(255, 236, 190, 0.32),
+    rgba(226, 190, 104, 0.18),
+    transparent
+  );
+  box-shadow:
+    0 0 1.5rem rgba(226, 190, 104, 0.14),
+    0 0 3rem rgba(116, 91, 176, 0.12);
+  opacity: 0.78;
+}
+
+/* ------------------------------------------------------------
+   Room-field novae atmosphere
+   Later JS may append .room-novae-field inside .house-room-field.
+------------------------------------------------------------ */
+
+.house-room-field .room-novae-field,
+.house-room-field [data-room-novae] {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.house-room-field .room-novae-field::before,
+.house-room-field [data-room-novae]::before {
+  content: "";
+  position: absolute;
+  inset: -8rem -6rem;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(226, 190, 104, 0.08), transparent 18rem),
+    radial-gradient(circle at 78% 28%, rgba(116, 91, 176, 0.12), transparent 22rem),
+    radial-gradient(circle at 52% 62%, rgba(226, 190, 104, 0.07), transparent 24rem),
+    radial-gradient(circle at 22% 82%, rgba(74, 63, 135, 0.11), transparent 22rem);
+  filter: blur(4px);
+  opacity: 0.72;
+}
+
+.house-room-field .room-novae-field::after,
+.house-room-field [data-room-novae]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 239, 196, 0.16) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(157, 131, 209, 0.12) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(226, 190, 104, 0.10) 0 1px, transparent 1.7px);
+  background-size:
+    13rem 11rem,
+    19rem 17rem,
+    27rem 23rem;
+  background-position:
+    2rem 3rem,
+    9rem 7rem,
+    15rem 12rem;
+  opacity: 0.28;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+
+/* ------------------------------------------------------------
+   Particle support
+   Supports both current and future JS-created particles.
+------------------------------------------------------------ */
+
+.room-novae-particle,
+.novae-particle,
+[data-novae-particle] {
+  position: absolute;
+  display: block;
+  width: var(--novae-size, 0.16rem);
+  height: var(--novae-size, 0.16rem);
+  border-radius: 999px;
+  background: rgba(255, 235, 184, var(--novae-opacity, 0.56));
+  box-shadow:
+    0 0 0.45rem rgba(255, 235, 184, 0.28),
+    0 0 1.1rem rgba(116, 91, 176, 0.18);
+  opacity: var(--novae-opacity, 0.56);
+  transform:
+    translate3d(
+      var(--novae-x, 0),
+      var(--novae-y, 0),
+      0
+    )
+    scale(var(--novae-scale, 1));
+  animation:
+    roomNovaeDrift var(--novae-duration, 18s) ease-in-out var(--novae-delay, 0s) infinite alternate,
+    roomNovaePulse calc(var(--novae-duration, 18s) * 0.7) ease-in-out var(--novae-delay, 0s) infinite;
+}
+
+.room-novae-particle.is-soft,
+.novae-particle.is-soft,
+[data-novae-particle].is-soft {
+  filter: blur(1px);
+  opacity: calc(var(--novae-opacity, 0.56) * 0.62);
+}
+
+.room-novae-particle.is-gold,
+.novae-particle.is-gold,
+[data-novae-particle].is-gold {
+  background: rgba(255, 225, 151, var(--novae-opacity, 0.58));
+  box-shadow:
+    0 0 0.55rem rgba(255, 225, 151, 0.3),
+    0 0 1.4rem rgba(194, 143, 63, 0.18);
+}
+
+.room-novae-particle.is-violet,
+.novae-particle.is-violet,
+[data-novae-particle].is-violet {
+  background: rgba(183, 162, 255, var(--novae-opacity, 0.42));
+  box-shadow:
+    0 0 0.55rem rgba(183, 162, 255, 0.2),
+    0 0 1.4rem rgba(108, 78, 176, 0.18);
+}
+
+/* ------------------------------------------------------------
+   Optional transition band
+   Can be used later if markup adds a dedicated divider.
+------------------------------------------------------------ */
+
+.room-novae-transition {
+  position: relative;
+  z-index: 12;
+  height: clamp(5rem, 12vw, 10rem);
+  margin-top: calc(clamp(5rem, 12vw, 10rem) * -0.55);
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(226, 190, 104, 0.08), transparent 54%),
+    linear-gradient(to bottom, transparent, rgba(3, 3, 10, 0.86), transparent);
+  mix-blend-mode: screen;
+}
+
+/* ------------------------------------------------------------
+   Motion
+------------------------------------------------------------ */
+
+@keyframes roomNovaeDrift {
+  0% {
+    transform:
+      translate3d(
+        var(--novae-x, 0),
+        var(--novae-y, 0),
+        0
+      )
+      scale(var(--novae-scale, 1));
+  }
+
+  100% {
+    transform:
+      translate3d(
+        calc(var(--novae-x, 0) + var(--novae-drift-x, 1.2rem)),
+        calc(var(--novae-y, 0) + var(--novae-drift-y, -1.6rem)),
+        0
+      )
+      scale(calc(var(--novae-scale, 1) * 1.08));
+  }
+}
+
+@keyframes roomNovaePulse {
+  0%,
+  100% {
+    opacity: calc(var(--novae-opacity, 0.56) * 0.54);
+  }
+
+  45% {
+    opacity: var(--novae-opacity, 0.56);
+  }
+
+  72% {
+    opacity: calc(var(--novae-opacity, 0.56) * 0.34);
+  }
+}
+
+/* ------------------------------------------------------------
+   Responsive behavior
+------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .entry-threshold .room-novae-layer::before {
+    width: 120vw;
+    height: 34vh;
+    bottom: -12rem;
+    opacity: 0.5;
+  }
+
+  .house-room-field .room-novae-field::after,
+  .house-room-field [data-room-novae]::after {
+    background-size:
+      10rem 9rem,
+      15rem 13rem,
+      22rem 19rem;
+    opacity: 0.22;
+  }
+}
+
+@media (max-width: 620px) {
+  .entry-threshold .room-novae-layer::before {
+    bottom: -10rem;
+    height: 30vh;
+    opacity: 0.42;
+  }
+
+  .entry-threshold .room-novae-layer::after {
+    width: 72vw;
+    opacity: 0.58;
+  }
+
+  .room-novae-particle,
+  .novae-particle,
+  [data-novae-particle] {
+    width: calc(var(--novae-size, 0.16rem) * 0.86);
+    height: calc(var(--novae-size, 0.16rem) * 0.86);
+  }
+}
+
+/* ------------------------------------------------------------
+   Motion preference
+------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .room-novae-particle,
+  .novae-particle,
+  [data-novae-particle] {
+    animation: none;
+  }
+}

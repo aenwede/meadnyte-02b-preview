@@ -1,0 +1,637 @@
+/*
+  File: meadnyte-site/assets/css/meadnyte-entry.css
+  02_Index_Page_and_Menu locked file.
+
+  Future modification instructions:
+  - This file controls only the entry/menu visual system.
+  - Tune starfield density, portal size, node orbit radius/speed, glow, and responsive fit here.
+  - Do not add browser-rendered brand text for the upper-left mark; use assets/img/woodmark.png.
+  - Do not add a placeholder central M; use assets/img/logo.png.
+  - Do not reintroduce deprecated room IDs, the conventional top header, Welcome hero, or a lower-left ghost wordmark.
+*/
+
+html,
+body.entry-page {
+  min-height: 100%;
+  background: #020106;
+}
+
+body.entry-page {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: var(--color-cream, #f2ead9);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(92, 59, 142, 0.28), transparent 21rem),
+    radial-gradient(circle at 72% 22%, rgba(118, 89, 170, 0.13), transparent 18rem),
+    radial-gradient(circle at 20% 82%, rgba(26, 34, 78, 0.26), transparent 26rem),
+    linear-gradient(180deg, #080613 0%, #05040c 53%, #020106 100%);
+  isolation: isolate;
+}
+
+body.entry-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(242, 234, 217, 0.96) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(214, 189, 120, 0.86) 0 1.1px, transparent 1.9px),
+    radial-gradient(circle, rgba(242, 234, 217, 0.68) 0 0.9px, transparent 1.6px),
+    radial-gradient(circle, rgba(214, 189, 120, 0.52) 0 1.2px, transparent 2px),
+    radial-gradient(circle, rgba(242, 234, 217, 0.42) 0 0.75px, transparent 1.5px);
+  background-size:
+    6.6rem 5.6rem,
+    9.1rem 7.7rem,
+    12.7rem 10.4rem,
+    17.3rem 14.8rem,
+    23.4rem 19.7rem;
+  background-position:
+    0.3rem 0.7rem,
+    3.1rem 2.4rem,
+    5.6rem 4.2rem,
+    9.7rem 6.8rem,
+    2.7rem 10.1rem;
+  opacity: 1;
+}
+
+body.entry-page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(105, 75, 166, 0.18), transparent 17rem),
+    radial-gradient(circle at 50% 52%, rgba(218, 191, 117, 0.08), transparent 9rem),
+    radial-gradient(circle at 50% 50%, transparent 0 28rem, rgba(0, 0, 0, 0.26) 48rem, rgba(0, 0, 0, 0.72) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent 22%, transparent 78%, rgba(0, 0, 0, 0.36));
+}
+
+.entry-page .universe-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.entry-header,
+.entry-main,
+.entry-footer {
+  position: relative;
+  z-index: 5;
+}
+
+.entry-header {
+  position: fixed;
+  top: clamp(1rem, 2.25vw, 2.25rem);
+  left: clamp(1rem, 2.5vw, 2.5rem);
+  z-index: 30;
+  width: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.entry-woodmark {
+  display: block;
+  width: clamp(11.5rem, 17vw, 18rem);
+  opacity: 0.92;
+  text-decoration: none;
+  filter: drop-shadow(0 0 0.6rem rgba(214, 189, 120, 0.08));
+}
+
+.entry-woodmark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.entry-main,
+.meadnyte-entry {
+  min-height: 100vh;
+}
+
+.entry-main {
+  padding: 0;
+}
+
+.meadnyte-entry {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(4.75rem, 8vh, 6.5rem) 1rem 2rem;
+}
+
+.entry-border {
+  position: absolute;
+  inset: clamp(0.45rem, 1vw, 0.95rem);
+  z-index: 1;
+  border: 1px solid rgba(242, 234, 217, 0.08);
+  box-shadow:
+    inset 0 0 2.8rem rgba(103, 71, 165, 0.08),
+    inset 0 0 1rem rgba(214, 189, 120, 0.035);
+  pointer-events: none;
+}
+
+.portal-stage {
+  --stage-size: clamp(25rem, 39vw, 36rem);
+  position: relative;
+  z-index: 8;
+  width: var(--stage-size);
+  aspect-ratio: 1;
+  transform:
+    perspective(900px)
+    rotateX(var(--portal-tilt-x, 0deg))
+    rotateY(var(--portal-tilt-y, 0deg));
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.portal-stage.is-orbital-active {
+  filter: drop-shadow(0 0 1.1rem rgba(214, 189, 120, 0.06));
+}
+
+.portal-haze {
+  position: absolute;
+  inset: 7%;
+  z-index: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(214, 189, 120, 0.12), transparent 16%),
+    radial-gradient(circle at 50% 50%, rgba(105, 75, 166, 0.26), transparent 48%),
+    radial-gradient(circle at 50% 50%, rgba(27, 18, 55, 0.4), transparent 72%);
+  filter: blur(0.45rem);
+  pointer-events: none;
+}
+
+.portal-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.portal-ring-outer {
+  width: 52%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(214, 189, 120, 0.2);
+  box-shadow:
+    0 0 2.3rem rgba(110, 81, 172, 0.2),
+    inset 0 0 1.8rem rgba(214, 189, 120, 0.05);
+  animation: portalRing 44s linear infinite;
+}
+
+.portal-ring-middle {
+  width: 43%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(242, 234, 217, 0.11);
+  box-shadow: inset 0 0 1.2rem rgba(110, 81, 172, 0.14);
+  animation: portalRingReverse 58s linear infinite;
+}
+
+.portal-ring-inner {
+  width: 33%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(214, 189, 120, 0.12);
+  opacity: 0.78;
+  animation: portalRing 70s linear infinite;
+}
+
+.portal-ring::before,
+.portal-ring::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  border: 1px solid rgba(214, 189, 120, 0.08);
+}
+
+.portal-ring::before {
+  inset: 10%;
+}
+
+.portal-ring::after {
+  inset: 20%;
+  border-style: dotted;
+  opacity: 0.75;
+}
+
+.portal-core {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.portal-core::before {
+  content: "";
+  position: absolute;
+  width: 34%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 217, 133, 0.32), rgba(103, 71, 165, 0.2) 44%, transparent 72%);
+  filter: blur(0.8rem);
+  animation: portalPulse 6s ease-in-out infinite;
+}
+
+.portal-logo {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: clamp(8.5rem, 12.5vw, 12.6rem);
+  height: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 0.45rem rgba(255, 235, 171, 0.48))
+    drop-shadow(0 0 1.35rem rgba(214, 189, 120, 0.34))
+    drop-shadow(0 0 3.1rem rgba(110, 81, 172, 0.34));
+}
+
+.orbital-menu {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: block;
+  font-family: var(--font-ui, Arial, sans-serif);
+}
+
+.orbit-node {
+  --orbit-x: 0px;
+  --orbit-y: 0px;
+  --node-scale: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: var(--node-size, clamp(4.6rem, 6.9vw, 5.95rem));
+  aspect-ratio: 1;
+  border: 1px solid rgba(214, 189, 120, 0.16);
+  border-radius: 50%;
+  color: rgba(242, 234, 217, 0.8);
+  background:
+    radial-gradient(circle at 38% 25%, rgba(36, 29, 61, 0.96), rgba(2, 2, 7, 0.99) 63%, #000 100%);
+  box-shadow:
+    0 0 0.75rem rgba(214, 189, 120, 0.06),
+    0 0 1.9rem rgba(99, 68, 164, 0.28),
+    inset 0 0 1.5rem rgba(214, 189, 120, 0.035),
+    inset 0 -1.25rem 1.75rem rgba(0, 0, 0, 0.68);
+  font-size: clamp(0.48rem, 0.62vw, 0.64rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%) translate(var(--orbit-x), var(--orbit-y)) scale(var(--node-scale));
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+  will-change: transform;
+}
+
+.orbit-node::before {
+  content: "";
+  position: absolute;
+  inset: -0.62rem;
+  border-radius: inherit;
+  border: 1px solid rgba(120, 86, 180, 0.13);
+  box-shadow: 0 0 1.25rem rgba(120, 86, 180, 0.17);
+  pointer-events: none;
+}
+
+.orbit-node::after {
+  content: "";
+  position: absolute;
+  inset: 0.5rem;
+  border-radius: inherit;
+  background: radial-gradient(circle at 34% 22%, rgba(242, 234, 217, 0.08), transparent 54%);
+  pointer-events: none;
+}
+
+.orbit-node:hover,
+.orbit-node:focus-visible,
+.orbit-node.is-active {
+  color: #f4d985;
+  border-color: rgba(214, 189, 120, 0.48);
+  box-shadow:
+    0 0 0.95rem rgba(214, 189, 120, 0.16),
+    0 0 2.45rem rgba(129, 91, 188, 0.36),
+    inset 0 0 1.7rem rgba(214, 189, 120, 0.08),
+    inset 0 -1.2rem 1.6rem rgba(0, 0, 0, 0.68);
+}
+
+.orbit-listen {
+  --orbit-x: -2.2rem;
+  --orbit-y: -11rem;
+  --node-size: clamp(4.8rem, 7vw, 6.05rem);
+  --node-scale: 1.02;
+}
+
+.orbit-signals {
+  --orbit-x: -8.8rem;
+  --orbit-y: -5.3rem;
+  --node-size: clamp(4.3rem, 6.2vw, 5.35rem);
+  --node-scale: 0.94;
+}
+
+.orbit-house {
+  --orbit-x: -10rem;
+  --orbit-y: 4.7rem;
+  --node-size: clamp(5rem, 7.6vw, 6.55rem);
+  --node-scale: 1.08;
+}
+
+.orbit-contact {
+  --orbit-x: 8.3rem;
+  --orbit-y: 2.5rem;
+  --node-size: clamp(4.5rem, 6.4vw, 5.6rem);
+  --node-scale: 0.96;
+}
+
+.orbit-watch {
+  --orbit-x: 10.7rem;
+  --orbit-y: 6.1rem;
+  --node-size: clamp(4rem, 5.7vw, 4.9rem);
+  --node-scale: 0.86;
+  opacity: 0.92;
+}
+
+.orbit-about {
+  --orbit-x: 5.2rem;
+  --orbit-y: 9rem;
+  --node-size: clamp(3.6rem, 5.1vw, 4.45rem);
+  --node-scale: 0.78;
+  opacity: 0.88;
+}
+
+.room-panel-shell {
+  position: fixed;
+  right: clamp(1rem, 3vw, 3rem);
+  bottom: clamp(1rem, 3vw, 2.5rem);
+  z-index: 40;
+  width: min(32rem, calc(100vw - 2rem));
+  pointer-events: none;
+}
+
+.entry-room[hidden] {
+  display: none !important;
+}
+
+.entry-room.is-active {
+  display: block;
+  pointer-events: auto;
+}
+
+.room-panel {
+  position: relative;
+  padding: clamp(1.15rem, 2vw, 1.7rem);
+  border: 1px solid rgba(214, 189, 120, 0.18);
+  border-radius: 1.2rem;
+  color: rgba(242, 234, 217, 0.84);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(214, 189, 120, 0.08), transparent 16rem),
+    radial-gradient(circle at 100% 100%, rgba(110, 81, 172, 0.16), transparent 18rem),
+    rgba(4, 4, 10, 0.84);
+  box-shadow:
+    0 0 2.4rem rgba(0, 0, 0, 0.5),
+    0 0 2.4rem rgba(110, 81, 172, 0.16),
+    inset 0 0 2.2rem rgba(242, 234, 217, 0.03);
+  backdrop-filter: blur(14px);
+  animation: panelIn 180ms ease-out both;
+}
+
+.room-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.85rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(242, 234, 217, 0.14);
+  border-radius: 50%;
+  color: rgba(242, 234, 217, 0.8);
+  background: rgba(0, 0, 0, 0.34);
+  cursor: pointer;
+}
+
+.room-close:hover,
+.room-close:focus-visible {
+  color: #f4d985;
+  border-color: rgba(214, 189, 120, 0.42);
+}
+
+.room-eyebrow,
+.room-placeholder,
+.entry-social-portals a {
+  font-family: var(--font-ui, Arial, sans-serif);
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.room-eyebrow {
+  margin: 0 0 0.55rem;
+  color: rgba(214, 189, 120, 0.78);
+  font-size: 0.68rem;
+}
+
+.room-panel h2 {
+  margin: 0 2.4rem 0.85rem 0;
+  color: rgba(242, 234, 217, 0.95);
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  line-height: 1.05;
+}
+
+.room-panel p {
+  max-width: 29rem;
+  margin: 0;
+  color: rgba(242, 234, 217, 0.76);
+  line-height: 1.68;
+}
+
+.room-panel p + p,
+.entry-social-portals {
+  margin-top: 1rem;
+}
+
+.room-placeholder {
+  color: rgba(214, 189, 120, 0.66) !important;
+  font-size: 0.75rem;
+}
+
+.entry-social-portals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.entry-social-portals a {
+  min-height: 2.15rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(214, 189, 120, 0.18);
+  border-radius: 999px;
+  color: rgba(242, 234, 217, 0.78);
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.entry-social-portals a:hover,
+.entry-social-portals a:focus-visible {
+  color: #f4d985;
+  border-color: rgba(214, 189, 120, 0.42);
+}
+
+.entry-footer {
+  display: none;
+}
+
+@keyframes portalPulse {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes portalRing {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes portalRingReverse {
+  from {
+    transform: translate(-50%, -50%) rotate(24deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-336deg);
+  }
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.45rem) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  body.entry-page {
+    overflow: auto;
+  }
+
+  .portal-stage {
+    --stage-size: clamp(22rem, 78vw, 32rem);
+  }
+
+  .entry-woodmark {
+    width: clamp(10.5rem, 38vw, 15rem);
+  }
+
+  .room-panel-shell {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .meadnyte-entry {
+    padding-top: 5.8rem;
+  }
+
+  .portal-stage {
+    --stage-size: min(94vw, 29rem);
+  }
+
+  .portal-logo {
+    width: clamp(6.5rem, 25vw, 8.4rem);
+  }
+
+  .orbit-node {
+    width: var(--node-size, clamp(3.65rem, 14.5vw, 4.6rem));
+    font-size: clamp(0.43rem, 1.8vw, 0.56rem);
+  }
+
+  .orbit-listen {
+    --orbit-x: -2.4rem;
+    --orbit-y: -8.1rem;
+  }
+
+  .orbit-signals {
+    --orbit-x: -6.5rem;
+    --orbit-y: -3.7rem;
+  }
+
+  .orbit-house {
+    --orbit-x: -6.5rem;
+    --orbit-y: 3.4rem;
+  }
+
+  .orbit-contact {
+    --orbit-x: 5.8rem;
+    --orbit-y: 2.4rem;
+  }
+
+  .orbit-watch {
+    --orbit-x: 7.5rem;
+    --orbit-y: 5.4rem;
+  }
+
+  .orbit-about {
+    --orbit-x: 3.4rem;
+    --orbit-y: 7.6rem;
+  }
+
+  .room-panel {
+    max-height: 46vh;
+    overflow: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portal-stage,
+  .orbit-node {
+    transition: none !important;
+  }
+
+  .portal-ring,
+  .portal-core::before,
+  .room-panel {
+    animation: none !important;
+  }
+}

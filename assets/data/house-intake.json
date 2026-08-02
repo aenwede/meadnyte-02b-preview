@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "provider": "mailchimp",
+  "providerConfig": {
+    "action": "https://cameronnino.us19.list-manage.com/subscribe/post",
+    "hostedFormUrl": "https://eepurl.com/dILscT",
+    "accountId": "e1615ea17d151718717da22e7",
+    "audienceId": "860ce50d04",
+    "fields": {
+      "firstName": "MERGE1",
+      "lastName": "MERGE3",
+      "email": "MERGE0",
+      "interestFallback": "MERGE2"
+    },
+    "interestFields": {},
+    "hiddenDefaults": {
+      "mc_signupsource": "embed"
+    }
+  },
+  "copy": {
+    "title": "ENTER THE INNER SANCTUM",
+    "interestPrompt": "What would you like to discover?",
+    "submit": "CROSS THE THRESHOLD",
+    "consent": "By crossing the threshold, you agree to receive occasional email from Meadnyte. You may leave at any time.",
+    "pending": "A confirmation signal has been sent. Follow it to remain connected.",
+    "error": "The threshold did not open. Please review your information and try again.",
+    "providerUnavailable": "The threshold is temporarily obscured. Please continue through the secure Meadnyte signup page."
+  },
+  "interests": [
+    { "id": "books", "label": "Books" },
+    { "id": "poetry", "label": "Poetry" },
+    { "id": "music", "label": "Music" },
+    { "id": "film", "label": "Film" },
+    { "id": "signals", "label": "Signals" },
+    { "id": "everything", "label": "Everything", "exclusive": true }
+  ],
+  "analytics": {
+    "view": "intake_view",
+    "submit": "intake_submit",
+    "accepted": "intake_accepted"
+  }
+}

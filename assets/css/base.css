@@ -1,0 +1,125 @@
+/*
+  File: meadnyte-site/assets/css/base.css
+  Phase: 02_Index_Page_and_Menu
+
+  Purpose:
+  - Global reset, root variables, accessibility helpers, and safe defaults.
+  - This file should remain stable.
+  - Do not place entry-specific starfield, orbit, sigil, planet, or panel styling here.
+
+  Future modification instructions:
+  - Add only global tokens or true site-wide defaults.
+  - Do not tune the uploaded video design from this file.
+*/
+
+:root {
+  --color-void: #020106;
+  --color-void-soft: #05040c;
+  --color-void-blue: #080613;
+
+  --color-cream: #f2ead9;
+  --color-cream-muted: rgba(242, 234, 217, 0.76);
+
+  --color-gold: #d6bd78;
+  --color-gold-bright: #f4d985;
+  --color-gold-soft: rgba(214, 189, 120, 0.62);
+
+  --color-violet: #6f4ba6;
+  --color-violet-soft: rgba(111, 75, 166, 0.28);
+
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-ui: Arial, Helvetica, sans-serif;
+
+  --page-edge: clamp(0.45rem, 1vw, 0.95rem);
+  --header-top: clamp(1rem, 2.25vw, 2.25rem);
+  --header-left: clamp(1rem, 2.5vw, 2.5rem);
+
+  --transition-fast: 180ms ease;
+  --transition-medium: 260ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--color-void);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body.meadnyte-entry-page {
+  min-height: 100vh;
+  color: var(--color-cream);
+  background: var(--color-void);
+  overflow: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.u-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  clip: rect(0 0 0 0) !important;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 999;
+  transform: translateY(-150%);
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(214, 189, 120, 0.42);
+  border-radius: 999px;
+  color: var(--color-gold-bright);
+  background: rgba(2, 1, 6, 0.92);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

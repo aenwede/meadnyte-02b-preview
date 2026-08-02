@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--
+  File: meadnyte-site/index.htm
+  Phase: 03_Global_Page_Scaffold_and_Viewport
+
+  Purpose:
+  - Restores the landing page as a clean portal/stage entry.
+  - Removes stacked same-page room cards from the landing page.
+  - Sends each locked orbital menu item to its real destination index.htm page.
+  - Preserves the central sigil, upper-left woodmark, threshold/starfield layers, orbital stage, and six locked menu IDs.
+
+  Locked destination paths:
+  - about/index.htm
+  - house/index.htm
+  - listen/index.htm
+  - watch/index.htm
+  - signals/index.htm
+  - contact/index.htm
+
+  Future modification instructions:
+  - Do not add visible room cards back to this landing page unless explicitly reopened.
+  - Landing page visual tuning belongs in threshold/starfield/stage files.
+  - Planet design and speed remain reserved for #04_Orbital_Planets_and_Menu_Motion.
+  - Room content belongs inside the destination room folders.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+
+  
+
+  <!-- CSS component links -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/typography.css" />
+  <link rel="stylesheet" href="assets/css/utilities.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/entry-threshold.css" />
+  <link rel="stylesheet" href="assets/css/orbital-stage.css" />
+  <link rel="stylesheet" href="assets/css/sigil.css" />
+  <link rel="stylesheet" href="assets/css/orbital-planets.css" />
+  <link rel="stylesheet" href="assets/css/house-room-field.css" />
+  <link rel="stylesheet" href="assets/css/room-novae.css" />
+  <link rel="stylesheet" href="assets/css/house-intake.css" />
+<title>Meadnyte — The House of Meadnyte</title><meta name="description" content="The House of Meadnyte — a portal for sound, story, image, memory, and signal."><link rel="canonical" href="https://meadnyte.com/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/icons/favicons/favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="/assets/icons/favicons/favicon-16x16.png" type="image/png" sizes="16x16"><link rel="apple-touch-icon" href="/assets/icons/favicons/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#02050a"><meta property="og:type" content="website"><meta property="og:site_name" content="The House of Meadnyte"><meta property="og:title" content="Meadnyte — The House of Meadnyte"><meta property="og:description" content="The sound of something buried beginning to breathe."><meta property="og:url" content="https://meadnyte.com/"><meta property="og:image" content="https://meadnyte.com/assets/img/social/meadnyte-social-preview-1200x630.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Meadnyte — The sound of something buried beginning to breathe."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Meadnyte — The House of Meadnyte"><meta name="twitter:description" content="The sound of something buried beginning to breathe."><meta name="twitter:image" content="https://meadnyte.com/assets/img/social/meadnyte-social-preview-1200x630.png"><link rel="stylesheet" href="/assets/css/social-portals.css"></head>
+
+<body class="meadnyte-entry-page has-house-intake">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="entry-header" aria-label="The House of Meadnyte">
+    <a class="entry-woodmark" href="#entry-threshold" aria-label="Return to The House of Meadnyte threshold">
+      <img src="assets/img/woodmark.png" alt="The House of Meadnyte" />
+    </a>
+  </header>
+
+  <main id="main-content" class="entry-main">
+    <section
+      id="entry-threshold"
+      class="entry-threshold"
+      data-section-id="entry-threshold"
+      aria-labelledby="entry-title"
+    >
+      <h1 id="entry-title" class="u-visually-hidden">The House of Meadnyte</h1>
+
+      <div class="threshold-border" aria-hidden="true"></div>
+      <div class="threshold-starfield threshold-starfield-back" aria-hidden="true"></div>
+      <div class="threshold-starfield threshold-starfield-front" aria-hidden="true"></div>
+      <div class="threshold-haze" aria-hidden="true"></div>
+
+      <section class="orbital-stage" data-orbital-stage aria-label="Meadnyte orbital room menu">
+        <div class="orbital-stage__haze" aria-hidden="true"></div>
+
+        <div class="orbital-ring orbital-ring--outer" aria-hidden="true"></div>
+        <div class="orbital-ring orbital-ring--middle" aria-hidden="true"></div>
+        <div class="orbital-ring orbital-ring--inner" aria-hidden="true"></div>
+
+        <div class="entry-sigil" aria-hidden="true">
+          <img class="entry-sigil__image" src="assets/img/logo.png" alt="" />
+        </div>
+
+        <nav class="orbital-planets" aria-label="Meadnyte rooms">
+          <a
+            class="orbital-planet orbital-planet--about"
+            href="about/index.htm"
+            data-menu-id="about"
+            data-room-target="about"
+            data-destination="about/index.htm"
+            aria-label="Enter About"
+          >
+            <span class="orbital-planet__label">About</span>
+          </a>
+
+          <a
+            class="orbital-planet orbital-planet--house"
+            href="house/index.htm"
+            data-menu-id="house"
+            data-room-target="house"
+            data-destination="house/index.htm"
+            aria-label="Enter House"
+          >
+            <span class="orbital-planet__label">House</span>
+          </a>
+
+          <a
+            class="orbital-planet orbital-planet--listen"
+            href="listen/index.htm"
+            data-menu-id="listen"
+            data-room-target="listen"
+            data-destination="listen/index.htm"
+            aria-label="Enter Listen"
+          >
+            <span class="orbital-planet__label">Listen</span>
+          </a>
+
+          <a
+            class="orbital-planet orbital-planet--watch"
+            href="watch/index.htm"
+            data-menu-id="watch"
+            data-room-target="watch"
+            data-destination="watch/index.htm"
+            aria-label="Enter Watch"
+          >
+            <span class="orbital-planet__label">Watch</span>
+          </a>
+
+          <a
+            class="orbital-planet orbital-planet--signals"
+            href="signals/index.htm"
+            data-menu-id="signals"
+            data-room-target="signals"
+            data-destination="signals/index.htm"
+            aria-label="Enter Signals"
+          >
+            <span class="orbital-planet__label">Signals</span>
+          </a>
+
+          <a
+            class="orbital-planet orbital-planet--contact"
+            href="contact/index.htm"
+            data-menu-id="contact"
+            data-room-target="contact"
+            data-destination="contact/index.htm"
+            aria-label="Enter Contact"
+          >
+            <span class="orbital-planet__label">Contact</span>
+          </a>
+        </nav>
+      </section>
+
+      <a class="threshold-scroll-cue" href="house/index.htm" aria-label="Enter The House of Meadnyte">
+        <span class="threshold-scroll-cue__text">Enter House</span>
+        <span class="threshold-scroll-cue__mark" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <section
+      id="inner-sanctum"
+      class="house-intake"
+      data-house-intake
+      data-house-intake-config="assets/data/house-intake.json"
+      data-house-intake-source="meadnyte-website"
+      data-house-intake-context="landing"
+      aria-label="Meadnyte audience intake"
+    >
+      <div class="house-intake__loading" aria-live="polite">
+        <span class="u-visually-hidden">Preparing the Meadnyte audience intake.</span>
+      </div>
+      <noscript>
+        <p class="house-intake__noscript">
+          <a href="https://eepurl.com/dILscT">Enter the Inner Sanctum</a>
+        </p>
+      </noscript>
+    </section>
+  </main>
+
+  <footer class="entry-footer" aria-label="Site footer"><p>&copy; <span id="copyright-year">2026</span> Meadnyte. All rights reserved.</p><nav data-social-portals data-social-variant="quiet" aria-label="Meadnyte signal paths"></nav></footer>
+
+  <!-- JS component links -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/utils.js" defer></script>
+  <script src="assets/js/orbital-config.js" defer></script>
+  <script src="assets/js/universe-background.js" defer></script>
+  <script src="assets/js/orbital-menu.js" defer></script>
+  <script src="assets/js/planet-interactions.js" defer></script>
+  <script src="assets/js/room-novae.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/house-intake.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+<script src="/assets/js/social-portals.js" defer></script></body>
+</html>

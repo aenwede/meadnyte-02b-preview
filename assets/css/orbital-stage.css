@@ -1,0 +1,147 @@
+/*
+  File: meadnyte-site/assets/css/orbital-stage.css
+  Phase: 02_Index_Page_and_Menu
+
+  Purpose:
+  - Controls the central orbital stage, haze, and orbit rings.
+  - This file follows the uploaded video target: centered sigil portal, subtle gold/violet rings,
+    dark celestial atmosphere, no conventional website hero.
+
+  Future modification instructions:
+  - Tune stage size, ring size, ring glow, and central composition here.
+  - Do not style the upper-left woodmark here; use header.css.
+  - Do not style the central logo image itself here; use sigil.css.
+  - Do not style individual planet buttons here; use orbital-planets.css.
+  - Do not style room panels here; use house-room-field.css.
+*/
+
+.orbital-stage {
+  --stage-size: clamp(25rem, 39vw, 36rem);
+  --portal-tilt-x: 0deg;
+  --portal-tilt-y: 0deg;
+
+  position: relative;
+  z-index: 8;
+  width: var(--stage-size);
+  aspect-ratio: 1;
+  transform:
+    perspective(900px)
+    rotateX(var(--portal-tilt-x))
+    rotateY(var(--portal-tilt-y));
+  transition:
+    transform var(--transition-medium),
+    filter var(--transition-medium);
+}
+
+.orbital-stage.is-orbital-active {
+  filter: drop-shadow(0 0 1.1rem rgba(214, 189, 120, 0.06));
+}
+
+.orbital-stage__haze {
+  position: absolute;
+  inset: 7%;
+  z-index: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(214, 189, 120, 0.12), transparent 16%),
+    radial-gradient(circle at 50% 50%, rgba(105, 75, 166, 0.26), transparent 48%),
+    radial-gradient(circle at 50% 50%, rgba(27, 18, 55, 0.4), transparent 72%);
+  filter: blur(0.45rem);
+  pointer-events: none;
+}
+
+.orbital-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.orbital-ring--outer {
+  width: 52%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(214, 189, 120, 0.2);
+  box-shadow:
+    0 0 2.3rem rgba(110, 81, 172, 0.2),
+    inset 0 0 1.8rem rgba(214, 189, 120, 0.05);
+  animation: orbitalStageRingClockwise 44s linear infinite;
+}
+
+.orbital-ring--middle {
+  width: 43%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(242, 234, 217, 0.11);
+  box-shadow: inset 0 0 1.2rem rgba(110, 81, 172, 0.14);
+  animation: orbitalStageRingCounter 58s linear infinite;
+}
+
+.orbital-ring--inner {
+  width: 33%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(214, 189, 120, 0.12);
+  opacity: 0.78;
+  animation: orbitalStageRingClockwise 70s linear infinite;
+}
+
+.orbital-ring::before,
+.orbital-ring::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  border: 1px solid rgba(214, 189, 120, 0.08);
+}
+
+.orbital-ring::before {
+  inset: 10%;
+}
+
+.orbital-ring::after {
+  inset: 20%;
+  border-style: dotted;
+  opacity: 0.75;
+}
+
+@keyframes orbitalStageRingClockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes orbitalStageRingCounter {
+  from {
+    transform: translate(-50%, -50%) rotate(24deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-336deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .orbital-stage {
+    --stage-size: clamp(22rem, 78vw, 32rem);
+  }
+}
+
+@media (max-width: 620px) {
+  .orbital-stage {
+    --stage-size: min(94vw, 29rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbital-ring {
+    animation: none !important;
+  }
+
+  .orbital-stage {
+    transition: none !important;
+  }
+}

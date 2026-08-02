@@ -1,0 +1,38 @@
+/*
+  File: meadnyte-site/assets/css/house-room-field.css
+  Phase: 03_Global_Page_Scaffold_and_Viewport
+
+  Purpose:
+  - Removes the stacked room-card presentation from the landing page.
+  - Keeps this component dormant on the portal landing page now that rooms live in their own destination folders.
+  - Prevents old same-page room panels from appearing if stale markup remains during local testing.
+
+  Future modification instructions:
+  - Use this file only if same-page room preview panels are deliberately reopened later.
+  - Do not style destination room pages here unless those pages intentionally load this file.
+  - Do not style orbital planets here.
+  - Do not change orbital speed here.
+*/
+
+.house-room-field,
+.room-field-intro,
+.house-room-panel {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.house-room-panel,
+.house-room-panel[hidden],
+.house-room-panel.is-active,
+.house-room-panel.is-visible-section {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.house-room-panel__inner,
+.house-room-panel__close,
+.entry-social-portals {
+  display: none !important;
+}

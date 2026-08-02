@@ -1,0 +1,256 @@
+/* File: assets/css/components.css */
+
+/*
+  Meadnyte Website Build v0.5
+  Component layer.
+
+  This file should hold reusable pieces:
+  cards, panels, portal elements, badges, media shells,
+  and future room/project modules.
+*/
+
+.primary-nav a.is-active {
+  color: var(--color-soft-gold);
+}
+
+.primary-nav a.is-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.placeholder-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(214, 189, 120, 0.08), transparent 42%),
+    radial-gradient(circle at bottom right, rgba(42, 68, 110, 0.14), transparent 46%);
+  pointer-events: none;
+}
+
+.placeholder-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.portal-card {
+  position: relative;
+  overflow: hidden;
+  gap: 0.65rem;
+}
+
+.portal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(214, 189, 120, 0.12), transparent 42%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  pointer-events: none;
+}
+
+.portal-card:hover::before,
+.portal-card:focus-visible::before {
+  opacity: 1;
+}
+
+.portal-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.portal-card[href="#"] {
+  cursor: default;
+}
+
+.portal-card[href="#"]:hover {
+  color: var(--color-cream);
+}
+
+.portal-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  margin-bottom: 0.65rem;
+  border: 1px solid rgba(214, 189, 120, 0.4);
+  border-radius: 999px;
+  color: var(--color-soft-gold);
+  background:
+    radial-gradient(circle at 35% 28%, rgba(214, 189, 120, 0.18), transparent 48%),
+    rgba(5, 5, 7, 0.42);
+  box-shadow:
+    inset 0 0 1.2rem rgba(214, 189, 120, 0.05),
+    0 0 1.2rem rgba(214, 189, 120, 0.06);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.portal-icon::after {
+  content: "";
+  position: absolute;
+  width: 0.35rem;
+  height: 0.35rem;
+  transform: translate(1.03rem, -1.03rem);
+  border-radius: 999px;
+  background: rgba(214, 189, 120, 0.8);
+  box-shadow: 0 0 0.7rem rgba(214, 189, 120, 0.42);
+}
+
+.portal-card:hover .portal-icon,
+.portal-card:focus-visible .portal-icon {
+  border-color: rgba(214, 189, 120, 0.78);
+  background:
+    radial-gradient(circle at 35% 28%, rgba(214, 189, 120, 0.28), transparent 52%),
+    rgba(5, 5, 7, 0.56);
+}
+
+.portal-label {
+  display: block;
+}
+
+.portal-status {
+  display: block;
+  margin-top: auto;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 1.8rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(214, 189, 120, 0.35);
+  border-radius: 999px;
+  color: var(--color-soft-gold);
+  background: rgba(214, 189, 120, 0.08);
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.room-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.room-card {
+  min-height: 14rem;
+  padding: 1.2rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
+    var(--color-panel);
+  box-shadow: var(--shadow-soft);
+}
+
+.room-card h3 {
+  margin-bottom: 0.65rem;
+}
+
+.room-card p {
+  color: rgba(242, 234, 217, 0.72);
+}
+
+.signal-card {
+  padding: 1.25rem;
+  border-left: 2px solid rgba(214, 189, 120, 0.64);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.signal-card-title {
+  margin-bottom: 0.45rem;
+  color: var(--color-cream);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.signal-card-meta {
+  margin-bottom: 0.75rem;
+  color: rgba(242, 234, 217, 0.56);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.media-shell {
+  overflow: hidden;
+  margin-top: 1.5rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.media-shell iframe,
+.media-shell video,
+.media-shell audio {
+  display: block;
+  width: 100%;
+}
+
+.media-shell iframe,
+.media-shell video {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+.inline-link-list {
+  display: flex;
+  gap: 0.8rem 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.inline-link-list a {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .room-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .room-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
