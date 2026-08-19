@@ -124,6 +124,29 @@ body.meadnyte-entry-page .entry-footer a {
   pointer-events: auto;
 }
 
+
+body.meadnyte-entry-page .entry-footer__identity {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem 1rem;
+  min-width: 0;
+}
+
+body.meadnyte-entry-page .entry-footer__legal {
+  display: flex;
+  gap: 0.7rem;
+}
+
+body.meadnyte-entry-page .entry-footer__legal a {
+  color: rgba(229, 213, 177, 0.38);
+  text-decoration: none;
+}
+
+body.meadnyte-entry-page .entry-footer__legal a:hover,
+body.meadnyte-entry-page .entry-footer__legal a:focus-visible {
+  color: var(--social-signal-gold);
+}
+
 @media (max-width: 600px) {
   .portal-footer {
     right: 8px;
@@ -134,6 +157,10 @@ body.meadnyte-entry-page .entry-footer a {
   .portal-footer > span,
   body.meadnyte-entry-page .entry-footer p {
     display: none;
+  }
+
+  body.meadnyte-entry-page .entry-footer__identity {
+    gap: 0;
   }
 }
 
