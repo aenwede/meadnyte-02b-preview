@@ -62,29 +62,48 @@
     };
   }
 
-  function getOrbitAngle(orbit, elapsedSeconds) {
-    const cycleSeconds = Math.max(1, getNumber(orbit.cycleSeconds, 90));
-    const phaseDegrees = getNumber(orbit.phaseDegrees, 0);
-    const orbitDegrees = (elapsedSeconds / cycleSeconds) * 360;
+  function solveEccentricAnomaly(meanAnomaly, eccentricity) {
+    let eccentricAnomaly = meanAnomaly;
 
-    return degreesToRadians(phaseDegrees + orbitDegrees);
+    for (let iteration = 0; iteration < 10; iteration += 1) {
+      eccentricAnomaly -= (
+        eccentricAnomaly - eccentricity * Math.sin(eccentricAnomaly) - meanAnomaly
+      ) / (1 - eccentricity * Math.cos(eccentricAnomaly));
+    }
+
+    return eccentricAnomaly;
   }
 
-  function getEllipseCoordinates(stageSize, orbit, angle) {
+  function getMeanAnomaly(orbit, elapsedSeconds) {
+    const cycleSeconds = Math.max(1, getNumber(orbit.cycleSeconds, 90));
+    const initialAnomaly = degreesToRadians(getNumber(orbit.meanAnomalyDegrees, 0));
+
+    return initialAnomaly + (elapsedSeconds / cycleSeconds) * Math.PI * 2;
+  }
+
+  function getKeplerianCoordinates(stageSize, orbit, elapsedSeconds) {
     const semiMajor = stageSize * getNumber(orbit.semiMajor, 0.45);
-    const semiMinor = stageSize * getNumber(orbit.semiMinor, 0.28);
-    const tilt = degreesToRadians(getNumber(orbit.tiltDegrees, 0));
-    const rawX = Math.cos(angle) * semiMajor;
-    const rawY = Math.sin(angle) * semiMinor;
+    const eccentricity = Math.max(0, Math.min(0.8, getNumber(orbit.eccentricity, 0.15)));
+    const inclination = degreesToRadians(getNumber(orbit.inclinationDegrees, 78));
+    const ascendingNode = degreesToRadians(getNumber(orbit.ascendingNodeDegrees, 0));
+    const periapsis = degreesToRadians(getNumber(orbit.periapsisDegrees, 0));
+    const meanAnomaly = getMeanAnomaly(orbit, elapsedSeconds);
+    const eccentricAnomaly = solveEccentricAnomaly(meanAnomaly, eccentricity);
+    const orbitalX = semiMajor * (Math.cos(eccentricAnomaly) - eccentricity);
+    const orbitalY = semiMajor * Math.sqrt(1 - eccentricity * eccentricity) * Math.sin(eccentricAnomaly);
+    const periapsisX = orbitalX * Math.cos(periapsis) - orbitalY * Math.sin(periapsis);
+    const periapsisY = orbitalX * Math.sin(periapsis) + orbitalY * Math.cos(periapsis);
+    const inclinedY = periapsisY * Math.cos(inclination);
+    const depth = periapsisY * Math.sin(inclination);
 
     return {
-      x: rawX * Math.cos(tilt) - rawY * Math.sin(tilt),
-      y: rawX * Math.sin(tilt) + rawY * Math.cos(tilt)
+      x: periapsisX * Math.cos(ascendingNode) - inclinedY * Math.sin(ascendingNode),
+      y: periapsisX * Math.sin(ascendingNode) + inclinedY * Math.cos(ascendingNode),
+      depthUnit: Math.max(-1, Math.min(1, depth / Math.max(1, semiMajor)))
     };
   }
 
-  function getDepthState(orbit, angle) {
-    const depthUnit = Math.sin(angle);
+  function getDepthState(orbit, depthUnit) {
     const amount = Math.abs(depthUnit);
     const isFront = depthUnit >= 0;
 
@@ -175,9 +194,8 @@
       };
     }
 
-    const angle = getOrbitAngle(orbit, elapsedSeconds);
-    const coordinates = getEllipseCoordinates(stageSize, orbit, angle);
-    const depthState = getDepthState(orbit, angle);
+    const coordinates = getKeplerianCoordinates(stageSize, orbit, elapsedSeconds);
+    const depthState = getDepthState(orbit, coordinates.depthUnit);
     const light = getSigilLightDirection(coordinates, stageSize);
 
     return {
