@@ -1,7 +1,8 @@
 (() => {
   "use strict";
 
-  const PROJECT_ROOT = new URL("../../", document.currentScript.src);\n  const DATA_URL = new URL("assets/data/social-portals.json", PROJECT_ROOT);
+  const PROJECT_ROOT = new URL("../../", document.currentScript.src);
+  const DATA_URL = new URL("assets/data/social-portals.json", PROJECT_ROOT);
   const mounts = [...document.querySelectorAll("[data-social-portals]")];
 
   if (!mounts.length) return;
@@ -21,7 +22,8 @@
     link.dataset.validation = portal.validation;
 
     icon.className = "social-portals__icon";
-    const iconUrl = new URL(portal.icon.replace(/^\\/+/, ""), PROJECT_ROOT);\n    icon.style.setProperty("--social-icon", `url("${iconUrl.href}")`);
+    const iconPath = portal.icon.startsWith("/") ? portal.icon.slice(1) : portal.icon;\n    const iconUrl = new URL(iconPath, PROJECT_ROOT);
+    icon.style.setProperty("--social-icon", `url("${iconUrl.href}")`);
     icon.setAttribute("aria-hidden", "true");
 
     link.append(icon);
