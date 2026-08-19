@@ -63,30 +63,6 @@
     return attribution;
   }
 
-  function compactValue(value) {
-    return String(value || "")
-      .replace(/[;|=]/g, "-")
-      .replace(/\s+/g, " ")
-      .trim()
-      .slice(0, 80);
-  }
-
-  function buildAttributionValue(interests, source, context, attribution) {
-    const parts = [
-      "interests=" + interests.map(compactValue).join(","),
-      "source=" + compactValue(source),
-      "page=" + compactValue(context)
-    ];
-
-    UTM_KEYS.forEach(function (key) {
-      if (attribution[key]) {
-        parts.push(key + "=" + compactValue(attribution[key]));
-      }
-    });
-
-    return parts.join(";").slice(0, 255);
-  }
-
   function emitEvent(name, detail) {
     const payload = Object.assign({ event: name }, detail || {});
 
@@ -124,16 +100,29 @@
     observer.observe(root);
   }
 
-  function submitProvider(url, parameters, provider) {
-    const action = new URL(url);
-    action.searchParams.set("u", provider.accountId);
-    action.searchParams.set("id", provider.audienceId);
+  function prepareProviderSubmission(form, url, parameters, targetName) {
+    form.action = url;
+    form.method = "post";
+    form.acceptCharset = "UTF-8";
+    form.target = targetName;
 
-    return fetch(action.toString(), {
-      method: "POST",
-      mode: "no-cors",
-      credentials: "omit",
-      body: parameters
+    Array.from(form.querySelectorAll("[data-house-intake-provider-field]")).forEach(function (field) {
+      field.remove();
+    });
+
+    parameters.forEach(function (value, name) {
+      const field = document.createElement("input");
+      field.type = "hidden";
+      field.name = name;
+      field.value = value;
+      field.setAttribute("data-house-intake-provider-field", "");
+      form.appendChild(field);
+    });
+
+    Array.from(form.elements).forEach(function (field) {
+      if (field.type !== "submit" && !field.hasAttribute("data-house-intake-provider-field")) {
+        field.disabled = true;
+      }
     });
   }
 
@@ -166,6 +155,7 @@
     root.innerHTML = [
       "<div class=\"house-intake__inner\">",
       "<h2 class=\"house-intake__title\" id=\"" + titleId + "\">" + escapeHtml(copy.title) + "</h2>",
+      "<iframe name=\"" + escapeHtml(instanceId + "-provider-response") + "\" title=\"Mailchimp signup response\" data-house-intake-provider-response hidden></iframe>",
       "<form class=\"house-intake__form\" data-house-intake-form novalidate>",
       "<div class=\"house-intake__identity\">",
       "<div class=\"house-intake__field\">",
@@ -175,7 +165,7 @@
       "</div>",
       "<div class=\"house-intake__field\">",
       "<label class=\"house-intake__label\" for=\"" + instanceId + "-last-name\">Last Name</label>",
-      "<input class=\"house-intake__input\" id=\"" + instanceId + "-last-name\" name=\"last-name\" type=\"text\" autocomplete=\"family-name\" required>",
+      "<input class=\"house-intake__input\" id=\"" + instanceId + "-last-name\" name=\"last-name\" type=\"text\" autocomplete=\"family-name\">",
       "<p class=\"house-intake__error\" data-error-for=\"last-name\" aria-live=\"polite\"></p>",
       "</div>",
       "<div class=\"house-intake__field house-intake__field--email\">",
@@ -193,8 +183,19 @@
       "<label for=\"" + instanceId + "-website\">Leave this field empty</label>",
       "<input id=\"" + instanceId + "-website\" name=\"website\" type=\"text\" tabindex=\"-1\" autocomplete=\"off\">",
       "</div>",
-      "<button class=\"house-intake__action\" type=\"submit\" data-reflection=\"" + escapeHtml(copy.submit) + "\">" + escapeHtml(copy.submit) + "</button>",
-      "<p class=\"house-intake__consent\">" + escapeHtml(copy.consent) + "</p>",
+      "<button class=\"house-intake__action\" type=\"submit\">",
+      "<span class=\"house-intake__action-text\">" + escapeHtml(copy.submit) + "</span>",
+      "<span class=\"house-intake__action-mark\" aria-hidden=\"true\"></span>",
+      "<span class=\"house-intake__action-reflection\" aria-hidden=\"true\">" + escapeHtml(copy.submit) + "</span>",
+      "</button>",
+      "<div class=\"house-intake__consent\">",
+      "<label class=\"house-intake__consent-choice\" for=\"" + instanceId + "-consent\">",
+      "<input class=\"house-intake__consent-checkbox\" id=\"" + instanceId + "-consent\" name=\"consent\" type=\"checkbox\" required>",
+      "<span class=\"house-intake__consent-mark\" aria-hidden=\"true\"></span>",
+      "<span>" + escapeHtml(copy.consent) + " Read the <a href=\"" + escapeHtml(copy.privacyUrl) + "\">Privacy Policy</a> and <a href=\"" + escapeHtml(copy.emailDisclosureUrl) + "\">email disclosures</a>.</span>",
+      "</label>",
+      "<p class=\"house-intake__error\" data-error-for=\"consent\" aria-live=\"polite\"></p>",
+      "</div>",
       "</form>",
       "<p class=\"house-intake__status\" id=\"" + statusId + "\" data-house-intake-status role=\"status\" aria-live=\"polite\" tabindex=\"-1\" hidden></p>",
       "</div>"
@@ -222,8 +223,8 @@
 
   function validateForm(form) {
     const firstName = form.elements["first-name"];
-    const lastName = form.elements["last-name"];
     const email = form.elements.email;
+    const consent = form.elements.consent;
     const interests = selectedInterests(form);
     let valid = true;
 
@@ -231,16 +232,13 @@
     showFieldError(form, "last-name", "");
     showFieldError(form, "email", "");
     showFieldError(form, "interests", "");
+    showFieldError(form, "consent", "");
 
     if (!firstName.value.trim()) {
       showFieldError(form, "first-name", "Please enter your first name.");
       valid = false;
     }
 
-    if (!lastName.value.trim()) {
-      showFieldError(form, "last-name", "Please enter your last name.");
-      valid = false;
-    }
 
     if (!email.value.trim()) {
       showFieldError(form, "email", "Please enter your email address.");
@@ -252,6 +250,11 @@
 
     if (!interests.length) {
       showFieldError(form, "interests", "Choose at least one path of discovery.");
+      valid = false;
+    }
+
+    if (!consent.checked) {
+      showFieldError(form, "consent", "Please confirm that you would like to receive Meadnyte email.");
       valid = false;
     }
 
@@ -301,6 +304,20 @@
     return mapped;
   }
 
+  function hasCompleteInterestMappings(config) {
+    const interests = Array.isArray(config.interests) ? config.interests : [];
+    const mappings = config.providerConfig && config.providerConfig.interestFields;
+    const providerFieldPattern = /^group\[\d+\]\[\d+\]$/;
+
+    return Boolean(mappings) && interests.length > 0 && interests.every(function (interest) {
+      const mapping = mappings[interest.id];
+
+      return mapping &&
+        providerFieldPattern.test(mapping.name) &&
+        String(mapping.value || "1") === "1";
+    });
+  }
+
   function setBusy(form, busy) {
     const button = form.querySelector(".house-intake__action");
     button.setAttribute("aria-disabled", busy ? "true" : "false");
@@ -327,12 +344,22 @@
     status.focus({ preventScroll: true });
   }
 
+  function showSubmissionError(root, form, message) {
+    const status = root.querySelector("[data-house-intake-status]");
+
+    form.hidden = false;
+    status.hidden = false;
+    status.textContent = message;
+    status.focus({ preventScroll: true });
+  }
+
   function bindComponent(root, config) {
     const form = root.querySelector("[data-house-intake-form]");
+    const providerResponse = root.querySelector("[data-house-intake-provider-response]");
     const source = root.dataset.houseIntakeSource || "meadnyte-website";
     const context = root.dataset.houseIntakeContext || window.location.pathname;
     const analytics = config.analytics || {};
-    const attribution = captureAttribution();
+    captureAttribution();
 
     applyExclusiveInterestBehavior(form);
     observeView(root, analytics.view || "intake_view", { intake_source: source, intake_context: context });
@@ -343,10 +370,13 @@
       });
     });
 
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+    form.elements.consent.addEventListener("change", function () {
+      showFieldError(form, "consent", "");
+    });
 
+    form.addEventListener("submit", function (event) {
       if (form.elements.website.value || !validateForm(form)) {
+        event.preventDefault();
         const firstInvalid = form.querySelector("[aria-invalid=\"true\"]");
         if (firstInvalid) {
           firstInvalid.focus();
@@ -360,9 +390,6 @@
       const interests = selectedInterests(form);
       const provider = config.providerConfig;
       const parameters = new URLSearchParams();
-
-      parameters.set("u", provider.accountId);
-      parameters.set("id", provider.audienceId);
       parameters.set(provider.fields.firstName, firstName);
       parameters.set(provider.fields.lastName, lastName);
       parameters.set(provider.fields.email, email);
@@ -372,10 +399,9 @@
       });
 
       if (!addProviderInterests(parameters, config, interests)) {
-        parameters.set(
-          provider.fields.interestFallback,
-          buildAttributionValue(interests, source, context, attribution)
-        );
+        event.preventDefault();
+        showStatus(root, config, config.copy.providerUnavailable, true);
+        return;
       }
 
       setBusy(form, true);
@@ -388,7 +414,9 @@
         intake_interests: interests.join(",")
       });
 
-      submitProvider(provider.action, parameters, provider).then(function () {
+      prepareProviderSubmission(form, provider.action, parameters, providerResponse.name);
+
+      window.setTimeout(function () {
         emitEvent(analytics.accepted || "intake_accepted", {
           intake_source: source,
           intake_context: context,
@@ -396,10 +424,15 @@
         });
         form.reset();
         showStatus(root, config, config.copy.pending, false);
-      }).catch(function (error) {
-        setBusy(form, false);
-        showStatus(root, config, config.copy.providerUnavailable, true);
-      });
+
+        const threshold = document.getElementById("entry-threshold");
+        if (threshold) {
+          if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, "", "#entry-threshold");
+          }
+          threshold.scrollIntoView({ block: "start" });
+        }
+      }, 0);
     });
   }
 
@@ -429,13 +462,17 @@
         return response.json();
       })
       .then(function (config) {
+        if (!hasCompleteInterestMappings(config)) {
+          throw new Error("Incomplete Mailchimp interest mapping");
+        }
+
         renderComponent(root, config);
         bindComponent(root, config);
       })
       .catch(function () {
         renderUnavailable(
           root,
-          "https://eepurl.com/dILscT",
+          "https://cameronnino.us19.list-manage.com/subscribe?u=e1615ea17d151718717da22e7&id=860ce50d04",
           "The threshold is temporarily obscured."
         );
       });
