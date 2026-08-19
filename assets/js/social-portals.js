@@ -22,7 +22,8 @@
     link.dataset.validation = portal.validation;
 
     icon.className = "social-portals__icon";
-    const iconPath = portal.icon.startsWith("/") ? portal.icon.slice(1) : portal.icon;\n    const iconUrl = new URL(iconPath, PROJECT_ROOT);
+    const iconPath = portal.icon.startsWith("/") ? portal.icon.slice(1) : portal.icon;
+    const iconUrl = new URL(iconPath, PROJECT_ROOT);
     icon.style.setProperty("--social-icon", `url("${iconUrl.href}")`);
     icon.setAttribute("aria-hidden", "true");
 
