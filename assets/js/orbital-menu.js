@@ -144,20 +144,19 @@
 
   function getPlanetZIndex(depthState) {
     const layers = getLayerSettings();
+    const depthSortSteps = 1000;
+    const depthOffset = Math.round(depthState.amount * depthSortSteps);
 
+    /*
+      Preserve the Sigil boundary at z-index 6 while giving planets enough
+      discrete depth levels to avoid DOM-order ties at projected crossings.
+      Front planets sort upward from 7; rear planets sort downward from 5.
+    */
     if (depthState.isFront) {
-      return Math.round(interpolate(
-        layers.planetFrontNearZIndex,
-        layers.planetFrontFarZIndex,
-        depthState.amount
-      ));
+      return layers.planetFrontNearZIndex + depthOffset;
     }
 
-    return Math.round(interpolate(
-      layers.planetBehindNearZIndex,
-      layers.planetBehindFarZIndex,
-      depthState.amount
-    ));
+    return layers.planetBehindNearZIndex - depthOffset;
   }
 
   function getSigilLightDirection(coordinates, stageSize) {
