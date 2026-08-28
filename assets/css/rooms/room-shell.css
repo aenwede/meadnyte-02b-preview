@@ -204,7 +204,7 @@ body.house-page {
 .room-opening__title {
   margin: 0 0 1.35rem;
   color: var(--house-gold);
-  font-size: clamp(2.35rem, 5vw, 4.75rem);
+  font-size: clamp(1.5rem, 2.4375vw, 2.4375rem);
   font-weight: 400;
   letter-spacing: 0.1em;
   line-height: 1.04;
