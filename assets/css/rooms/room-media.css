@@ -1,0 +1,37 @@
+/*
+  Shared Room Media — Phase 06
+  Images, galleries, video, audio, posters, and captions.
+*/
+.media-frame {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--house-rule);
+  background: rgba(0, 0, 0, 0.32);
+}
+.media-frame img,
+.media-frame video,
+.media-frame iframe { display: block; width: 100%; height: auto; }
+.media-frame--video video,
+.media-frame--video iframe { aspect-ratio: 16 / 9; border: 0; object-fit: contain; }
+.media-frame--portrait img { aspect-ratio: 4 / 5; object-fit: cover; }
+.media-frame--square img { aspect-ratio: 1; object-fit: cover; }
+.media-frame audio { display: block; width: calc(100% - 2rem); margin: 1rem; }
+.media-frame figcaption,
+.media-caption {
+  padding: 0.8rem 1rem;
+  color: var(--house-faint);
+  font: 0.68rem/1.55 var(--house-ui);
+  letter-spacing: 0.05em;
+}
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+.media-poster { position: relative; }
+.media-poster__action {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
