@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-16",
+  "identity": {
+    "name": "Meadnyte",
+    "alternateName": "The House of Meadnyte",
+    "website": "https://meadnyte.com",
+    "tagline": "The sound of something buried beginning to breathe."
+  },
+  "portals": [
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/meadnyte",
+      "icon": "/assets/icons/social/facebook.svg",
+      "validation": "production-validated"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/meadnyte",
+      "icon": "/assets/icons/social/instagram.svg",
+      "validation": "production-validated"
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@Meadnyte",
+      "icon": "/assets/icons/social/youtube.svg",
+      "validation": "production-validated"
+    },
+    {
+      "id": "soundcloud",
+      "label": "SoundCloud",
+      "url": "https://soundcloud.com/meadnyte",
+      "icon": "/assets/icons/social/soundcloud.svg",
+      "validation": "production-validated"
+    },
+    {
+      "id": "tiktok",
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@mead_nyte",
+      "icon": "/assets/icons/social/tiktok.svg",
+      "validation": "production-validated"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+/*
+  File: meadnyte-site/assets/css/sigil.css
+  Phase: 02_Index_Page_and_Menu
+
+  Purpose:
+  - Controls only the central Meadnyte sigil/logo image.
+  - The uploaded video target requires a central portal mark.
+  - The mark must be the actual asset: assets/img/logo.png.
+  - Do not use a browser-rendered placeholder M.
+
+  Future modification instructions:
+  - Logo size has been accepted unless Aham explicitly reopens it.
+  - Tune only sigil glow, image treatment, and central logo presentation here.
+  - Do not place or style the upper-left woodmark here.
+  - Do not style orbiting planets here.
+*/
+
+.entry-sigil {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.entry-sigil::before {
+  content: "";
+  position: absolute;
+  width: 34%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(244, 217, 133, 0.32),
+      rgba(103, 71, 165, 0.2) 44%,
+      transparent 72%
+    );
+  filter: blur(0.8rem);
+  animation: sigilPortalPulse 6s ease-in-out infinite;
+}
+
+.entry-sigil__image {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: clamp(8.5rem, 12.5vw, 12.6rem);
+  height: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 0.45rem rgba(255, 235, 171, 0.48))
+    drop-shadow(0 0 1.35rem rgba(214, 189, 120, 0.34))
+    drop-shadow(0 0 3.1rem rgba(110, 81, 172, 0.34));
+}
+
+@keyframes sigilPortalPulse {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 620px) {
+  .entry-sigil__image {
+    width: clamp(6.5rem, 25vw, 8.4rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entry-sigil::before {
+    animation: none !important;
+  }
+}

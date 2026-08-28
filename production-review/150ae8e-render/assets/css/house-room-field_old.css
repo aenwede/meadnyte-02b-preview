@@ -1,0 +1,406 @@
+/*
+  File: meadnyte-site/assets/css/house-room-field.css
+  Phase: 03_Global_Page_Scaffold_and_Viewport
+
+  Purpose:
+  - Converts the room field from a fixed right-side overlay into visible real site sections.
+  - Makes the whole site readable below the threshold so the vertical / horizontal / stage relationship can be judged.
+  - Keeps the six locked rooms visible: about, house, listen, watch, signals, contact.
+  - Preserves the portal-first direction from the uploaded design reference: dark, regal, atmospheric, threshold-led.
+
+  Future modification instructions:
+  - Use this file for visible room-section layout, room cards, room intro styling, social portal chips, and room spacing.
+  - Do not style orbital planets here.
+  - Do not change planet speed here.
+  - Do not tune the starfield here.
+  - Do not move the sigil or woodmark here.
+  - If the rooms later become overlays again, reopen this file deliberately instead of mixing overlay and scroll-section behavior.
+*/
+
+/* ------------------------------------------------------------
+   Room field root
+------------------------------------------------------------ */
+
+.house-room-field {
+  position: relative;
+  z-index: 15;
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding:
+    clamp(4.5rem, 9vw, 8rem)
+    clamp(1rem, 4vw, 4rem)
+    clamp(5.5rem, 10vw, 9rem);
+  pointer-events: auto;
+  color: rgba(244, 236, 218, 0.9);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(152, 113, 55, 0.14), transparent 22rem),
+    radial-gradient(circle at 18% 22%, rgba(91, 72, 145, 0.18), transparent 30rem),
+    radial-gradient(circle at 82% 60%, rgba(157, 106, 48, 0.12), transparent 30rem),
+    linear-gradient(
+      to bottom,
+      rgba(3, 3, 10, 0.98),
+      rgba(7, 6, 16, 0.99) 46%,
+      rgba(3, 3, 10, 1)
+    );
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.house-room-field::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(226, 198, 132, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(226, 198, 132, 0.035) 1px, transparent 1px);
+  background-size: 7rem 7rem;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 72%);
+  opacity: 0.18;
+}
+
+.house-room-field::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.42), transparent 18rem),
+    radial-gradient(circle at 50% 44%, transparent 0 20rem, rgba(0, 0, 0, 0.22) 42rem);
+}
+
+/* ------------------------------------------------------------
+   Global room visibility override for scaffold phase
+------------------------------------------------------------ */
+
+.house-room-panel,
+.house-room-panel[hidden],
+.house-room-panel.is-active {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+/* ------------------------------------------------------------
+   Room field introduction
+------------------------------------------------------------ */
+
+.room-field-intro {
+  position: relative;
+  width: min(100%, 72rem);
+  margin: 0 auto clamp(2.5rem, 7vw, 6rem);
+  padding: clamp(1rem, 2.5vw, 2rem) 0;
+  text-align: center;
+}
+
+.room-field-intro::before {
+  content: "";
+  display: block;
+  width: min(18rem, 48vw);
+  height: 1px;
+  margin: 0 auto clamp(1.4rem, 3vw, 2rem);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(218, 188, 116, 0.58),
+    transparent
+  );
+}
+
+.room-field-intro__eyebrow {
+  margin: 0 0 0.85rem;
+  color: rgba(218, 188, 116, 0.74);
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: clamp(0.68rem, 1vw, 0.78rem);
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.room-field-intro__title {
+  margin: 0;
+  color: rgba(246, 238, 222, 0.96);
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(2.25rem, 6vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.room-field-intro__copy {
+  width: min(100%, 43rem);
+  margin: clamp(1rem, 2.5vw, 1.5rem) auto 0;
+  color: rgba(236, 225, 205, 0.68);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+}
+
+/* ------------------------------------------------------------
+   Room panel layout
+------------------------------------------------------------ */
+
+.house-room-panel {
+  position: relative;
+  width: min(100%, 74rem);
+  margin-inline: auto;
+  scroll-margin-top: clamp(2rem, 8vh, 5rem);
+}
+
+.house-room-panel + .house-room-panel {
+  margin-top: clamp(1.4rem, 3.5vw, 3rem);
+}
+
+.house-room-panel:nth-of-type(odd) {
+  padding-right: clamp(0rem, 8vw, 8rem);
+}
+
+.house-room-panel:nth-of-type(even) {
+  padding-left: clamp(0rem, 8vw, 8rem);
+}
+
+.house-room-panel__inner {
+  position: relative;
+  display: grid;
+  gap: clamp(0.9rem, 1.6vw, 1.3rem);
+  min-height: clamp(17rem, 34vw, 25rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(218, 188, 116, 0.18);
+  border-radius: clamp(1.15rem, 2vw, 1.8rem);
+  color: rgba(242, 234, 217, 0.86);
+  background:
+    radial-gradient(circle at 14% 0%, rgba(218, 188, 116, 0.11), transparent 18rem),
+    radial-gradient(circle at 100% 100%, rgba(109, 84, 172, 0.2), transparent 22rem),
+    linear-gradient(135deg, rgba(16, 14, 22, 0.88), rgba(4, 4, 11, 0.92));
+  box-shadow:
+    0 1.5rem 4rem rgba(0, 0, 0, 0.42),
+    0 0 3rem rgba(101, 77, 160, 0.12),
+    inset 0 0 2.6rem rgba(246, 238, 218, 0.035);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+}
+
+.house-room-panel__inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 34%),
+    radial-gradient(circle at 80% 18%, rgba(218, 188, 116, 0.12), transparent 10rem);
+  opacity: 0.52;
+}
+
+.house-room-panel__inner > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ------------------------------------------------------------
+   Room panel text
+------------------------------------------------------------ */
+
+.house-room-panel__eyebrow,
+.house-room-panel__placeholder,
+.entry-social-portals a {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.house-room-panel__eyebrow {
+  margin: 0;
+  color: rgba(218, 188, 116, 0.78);
+  font-size: clamp(0.68rem, 1vw, 0.78rem);
+}
+
+.house-room-panel__title {
+  max-width: 14ch;
+  margin: 0;
+  color: rgba(246, 238, 222, 0.96);
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(2.15rem, 5vw, 4.35rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.house-room-panel__copy {
+  width: min(100%, 38rem);
+  margin: 0;
+  color: rgba(236, 225, 205, 0.74);
+  font-size: clamp(1rem, 1.25vw, 1.22rem);
+  line-height: 1.75;
+}
+
+.house-room-panel__placeholder {
+  width: fit-content;
+  margin: clamp(0.4rem, 1vw, 0.8rem) 0 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(218, 188, 116, 0.16);
+  border-radius: 999px;
+  color: rgba(218, 188, 116, 0.66);
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.72rem;
+}
+
+/* ------------------------------------------------------------
+   Close button is hidden in visible-section scaffold mode
+------------------------------------------------------------ */
+
+.house-room-panel__close {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   Individual room atmosphere
+------------------------------------------------------------ */
+
+.house-room-panel--about .house-room-panel__inner {
+  background:
+    radial-gradient(circle at 14% 0%, rgba(218, 188, 116, 0.12), transparent 18rem),
+    radial-gradient(circle at 100% 100%, rgba(109, 84, 172, 0.18), transparent 22rem),
+    linear-gradient(135deg, rgba(16, 14, 22, 0.9), rgba(4, 4, 11, 0.94));
+}
+
+.house-room-panel--house .house-room-panel__inner {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(143, 91, 42, 0.15), transparent 18rem),
+    radial-gradient(circle at 100% 100%, rgba(121, 92, 185, 0.18), transparent 22rem),
+    linear-gradient(135deg, rgba(17, 13, 18, 0.91), rgba(4, 4, 11, 0.94));
+}
+
+.house-room-panel--listen .house-room-panel__inner {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(218, 188, 116, 0.1), transparent 18rem),
+    radial-gradient(circle at 100% 100%, rgba(72, 91, 158, 0.2), transparent 22rem),
+    linear-gradient(135deg, rgba(11, 13, 24, 0.92), rgba(4, 4, 11, 0.95));
+}
+
+.house-room-panel--watch .house-room-panel__inner {
+  background:
+    radial-gradient(circle at 14% 0%, rgba(218, 188, 116, 0.09), transparent 18rem),
+    radial-gradient(circle at 100% 100%, rgba(124, 76, 164, 0.22), transparent 22rem),
+    linear-gradient(135deg, rgba(15, 11, 22, 0.92), rgba(4, 4, 11, 0.95));
+}
+
+.house-room-panel--signals .house-room-panel__inner {
+  background:
+    radial-gradient(circle at 14% 0%, rgba(218, 188, 116, 0.11), transparent 18rem),
+    radial-gradient(circle at 100% 100%, rgba(67, 108, 128, 0.2), transparent 22rem),
+    linear-gradient(135deg, rgba(10, 14, 20, 0.92), rgba(4, 4, 11, 0.95));
+}
+
+.house-room-panel--contact .house-room-panel__inner {
+  background:
+    radial-gradient(circle at 14% 0%, rgba(218, 188, 116, 0.12), transparent 18rem),
+    radial-gradient(circle at 100% 100%, rgba(109, 84, 172, 0.2), transparent 22rem),
+    linear-gradient(135deg, rgba(15, 14, 20, 0.92), rgba(4, 4, 11, 0.95));
+}
+
+/* ------------------------------------------------------------
+   Social portal chips
+------------------------------------------------------------ */
+
+.entry-social-portals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.entry-social-portals a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid rgba(218, 188, 116, 0.18);
+  border-radius: 999px;
+  color: rgba(242, 234, 217, 0.78);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.72rem;
+  text-decoration: none;
+  box-shadow: inset 0 0 1.2rem rgba(255, 255, 255, 0.025);
+}
+
+.entry-social-portals a:hover,
+.entry-social-portals a:focus-visible {
+  color: rgba(255, 235, 184, 0.96);
+  border-color: rgba(218, 188, 116, 0.46);
+  background: rgba(218, 188, 116, 0.08);
+}
+
+/* ------------------------------------------------------------
+   Responsive room relationship
+------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .house-room-field {
+    padding:
+      clamp(3.75rem, 10vw, 6rem)
+      clamp(0.9rem, 4vw, 2rem)
+      clamp(4.5rem, 12vw, 7rem);
+  }
+
+  .room-field-intro {
+    text-align: left;
+  }
+
+  .room-field-intro::before {
+    margin-left: 0;
+  }
+
+  .room-field-intro__copy {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .house-room-panel,
+  .house-room-panel:nth-of-type(odd),
+  .house-room-panel:nth-of-type(even) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .house-room-panel__inner {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .house-room-field {
+    padding-top: clamp(3.5rem, 14vw, 5rem);
+  }
+
+  .house-room-panel + .house-room-panel {
+    margin-top: 1rem;
+  }
+
+  .house-room-panel__inner {
+    padding: clamp(1.25rem, 6vw, 1.75rem);
+    border-radius: 1.1rem;
+  }
+
+  .house-room-panel__title {
+    max-width: 100%;
+  }
+
+  .house-room-panel__copy {
+    line-height: 1.65;
+  }
+
+  .entry-social-portals {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .entry-social-portals a {
+    width: 100%;
+  }
+}

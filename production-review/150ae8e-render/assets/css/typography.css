@@ -1,0 +1,43 @@
+/*
+  File: meadnyte-site/assets/css/typography.css
+  Phase: 02_Index_Page_and_Menu
+
+  Purpose:
+  - Site-wide type defaults and text rendering.
+  - This file should not control the woodmark image, sigil image, planets, starfield, or room panel layout.
+
+  Future modification instructions:
+  - Add type scales and text defaults here only.
+  - Do not replace the upper-left woodmark image with browser-rendered text.
+*/
+
+body {
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.meadnyte-entry-page {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.entry-social-portals,
+.house-room-panel__eyebrow,
+.house-room-panel__placeholder,
+.orbital-planet__label {
+  font-family: var(--font-ui);
+}
+
+::selection {
+  color: var(--color-void);
+  background: var(--color-gold-bright);
+}

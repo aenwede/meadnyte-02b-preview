@@ -1,0 +1,89 @@
+{
+  "version": "1.4.0",
+  "provider": "mailchimp",
+  "providerConfig": {
+    "action": "https://cameronnino.us19.list-manage.com/subscribe/post?u=e1615ea17d151718717da22e7&id=860ce50d04&f_id=0023aae6f0",
+    "hostedFormUrl": "https://cameronnino.us19.list-manage.com/subscribe?u=e1615ea17d151718717da22e7&id=860ce50d04",
+    "accountId": "e1615ea17d151718717da22e7",
+    "audienceId": "860ce50d04",
+    "fields": {
+      "firstName": "FIRSTNAME",
+      "lastName": "LASTNAME",
+      "email": "EMAIL"
+    },
+    "interestFields": {
+      "books": {
+        "name": "group[211678][1]",
+        "value": "1"
+      },
+      "poetry": {
+        "name": "group[211678][2]",
+        "value": "1"
+      },
+      "music": {
+        "name": "group[211678][4]",
+        "value": "1"
+      },
+      "film": {
+        "name": "group[211678][8]",
+        "value": "1"
+      },
+      "signals": {
+        "name": "group[211678][16]",
+        "value": "1"
+      },
+      "everything": {
+        "name": "group[211678][32]",
+        "value": "1"
+      }
+    },
+    "hiddenDefaults": {
+      "b_e1615ea17d151718717da22e7_860ce50d04": ""
+    },
+    "embeddedFormId": "0023aae6f0"
+  },
+  "copy": {
+    "title": "ENTER THE INNER SANCTUM",
+    "interestPrompt": "What would you like to discover?",
+    "submit": "CROSS THE THRESHOLD",
+    "consent": "I would like to receive news, creative work, and invitations from the House of Meadnyte. I understand that I can leave at any time.",
+    "pending": "A confirmation signal has been sent. Follow it to remain connected.",
+    "error": "Mailchimp did not accept this signup. Please review your information and try again.",
+    "alreadySubscribed": "This address is already connected to the House. No new Welcome Wagon enrollment was created.",
+    "providerUnavailable": "The threshold is temporarily obscured. Please continue through the secure Meadnyte signup page.",
+    "privacyUrl": "legal/privacy.htm",
+    "emailDisclosureUrl": "legal/email-and-subscriber-data.htm"
+  },
+  "interests": [
+    {
+      "id": "books",
+      "label": "Books"
+    },
+    {
+      "id": "poetry",
+      "label": "Poetry"
+    },
+    {
+      "id": "music",
+      "label": "Music"
+    },
+    {
+      "id": "film",
+      "label": "Film"
+    },
+    {
+      "id": "signals",
+      "label": "Signals"
+    },
+    {
+      "id": "everything",
+      "label": "Everything",
+      "exclusive": true
+    }
+  ],
+  "analytics": {
+    "view": "intake_view",
+    "submit": "intake_submit",
+    "accepted": "intake_accepted"
+  }
+}
