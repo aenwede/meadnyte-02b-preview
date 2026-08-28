@@ -64,6 +64,7 @@
 .contact-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .contact-status { margin: 0 0 2rem; border: 1px solid var(--house-gold-soft); padding: 1.15rem 1.3rem; color: var(--house-ivory-muted); background: rgba(3, 5, 10, 0.86); }
 .contact-status[data-state="success"] { color: var(--house-gold-bright); }
+.contact-status a { color: var(--house-gold-bright); }
 .contact-departments { border-top: 1px solid var(--house-rule); }
 .contact-departments__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--house-rule); }
 .contact-department { min-width: 0; padding: clamp(1.35rem, 3vw, 2.2rem); background: rgba(3, 5, 10, 0.92); }
@@ -87,4 +88,3 @@
   .contact-path strong { font-size: 1.08rem; }
 }
 @media (prefers-reduced-motion: reduce) { .contact-path, .contact-form button { transition: none; } }
-
