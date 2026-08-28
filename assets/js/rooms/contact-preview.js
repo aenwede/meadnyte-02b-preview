@@ -5,11 +5,10 @@
   if (!form || !status) return;
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    status.dataset.state = "success";
-    status.textContent = "Your message has entered the House. Thank you. The appropriate desk will respond as soon as reasonably possible.";
+    if (!form.reportValidity()) return;
+    status.dataset.state = "error";
+    status.textContent = "This GitHub sandbox displays the Contact Room but cannot execute its Plesk mail handler. Delivery testing must be completed on meadnyte.com after deployment.";
     status.hidden = false;
-    form.reset();
     status.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 })();
-
