@@ -268,7 +268,7 @@ body.house-page {
   .house-menu__panel { position: fixed; top: 4.5rem; right: 1rem; }
   .room-stage { width: min(100% - 2rem, var(--house-stage)); padding: 3.5rem 0 4rem; }
   .room-opening { margin-bottom: 3.25rem; }
-  .room-opening__title { letter-spacing: 0.07em; }
+  .room-opening__title { font-size: 1.25rem; letter-spacing: 0.07em; }
   .house-frame__footer {
     position: relative;
     align-items: flex-start;
