@@ -335,16 +335,6 @@ body.legal-page {
 
 /* Phase 06 Shared House Frame integration.
    Scoped so policy pages not yet migrated retain the legacy Legal presentation. */
-.house-page--legal .room-opening__title {
-  font-size: clamp(2rem, 3.25vw, 3.25rem);
-  letter-spacing: 0.08em;
-}
-
-.house-page--privacy .room-opening__title {
-  font-size: clamp(1.5rem, 2.4375vw, 2.4375rem);
-  letter-spacing: 0.08em;
-}
-
 .house-page .legal-document {
   justify-content: center;
 }
