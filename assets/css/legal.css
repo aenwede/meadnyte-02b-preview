@@ -332,3 +332,48 @@ body.legal-page {
   .legal-field::after { animation: none; }
   .legal-brand img, .legal-brand::after, .legal-card { transition: none; }
 }
+
+/* Phase 06 Shared House Frame integration.
+   Scoped so policy pages not yet migrated retain the legacy Legal presentation. */
+.house-page--legal .room-opening__title,
+.house-page--privacy .room-opening__title {
+  font-size: clamp(2rem, 3.25vw, 3.25rem);
+  letter-spacing: 0.08em;
+}
+
+.house-page .legal-document {
+  justify-content: center;
+}
+
+.house-page .legal-toc {
+  top: 8rem;
+}
+
+.house-page .legal-content section {
+  scroll-margin-top: 8rem;
+}
+
+.house-page .legal-content h2 {
+  color: rgba(238, 232, 220, 0.78);
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  line-height: 1.28;
+}
+
+.house-page .legal-content h3 {
+  color: rgba(238, 232, 220, 0.76);
+  font-size: 1.02rem;
+}
+
+.house-page .legal-content strong {
+  color: rgba(255, 248, 232, 0.82);
+}
+
+@media print {
+  .house-page .legal-toc { display: none; }
+  .house-page .legal-document { display: block; }
+  .house-page .legal-content h2,
+  .house-page .legal-content h3,
+  .house-page .legal-content strong { color: #111; }
+  .house-page .legal-content p,
+  .house-page .legal-content li { color: #333; }
+}
