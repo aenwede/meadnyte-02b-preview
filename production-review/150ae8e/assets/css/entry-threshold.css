@@ -1,0 +1,179 @@
+/*
+  File: meadnyte-site/assets/css/entry-threshold.css
+  Phase: 04_Threshold_Starfield_and_Stage_Polish
+
+  Purpose:
+  - Controls the dark threshold background, organic starfield, atmospheric haze, and page border.
+  - Corrects browser-fill behavior so the Meadnyte universe field covers the full viewport.
+  - Preserves the current visual design: dark portal field, haze, starfield, no grid pattern.
+
+  Modification boundary:
+  - Tune viewport background fill, starfield layer coverage, haze depth, and background darkness here.
+  - Do not style the upper-left woodmark here; use header.css.
+  - Do not style the central sigil here; use sigil.css.
+  - Do not style planets here; use orbital-planets.css.
+  - Do not style room panels here; use house-room-field.css.
+*/
+
+html,
+body.meadnyte-entry-page {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  background: #020106;
+}
+
+body.meadnyte-entry-page {
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(92, 59, 142, 0.28), transparent 21rem),
+    radial-gradient(circle at 72% 22%, rgba(118, 89, 170, 0.13), transparent 18rem),
+    radial-gradient(circle at 20% 82%, rgba(26, 34, 78, 0.26), transparent 26rem),
+    linear-gradient(180deg, #080613 0%, #05040c 53%, #020106 100%);
+}
+
+.entry-threshold {
+  width: 100%;
+  min-width: 100%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(92, 59, 142, 0.22), transparent 22rem),
+    radial-gradient(circle at 50% 58%, rgba(2, 1, 6, 0.24), rgba(2, 1, 6, 0.02) 54%, transparent 100%);
+}
+
+.threshold-border {
+  position: absolute;
+  inset: var(--page-edge);
+  z-index: 4;
+  border: 1px solid rgba(242, 234, 217, 0.08);
+  box-shadow:
+    inset 0 0 2.8rem rgba(103, 71, 165, 0.08),
+    inset 0 0 1rem rgba(214, 189, 120, 0.035);
+  pointer-events: none;
+}
+
+.threshold-starfield {
+  position: fixed;
+  inset: -10vmax;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  mix-blend-mode: screen;
+}
+
+.universe-background-canvas {
+  position: fixed !important;
+  inset: -10vmax !important;
+  z-index: 2 !important;
+  width: calc(100vw + 20vmax) !important;
+  height: calc(100dvh + 20vmax) !important;
+  max-width: none !important;
+  max-height: none !important;
+  pointer-events: none !important;
+}
+
+.threshold-starfield-back {
+  opacity: 0.78;
+  background-image:
+    radial-gradient(circle at 6% 7%, rgba(242, 234, 217, 0.38) 0 0.65px, transparent 1.4px),
+    radial-gradient(circle at 11% 92%, rgba(214, 189, 120, 0.34) 0 0.7px, transparent 1.5px),
+    radial-gradient(circle at 16% 42%, rgba(242, 234, 217, 0.28) 0 0.55px, transparent 1.3px),
+    radial-gradient(circle at 24% 25%, rgba(242, 234, 217, 0.32) 0 0.6px, transparent 1.4px),
+    radial-gradient(circle at 33% 68%, rgba(214, 189, 120, 0.3) 0 0.65px, transparent 1.4px),
+    radial-gradient(circle at 39% 6%, rgba(242, 234, 217, 0.3) 0 0.55px, transparent 1.3px),
+    radial-gradient(circle at 49% 57%, rgba(242, 234, 217, 0.34) 0 0.65px, transparent 1.5px),
+    radial-gradient(circle at 58% 94%, rgba(214, 189, 120, 0.32) 0 0.7px, transparent 1.5px),
+    radial-gradient(circle at 66% 45%, rgba(242, 234, 217, 0.28) 0 0.55px, transparent 1.3px),
+    radial-gradient(circle at 74% 5%, rgba(242, 234, 217, 0.34) 0 0.6px, transparent 1.4px),
+    radial-gradient(circle at 81% 66%, rgba(214, 189, 120, 0.3) 0 0.65px, transparent 1.5px),
+    radial-gradient(circle at 88% 29%, rgba(242, 234, 217, 0.32) 0 0.6px, transparent 1.4px),
+    radial-gradient(circle at 96% 96%, rgba(242, 234, 217, 0.26) 0 0.55px, transparent 1.3px);
+  animation:
+    thresholdFarStarDrift 140s linear infinite,
+    thresholdStarPulse 13s ease-in-out infinite alternate-reverse;
+}
+
+.threshold-starfield-front {
+  opacity: 0.9;
+  background-image:
+    radial-gradient(circle at 4% 19%, rgba(242, 234, 217, 0.86) 0 1.2px, transparent 2px),
+    radial-gradient(circle at 9% 48%, rgba(214, 189, 120, 0.78) 0 1.1px, transparent 2px),
+    radial-gradient(circle at 13% 77%, rgba(242, 234, 217, 0.68) 0 0.95px, transparent 1.9px),
+    radial-gradient(circle at 18% 31%, rgba(242, 234, 217, 0.72) 0 1.1px, transparent 2px),
+    radial-gradient(circle at 21% 63%, rgba(214, 189, 120, 0.7) 0 1.25px, transparent 2.1px),
+    radial-gradient(circle at 27% 12%, rgba(242, 234, 217, 0.58) 0 0.9px, transparent 1.8px),
+    radial-gradient(circle at 30% 89%, rgba(214, 189, 120, 0.62) 0 1px, transparent 2px),
+    radial-gradient(circle at 36% 41%, rgba(242, 234, 217, 0.86) 0 1.25px, transparent 2.1px),
+    radial-gradient(circle at 42% 21%, rgba(214, 189, 120, 0.76) 0 1px, transparent 1.9px),
+    radial-gradient(circle at 46% 72%, rgba(242, 234, 217, 0.7) 0 1.05px, transparent 2px),
+    radial-gradient(circle at 53% 8%, rgba(242, 234, 217, 0.55) 0 0.85px, transparent 1.8px),
+    radial-gradient(circle at 57% 36%, rgba(214, 189, 120, 0.66) 0 1.15px, transparent 2.1px),
+    radial-gradient(circle at 61% 84%, rgba(242, 234, 217, 0.76) 0 1.1px, transparent 2px),
+    radial-gradient(circle at 68% 18%, rgba(242, 234, 217, 0.82) 0 1.2px, transparent 2.1px),
+    radial-gradient(circle at 72% 58%, rgba(214, 189, 120, 0.72) 0 1px, transparent 2px),
+    radial-gradient(circle at 79% 34%, rgba(242, 234, 217, 0.64) 0 0.95px, transparent 1.9px),
+    radial-gradient(circle at 84% 76%, rgba(214, 189, 120, 0.78) 0 1.15px, transparent 2.1px),
+    radial-gradient(circle at 91% 13%, rgba(242, 234, 217, 0.72) 0 1px, transparent 1.9px),
+    radial-gradient(circle at 95% 54%, rgba(242, 234, 217, 0.58) 0 0.9px, transparent 1.8px),
+    radial-gradient(circle at 98% 88%, rgba(214, 189, 120, 0.64) 0 1.05px, transparent 2px);
+  animation:
+    thresholdNearStarDrift 96s linear infinite,
+    thresholdStarPulse 9s ease-in-out infinite alternate;
+}
+
+.threshold-haze {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(105, 75, 166, 0.18), transparent 17rem),
+    radial-gradient(circle at 50% 52%, rgba(218, 191, 117, 0.08), transparent 9rem),
+    radial-gradient(circle at 50% 50%, transparent 0 28rem, rgba(0, 0, 0, 0.26) 48rem, rgba(0, 0, 0, 0.72) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent 22%, transparent 78%, rgba(0, 0, 0, 0.36));
+}
+
+@keyframes thresholdNearStarDrift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(-2.5%, 1.8%, 0) scale(1.035);
+  }
+}
+
+@keyframes thresholdFarStarDrift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(2.2%, -1.4%, 0) scale(1.025);
+  }
+}
+
+@keyframes thresholdStarPulse {
+  from {
+    opacity: 0.62;
+    filter: brightness(0.9);
+  }
+
+  to {
+    opacity: 0.98;
+    filter: brightness(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .threshold-starfield-back,
+  .threshold-starfield-front {
+    animation: none !important;
+  }
+}

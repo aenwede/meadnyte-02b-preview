@@ -1,0 +1,57 @@
+/*
+  File: meadnyte-site/assets/css/header.css
+  Phase: 02_Index_Page_and_Menu
+
+  Purpose:
+  - Controls only the upper-left Meadnyte woodmark.
+  - The uploaded video target shows the woodmark in the upper-left.
+  - The mark must be the image asset, not browser-rendered text.
+
+  Future modification instructions:
+  - Woodmark size/opacity has been accepted unless Aham explicitly reopens it.
+  - Do not move the woodmark to the lower-left or upper-right.
+  - Do not add a conventional navigation/header bar here.
+*/
+
+.entry-header {
+  position: fixed;
+  top: var(--header-top);
+  left: var(--header-left);
+  z-index: 40;
+  width: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.entry-woodmark {
+  display: block;
+  width: clamp(11.5rem, 17vw, 18rem);
+  opacity: 0.92;
+  text-decoration: none;
+  filter: drop-shadow(0 0 0.6rem rgba(214, 189, 120, 0.08));
+  transition:
+    opacity var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.entry-woodmark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.entry-woodmark:hover,
+.entry-woodmark:focus-visible {
+  opacity: 1;
+  filter:
+    drop-shadow(0 0 0.6rem rgba(214, 189, 120, 0.14))
+    drop-shadow(0 0 1.4rem rgba(111, 75, 166, 0.12));
+}
+
+@media (max-width: 900px) {
+  .entry-woodmark {
+    width: clamp(10.5rem, 38vw, 15rem);
+  }
+}

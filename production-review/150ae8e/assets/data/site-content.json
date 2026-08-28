@@ -1,0 +1,69 @@
+{
+  "_file": "meadnyte-site/assets/data/site-content.json",
+  "_scope": "02_Index_Page_and_Menu",
+  "_futureModificationInstruction": "JSON does not allow real comments. Keep locked room IDs exactly: about, house, listen, watch, signals, contact. Do not add deprecated room IDs from earlier builds in this phase. Future copy refinement may edit room text, but the ID system should stay locked unless a later phase formally reopens it.",
+  "version": "0.7-02-index-page-and-menu",
+  "brand": {
+    "name": "Meadnyte",
+    "fullName": "The House of Meadnyte",
+    "essenceLine": "The sound of something buried beginning to breathe.",
+    "assets": {
+      "woodmark": "assets/img/woodmark.png",
+      "logo": "assets/img/logo.png"
+    }
+  },
+  "menu": [
+    { "id": "about", "label": "About", "href": "#about", "status": "active" },
+    { "id": "house", "label": "House", "href": "#house", "status": "active" },
+    { "id": "listen", "label": "Listen", "href": "#listen", "status": "active" },
+    { "id": "watch", "label": "Watch", "href": "#watch", "status": "active" },
+    { "id": "signals", "label": "Signals", "href": "#signals", "status": "active" },
+    { "id": "contact", "label": "Contact", "href": "#contact", "status": "active" }
+  ],
+  "entry": {
+    "type": "central-orbital-portal",
+    "centralMark": "assets/img/logo.png",
+    "brandPlacement": "upper-left woodmark image",
+    "roomBehavior": "same-page panel reveal",
+    "planetMotion": "true JS-driven orbit",
+    "visualTarget": "visible dark starfield, central logo sigil, six moving orbital room nodes, subtle orbit rings and glow"
+  },
+  "rooms": {
+    "about": {
+      "eyebrow": "About",
+      "title": "About Meadnyte",
+      "copy": "Meadnyte is the public threshold for sound, story, image, memory, and the slow return of things that were not ready to speak until now.",
+      "placeholder": "About room placeholder."
+    },
+    "house": {
+      "eyebrow": "House",
+      "title": "The House",
+      "copy": "The central room of Meadnyte. This is where visitors orient themselves before moving into books, music, images, signals, and future project rooms.",
+      "placeholder": "House introduction module placeholder."
+    },
+    "listen": {
+      "eyebrow": "Listen",
+      "title": "Listen",
+      "copy": "A listening room for readings, fragments, audio medallions, SoundCloud entries, and future project-specific audio portals.",
+      "placeholder": "Audio player / SoundCloud embed placeholder."
+    },
+    "watch": {
+      "eyebrow": "Watch",
+      "title": "Watch",
+      "copy": "A room for visual work, video releases, motion experiments, readings on screen, and future public visual portals.",
+      "placeholder": "Video / visual portal placeholder."
+    },
+    "signals": {
+      "eyebrow": "Signals",
+      "title": "Signals",
+      "copy": "Public updates, launch notes, short announcements, new releases, and dispatches from inside the House.",
+      "placeholder": "Latest signal / announcement card placeholder."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Contact",
+      "copy": "Reach the House of Meadnyte, follow the public rooms as they open, or enter through one of the social media portals below.",
+      "placeholder": "Contact and social portal placeholder."
+    }
+  }
+}

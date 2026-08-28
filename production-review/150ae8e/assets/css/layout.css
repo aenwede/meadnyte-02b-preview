@@ -1,0 +1,200 @@
+/*
+  File: meadnyte-site/assets/css/layout.css
+  Phase: 03_Global_Page_Scaffold_and_Viewport
+
+  Purpose:
+  - Restores the landing page as a portal-first threshold.
+  - Removes the forced long-page behavior created for the temporary stacked-room scaffold.
+  - Keeps the orbital stage centered and visible.
+  - Allows only controlled overflow on cramped screens.
+  - Does not modify orbital planet design or speed.
+
+  Future modification instructions:
+  - Use this file only for page-level viewport, scroll, section containment, footer visibility, and threshold relationship.
+  - Do not tune starfield density here.
+  - Do not tune planet design or speed here.
+  - Do not restore stacked room cards here.
+*/
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+  background: #03030a;
+}
+
+body.meadnyte-entry-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(77, 62, 122, 0.2), transparent 34rem),
+    radial-gradient(circle at 50% 58%, rgba(7, 10, 26, 0.94), #020208 68%);
+  color: rgba(246, 238, 218, 0.92);
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  transform: translateY(-160%);
+  padding: 0.7rem 0.95rem;
+  border: 1px solid rgba(231, 203, 142, 0.45);
+  border-radius: 999px;
+  background: rgba(5, 5, 14, 0.92);
+  color: rgba(255, 243, 212, 0.96);
+  text-decoration: none;
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.entry-header {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 80;
+  width: 100%;
+  height: 0;
+  pointer-events: none;
+}
+
+.entry-woodmark {
+  pointer-events: auto;
+}
+
+.entry-main {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.entry-threshold {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  padding:
+    clamp(5rem, 8vh, 6.75rem)
+    clamp(1rem, 3vw, 2.5rem)
+    clamp(4.25rem, 8vh, 6.5rem);
+}
+
+.entry-threshold::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 2;
+  height: min(22vh, 13rem);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(3, 3, 10, 0.58) 62%,
+    rgba(3, 3, 10, 0.9)
+  );
+}
+
+.entry-threshold > * {
+  position: relative;
+}
+
+.entry-threshold .orbital-stage {
+  z-index: 20;
+}
+
+.threshold-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1.15rem, 3vh, 2rem);
+  z-index: 30;
+  display: inline-grid;
+  justify-items: center;
+  gap: 0.45rem;
+  transform: translateX(-50%);
+  color: rgba(237, 213, 161, 0.72);
+  text-decoration: none;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: clamp(0.58rem, 1vw, 0.68rem);
+  line-height: 1;
+  opacity: 0.84;
+}
+
+.threshold-scroll-cue:hover,
+.threshold-scroll-cue:focus-visible {
+  color: rgba(255, 239, 194, 0.96);
+  opacity: 1;
+}
+
+.threshold-scroll-cue__mark {
+  width: 1px;
+  height: clamp(1.65rem, 4vh, 2.5rem);
+  background: linear-gradient(
+    to bottom,
+    rgba(237, 213, 161, 0.05),
+    rgba(237, 213, 161, 0.78),
+    rgba(237, 213, 161, 0.05)
+  );
+}
+
+.entry-footer {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .entry-threshold {
+    padding:
+      clamp(5.25rem, 10vh, 7rem)
+      clamp(0.85rem, 3vw, 1.5rem)
+      clamp(4.75rem, 9vh, 7rem);
+  }
+}
+
+@media (max-width: 620px) {
+  body.meadnyte-entry-page {
+    overflow-y: auto;
+  }
+
+  .entry-threshold {
+    height: auto;
+    min-height: 100svh;
+    place-items: center;
+    padding-top: clamp(5.75rem, 12vh, 7rem);
+    padding-bottom: clamp(5.25rem, 12vh, 7.5rem);
+  }
+
+  .threshold-scroll-cue {
+    bottom: clamp(0.85rem, 2vh, 1.25rem);
+  }
+}
+
+@media (max-height: 720px) and (min-width: 700px) {
+  body.meadnyte-entry-page {
+    overflow-y: auto;
+  }
+
+  .entry-threshold {
+    height: auto;
+    min-height: 44rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

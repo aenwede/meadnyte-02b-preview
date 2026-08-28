@@ -1,0 +1,163 @@
+/* File: assets/css/utilities.css */
+
+/*
+  Meadnyte Website Build v0.5
+  Utility layer.
+
+  Small single-purpose helpers only.
+  Keep major visual design in base.css, layout.css, and components.css.
+*/
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+.u-center {
+  text-align: center;
+}
+
+.u-left {
+  text-align: left;
+}
+
+.u-right {
+  text-align: right;
+}
+
+.u-muted {
+  color: rgba(242, 234, 217, 0.62);
+}
+
+.u-gold {
+  color: var(--color-soft-gold);
+}
+
+.u-cream {
+  color: var(--color-cream);
+}
+
+.u-max-readable {
+  max-width: 42rem;
+}
+
+.u-max-narrow {
+  max-width: 32rem;
+}
+
+.u-max-wide {
+  max-width: 64rem;
+}
+
+.u-flow > * + * {
+  margin-top: 1rem;
+}
+
+.u-flow-sm > * + * {
+  margin-top: 0.65rem;
+}
+
+.u-flow-lg > * + * {
+  margin-top: 1.5rem;
+}
+
+.u-stack-sm {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.u-stack-md {
+  display: grid;
+  gap: 1rem;
+}
+
+.u-stack-lg {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.u-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.u-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.u-border-top {
+  border-top: 1px solid var(--color-line);
+}
+
+.u-border-bottom {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.u-soft-panel {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-panel);
+}
+
+.u-shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.u-uppercase {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.u-no-decoration {
+  text-decoration: none;
+}
+
+.u-full-width {
+  width: 100%;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-z-1 {
+  z-index: 1;
+}
+
+@media (max-width: 700px) {
+  .u-grid-2,
+  .u-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .u-mobile-left {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
