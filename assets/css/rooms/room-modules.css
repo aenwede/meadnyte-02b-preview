@@ -1,0 +1,22 @@
+/*
+  Dormant Room Presentation Modules — Phase 06
+  A module has no effect until its class appears in room markup.
+*/
+.room-module { min-width: 0; }
+.room-module--feature { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(16rem, 0.75fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
+.room-module--gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
+.room-module--playlist { border-block: 1px solid var(--house-rule); }
+.room-module--playlist > * { padding: 1rem 0; border-bottom: 1px solid var(--house-rule); }
+.room-module--playlist > :last-child { border-bottom: 0; }
+.room-module--cinema { width: min(100%, 90rem); margin-inline: auto; }
+.room-module--doorways { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1px; background: var(--house-rule); border: 1px solid var(--house-rule); }
+.room-module--timeline { border-left: 1px solid var(--house-rule); padding-left: clamp(1rem, 3vw, 2.5rem); }
+.room-module--timeline > * { position: relative; margin-bottom: 2rem; }
+.room-module--timeline > *::before { content: ""; position: absolute; left: calc(clamp(1rem, 3vw, 2.5rem) * -1 - 3px); top: 0.65rem; width: 5px; height: 5px; border-radius: 50%; background: var(--house-gold); }
+.room-module--archive { display: grid; gap: 1px; background: var(--house-rule); border: 1px solid var(--house-rule); }
+.room-module--quote { width: min(42rem, 100%); margin-inline: auto; text-align: center; }
+.room-module--quote blockquote { margin: 0; color: var(--house-ivory); font-size: clamp(1.4rem, 3vw, 2.35rem); line-height: 1.4; }
+.room-module--form { width: min(42rem, 100%); }
+@media (max-width: 700px) {
+  .room-module--feature { grid-template-columns: 1fr; }
+}
