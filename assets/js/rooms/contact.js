@@ -45,7 +45,7 @@
 
     status.dataset.state = "success";
     status.replaceChildren(
-      document.createTextNode("Your email application should now open with a prepared message to "),
+      document.createTextNode("Your configured email service should now open with a prepared message to "),
       fallback,
       document.createTextNode(". Review it and press Send there to deliver it to the House.")
     );
