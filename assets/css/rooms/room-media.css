@@ -1,37 +1,121 @@
 /*
   Shared Room Media — Phase 06
-  Images, galleries, video, audio, posters, and captions.
+  Semantic figures, poster-first video, audio, galleries, and captions.
 */
 .media-frame {
   min-width: 0;
   margin: 0;
   overflow: hidden;
   border: 1px solid var(--house-rule);
-  background: rgba(0, 0, 0, 0.32);
+  background: rgba(0, 0, 0, 0.22);
 }
+.media-frame picture,
 .media-frame img,
 .media-frame video,
-.media-frame iframe { display: block; width: 100%; height: auto; }
+.media-frame iframe { display: block; width: 100%; }
+.media-frame img { height: auto; object-fit: contain; }
+.media-frame--landscape .media-frame__surface { aspect-ratio: 16 / 10; }
+.media-frame--video .media-frame__surface,
 .media-frame--video video,
-.media-frame--video iframe { aspect-ratio: 16 / 9; border: 0; object-fit: contain; }
-.media-frame--portrait img { aspect-ratio: 4 / 5; object-fit: cover; }
-.media-frame--square img { aspect-ratio: 1; object-fit: cover; }
-.media-frame audio { display: block; width: calc(100% - 2rem); margin: 1rem; }
+.media-frame--video iframe { aspect-ratio: 16 / 9; }
+.media-frame--portrait .media-frame__surface { aspect-ratio: 4 / 5; }
+.media-frame--square .media-frame__surface { aspect-ratio: 1; }
+
+.media-frame__surface {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 12rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 68% 32%, rgba(215, 185, 111, 0.14), transparent 19%),
+    radial-gradient(circle at 31% 61%, rgba(102, 78, 140, 0.3), transparent 34%),
+    linear-gradient(145deg, #080b13, #020307 72%);
+}
+.media-frame__surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.42;
+  background-image:
+    radial-gradient(circle, rgba(238, 232, 220, 0.6) 0 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(215, 185, 111, 0.45) 0 1px, transparent 1.4px);
+  background-position: 1rem 1.5rem, 4.2rem 3.4rem;
+  background-size: 6.5rem 7.5rem, 9rem 8rem;
+}
+.media-frame__placeholder {
+  position: relative;
+  z-index: 1;
+  max-width: 24rem;
+  padding: 1.25rem;
+  color: var(--house-ivory-muted);
+  font: 700 0.65rem/1.6 var(--house-ui);
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.media-frame__placeholder-state[hidden] { display: none; }
+.media-frame__placeholder-state {
+  margin-top: 0.75rem;
+  color: var(--house-gold-bright);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
 .media-frame figcaption,
 .media-caption {
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1rem 1rem;
   color: var(--house-faint);
-  font: 0.68rem/1.55 var(--house-ui);
-  letter-spacing: 0.05em;
+  font: 0.72rem/1.55 var(--house-ui);
+  letter-spacing: 0.035em;
 }
+.media-caption strong { color: var(--house-ivory-muted); font-weight: 700; }
+.media-caption a { color: var(--house-gold); }
+
 .media-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
   gap: clamp(0.75rem, 2vw, 1.5rem);
 }
+
 .media-poster { position: relative; }
+.media-poster__action,
+.room-audio__button {
+  border: 1px solid rgba(215, 185, 111, 0.42);
+  color: var(--house-gold-bright);
+  background: rgba(2, 3, 7, 0.82);
+  font: 700 0.65rem/1 var(--house-ui);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 .media-poster__action {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 2;
+  min-width: 8rem;
+  min-height: 3rem;
+  padding: 0.95rem 1.25rem;
+}
+.media-poster__action:hover,
+.media-poster__action:focus-visible,
+.room-audio__button:hover,
+.room-audio__button:focus-visible { color: var(--house-void); background: var(--house-gold-bright); }
+.media-poster__action:focus-visible,
+.room-audio__button:focus-visible { outline: 1px solid var(--house-ivory); outline-offset: 0.25rem; }
+
+.room-audio {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-block: 1px solid var(--house-rule);
+  background: linear-gradient(90deg, rgba(9, 12, 20, 0.54), transparent);
+}
+.room-audio__meta { margin-bottom: 1rem; }
+.room-audio__title { margin: 0; color: var(--house-ivory); font-size: 1.35rem; font-weight: 400; }
+.room-audio__collection { margin: 0.3rem 0 0; color: var(--house-faint); font: 0.7rem/1.5 var(--house-ui); letter-spacing: 0.08em; }
+.room-audio audio { width: 100%; accent-color: var(--house-gold); }
+.room-audio__links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; margin-top: 0.9rem; }
+.room-audio__links a { color: var(--house-gold); font: 700 0.62rem/1.5 var(--house-ui); letter-spacing: 0.1em; text-transform: uppercase; }
+
+@media (prefers-reduced-motion: reduce) {
+  .media-poster__action,
+  .room-audio__button { transition: none; }
 }
