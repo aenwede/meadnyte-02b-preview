@@ -68,9 +68,9 @@
 .house-feature__track span { display: block; width: 18%; height: 1px; background: var(--house-gold); }
 .house-feature__player p { margin: 0; color: var(--house-faint); font: 0.67rem/1.4 var(--house-ui); letter-spacing: 0.08em; }
 
-.house-feature__doorway { display: inline-flex; align-items: center; gap: 1rem; margin-top: 2.2rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(215, 185, 111, 0.34); color: var(--house-gold); font: 700 0.64rem/1.2 var(--house-ui); letter-spacing: 0.18em; text-decoration: none; text-transform: uppercase; }
+.house-feature__doorway { display: inline-flex; align-items: center; gap: 1rem; margin: 1rem 0 0.3rem; padding: 0.9rem 1.15rem; border: 1px solid rgba(215, 185, 111, 0.42); color: var(--house-gold); background: rgba(3, 5, 10, 0.58); font: 700 0.64rem/1.2 var(--house-ui); letter-spacing: 0.18em; text-decoration: none; text-transform: uppercase; }
 .house-feature__doorway::after { content: "→"; color: var(--house-gold-bright); font-size: 1rem; }
-.house-feature__doorway:hover, .house-feature__doorway:focus-visible { color: var(--house-gold-bright); border-color: var(--house-gold); }
+.house-feature__doorway:hover, .house-feature__doorway:focus-visible { color: var(--house-gold-bright); border-color: var(--house-gold); background: rgba(20, 18, 16, 0.78); }
 .house-feature__doorway:focus-visible { outline: 1px solid var(--house-gold); outline-offset: 0.4rem; }
 
 .house-room-heading { width: min(46rem, 100%); margin-bottom: clamp(2.5rem, 6vw, 5rem); }
