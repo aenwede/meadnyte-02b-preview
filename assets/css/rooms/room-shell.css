@@ -160,13 +160,14 @@ body.house-page {
 .house-menu[open] summary::after { content: " −"; }
 .house-menu__panel {
   position: absolute;
-  top: calc(100% + 1rem);
+  top: calc(100% + 0.35rem);
   right: 0;
-  width: min(18rem, calc(100vw - 2rem));
-  padding: 1rem 1.2rem;
+  width: min(12rem, calc(100vw - 2rem));
+  padding: 0.75rem 1rem;
   border: 1px solid var(--house-gold-soft);
   background: rgba(2, 3, 7, 0.97);
   box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.48);
+  text-align: right;
 }
 .house-menu__panel a {
   display: block;
