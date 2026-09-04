@@ -1,6 +1,15 @@
 (function () {
   "use strict";
 
+  const navigationSource = document.currentScript?.src;
+  if (navigationSource && !document.querySelector("script[data-house-navigation]")) {
+    const navigationScript = document.createElement("script");
+    navigationScript.src = new URL("house-navigation.js?v=nav.2", navigationSource).href;
+    navigationScript.defer = true;
+    navigationScript.dataset.houseNavigation = "";
+    document.head.append(navigationScript);
+  }
+
   const field = document.querySelector(".chamber-field");
   if (!field) return;
 

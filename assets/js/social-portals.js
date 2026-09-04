@@ -1,6 +1,15 @@
 (() => {
   "use strict";
 
+  const navigationSource = document.currentScript?.src;
+  if (navigationSource && !document.querySelector("script[data-house-navigation]")) {
+    const navigationScript = document.createElement("script");
+    navigationScript.src = new URL("house-navigation.js?v=nav.2", navigationSource).href;
+    navigationScript.defer = true;
+    navigationScript.dataset.houseNavigation = "";
+    document.head.append(navigationScript);
+  }
+
   const PROJECT_ROOT = new URL("../../", document.currentScript.src);
   const DATA_URL = new URL("assets/data/social-portals.json", PROJECT_ROOT);
   const mounts = [...document.querySelectorAll("[data-social-portals]")];
