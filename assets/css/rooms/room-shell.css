@@ -5,7 +5,12 @@
 /*
   Shared House Frame — Phase 06
   Permanent perimeter architecture for public rooms and policy pages.
-  Does not control the Threshold, orbital motion, or 05A holding pages.
+
+  Boundary after shared-navigation correction:
+  - This file controls the House Frame, atmosphere, brand placement, room stage, and footer.
+  - assets/css/house-navigation.css controls breadcrumbs, menu trigger, menu panel, link spacing,
+    menu focus/hover states, and mobile menu behavior.
+  - Do not reintroduce .house-navigation, .house-crumbs, .house-menu, or .house-menu__panel rules here.
 */
 :root {
   --house-void: #020307;
@@ -96,7 +101,12 @@ body.house-page {
   background: linear-gradient(to bottom, rgba(2, 3, 7, 0.5), transparent 17rem, transparent calc(100% - 12rem), rgba(2, 3, 7, 0.78));
 }
 
-.house-frame { position: relative; z-index: 1; min-height: 100vh; }
+.house-frame {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
 .house-frame__header {
   position: fixed;
   inset: 0 0 auto;
@@ -109,86 +119,42 @@ body.house-page {
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(2, 3, 7, 0.98), rgba(2, 3, 7, 0.72) 56%, transparent);
 }
+
 .house-frame__brand,
-.house-navigation,
-.house-menu { pointer-events: auto; }
-.house-frame__brand { display: block; width: clamp(10rem, 18vw, 17rem); flex: 0 1 auto; }
+.house-frame__footer a {
+  pointer-events: auto;
+}
+
+.house-frame__brand {
+  display: block;
+  width: clamp(10rem, 18vw, 17rem);
+  flex: 0 1 auto;
+}
+
 .house-frame__brand img {
   display: block;
   width: 100%;
   height: auto;
   transition: filter 180ms ease, opacity 180ms ease;
 }
+
 .house-frame__brand:hover img,
 .house-frame__brand:focus-visible img {
   filter: brightness(1.16) drop-shadow(0 0 0.55rem rgba(215, 185, 111, 0.4));
 }
-.house-frame__brand:focus-visible,
-.house-crumbs a:focus-visible,
-.house-menu summary:focus-visible,
-.house-menu a:focus-visible,
-.house-frame__footer a:focus-visible {
-  outline: 1px solid var(--house-gold);
-  outline-offset: 0.35rem;
-}
-
-.house-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: clamp(1rem, 2vw, 2rem);
-  min-width: 0;
-  padding-top: 0.35rem;
-  font: 700 0.62rem/1.4 var(--house-ui);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-.house-crumbs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.35rem 0.65rem;
-  color: var(--house-faint);
-}
-.house-crumbs a { color: inherit; text-decoration: none; }
-.house-crumbs a:hover { color: var(--house-gold); }
-.house-crumbs [aria-current="page"] { color: var(--house-gold-bright); }
-.house-menu { position: relative; }
-.house-menu summary { color: var(--house-gold); cursor: pointer; list-style: none; white-space: nowrap; }
-.house-menu summary::-webkit-details-marker { display: none; }
-.house-menu summary::after { content: " +"; }
-.house-menu[open] summary::after { content: " −"; }
-.house-menu__panel {
-  position: absolute;
-  top: calc(100% + 0.35rem);
-  right: 0;
-  width: min(12rem, calc(100vw - 2rem));
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--house-gold-soft);
-  background: rgba(2, 3, 7, 0.97);
-  box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.48);
-  text-align: right;
-}
-.house-menu__panel a {
-  display: block;
-  padding: 0.58rem 0;
-  border-bottom: 1px solid var(--house-rule);
-  color: var(--house-ivory-muted);
-  text-decoration: none;
-}
-.house-menu__panel a:last-child { border-bottom: 0; }
-.house-menu__panel a:hover { color: var(--house-gold-bright); }
 
 .room-stage {
   width: min(var(--house-stage), calc(100% - 2rem));
   margin: 0 auto;
   padding: clamp(9rem, 14vw, 12rem) 0 clamp(8.5rem, 12vw, 11rem);
 }
+
 .room-opening {
   width: min(58rem, 100%);
   margin: 0 auto clamp(3.5rem, 7vw, 6rem);
   text-align: center;
 }
+
 .room-opening__eyebrow,
 .room-opening__meta,
 .house-content-label {
@@ -196,12 +162,14 @@ body.house-page {
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
+
 .room-opening__eyebrow {
   margin: 0 0 1.25rem;
   color: var(--house-gold);
   font-size: 0.7rem;
   font-weight: 700;
 }
+
 .room-opening__title {
   margin: 0 0 1.35rem;
   color: var(--house-gold);
@@ -211,6 +179,7 @@ body.house-page {
   line-height: 1.04;
   text-transform: uppercase;
 }
+
 .room-opening__inscription {
   width: min(46rem, 100%);
   margin: 0 auto;
@@ -218,6 +187,7 @@ body.house-page {
   font-size: clamp(1.02rem, 1.5vw, 1.2rem);
   line-height: 1.72;
 }
+
 .room-opening__meta {
   display: flex;
   flex-wrap: wrap;
@@ -227,6 +197,7 @@ body.house-page {
   color: var(--house-faint);
   font-size: 0.59rem;
 }
+
 .room-content-field { min-width: 0; }
 
 .house-frame__footer {
@@ -245,6 +216,7 @@ body.house-page {
   pointer-events: none;
   background: linear-gradient(to top, rgba(2, 3, 7, 0.98), rgba(2, 3, 7, 0.64) 54%, transparent);
 }
+
 .house-frame__identity,
 .house-frame__signals,
 .house-frame__legal,
@@ -255,6 +227,7 @@ body.house-page {
 .house-frame__footer a { color: inherit; text-decoration: none; }
 .house-frame__footer a:hover,
 .house-frame__footer a[aria-current="page"] { color: var(--house-gold); }
+.house-frame__footer a:focus-visible { outline: 1px solid var(--house-gold); outline-offset: 0.35rem; }
 .house-frame__signals .social-portals { gap: 0.18rem; }
 
 @media (max-width: 640px) {
@@ -264,9 +237,6 @@ body.house-page {
     background: rgba(2, 3, 7, 0.94);
   }
   .house-frame__brand { width: 9.5rem; }
-  .house-navigation { gap: 0.75rem; padding-top: 0.1rem; }
-  .house-crumbs { display: none; }
-  .house-menu__panel { position: fixed; top: 4.5rem; right: 1rem; }
   .room-stage { width: min(100% - 2rem, var(--house-stage)); padding: 3.5rem 0 4rem; }
   .room-opening { margin-bottom: 3.25rem; }
   .room-opening__title { font-size: 1.25rem; letter-spacing: 0.07em; }
