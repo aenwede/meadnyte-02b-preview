@@ -86,11 +86,11 @@
 
 .house-menu__panel {
   position: absolute;
-  top: calc(100% + 0.35rem);
+  top: 100%;
   right: 0;
   width: min(12rem, calc(100vw - 2rem));
   padding: 0.75rem 1rem;
-  border: 1px solid var(--house-gold-soft, rgba(215, 185, 111, 0.24));
+  border: 0;
   background: rgba(2, 3, 7, 0.97);
   box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.48);
   text-align: right;
@@ -99,13 +99,9 @@
 .house-menu__panel a {
   display: block;
   padding: 0.58rem 0;
-  border-bottom: 1px solid var(--house-rule, rgba(215, 185, 111, 0.16));
+  border-bottom: 0;
   color: var(--house-ivory-muted, rgba(238, 232, 220, 0.7));
   text-align: right;
-}
-
-.house-menu__panel a:last-child {
-  border-bottom: 0;
 }
 
 .house-menu__panel a:hover,
@@ -139,9 +135,9 @@
   }
 
   .house-menu__panel {
-    position: fixed;
-    top: 4.5rem;
-    right: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
   }
 }
 
