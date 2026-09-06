@@ -111,6 +111,9 @@
   object-fit: cover;
   transition: filter 260ms ease, transform 420ms ease;
 }
+.house-project--full-poster .house-project__visual img {
+  object-fit: contain;
+}
 .house-project__body {
   display: flex;
   flex-direction: column;
