@@ -76,63 +76,6 @@
 .house-room-heading { width: min(46rem, 100%); margin-bottom: clamp(2.5rem, 6vw, 5rem); }
 .house-room-heading h2 { margin: 0 0 1.3rem; color: var(--house-ivory); font-size: clamp(2.4rem, 6vw, 5.5rem); font-weight: 400; letter-spacing: -0.035em; line-height: 1; }
 .house-room-heading > p:last-child { margin: 0; color: var(--house-ivory-muted); font-size: 1.08rem; }
-.house-projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
-  gap: clamp(2.5rem, 4.5vw, 4.5rem) clamp(1.4rem, 2.8vw, 2.6rem);
-}
-.house-project {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  min-width: 0;
-  color: inherit;
-  text-decoration: none;
-}
-.house-project__visual {
-  position: relative;
-  aspect-ratio: 4 / 5;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid rgba(215, 185, 111, 0.24);
-  background: rgba(3, 5, 10, 0.94);
-}
-.house-project__visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, transparent 58%, rgba(2, 3, 7, 0.2));
-  box-shadow: inset 0 0 2rem rgba(2, 3, 7, 0.14);
-}
-.house-project__visual img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: filter 260ms ease, transform 420ms ease;
-}
-.house-project--full-poster .house-project__visual img {
-  object-fit: contain;
-}
-.house-project__body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.4rem 0.2rem 0;
-  border-top: 1px solid rgba(215, 185, 111, 0.17);
-}
-.house-project__code { margin: 0 0 1.15rem; color: var(--house-gold); font: 700 0.72rem/1 var(--house-ui); letter-spacing: 0.18em; text-transform: uppercase; }
-.house-project h3 { margin: 0 0 0.85rem; color: var(--house-ivory); font-size: clamp(1.75rem, 2.7vw, 2.6rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.02; }
-.house-project__medium { margin: 0 0 1rem; color: var(--house-faint); font: 700 0.75rem/1.4 var(--house-ui); letter-spacing: 0.13em; text-transform: uppercase; }
-.house-project__tagline { margin: 0 0 0.75rem; color: var(--house-ivory); font-size: 1.08rem; font-style: italic; line-height: 1.45; }
-.house-project__text { margin: 0; color: var(--house-ivory-muted); font-size: 1rem; line-height: 1.65; }
-.house-project__threshold { display: inline-flex; align-items: center; gap: 0.65rem; margin-top: auto; padding-top: 1.35rem; color: var(--house-gold); font: 700 0.76rem/1.3 var(--house-ui); letter-spacing: 0.13em; text-transform: uppercase; }
-a.house-project .house-project__threshold::after { content: "→"; color: var(--house-gold-bright); font-size: 0.95rem; }
-a.house-project:hover .house-project__visual img, a.house-project:focus-visible .house-project__visual img { filter: brightness(1.08); transform: scale(1.025); }
-a.house-project:hover .house-project__threshold, a.house-project:focus-visible .house-project__threshold { color: var(--house-gold-bright); }
-a.house-project:focus-visible { outline: 1px solid var(--house-gold); outline-offset: 0.55rem; }
-.house-project--forming .house-project__visual { border-color: rgba(238, 232, 220, 0.13); }
-.house-project--forming .house-project__threshold { color: var(--house-faint); }
 
 .house-places { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; border-block: 1px solid var(--house-rule); background: var(--house-rule); }
 .house-place { display: grid; min-height: 10rem; align-content: space-between; padding: clamp(1.4rem, 3vw, 2.2rem); color: inherit; background: rgba(3, 5, 10, 0.9); text-decoration: none; }
@@ -153,17 +96,15 @@ a.house-project:focus-visible { outline: 1px solid var(--house-gold); outline-of
   .house-feature__content > h2 { font-size: clamp(2.7rem, 14vw, 4.6rem); }
   .house-feature__listen-heading { flex-direction: column; }
   .house-feature__listen-heading > span { text-align: left; }
-  .house-projects { gap: 3.5rem; }
   .house-places { grid-template-columns: 1fr; }
 }
 
 @media print {
-  .house-room-page::before, .house-feature::before, .house-project__visual::after { display: none; }
+  .house-room-page::before, .house-feature::before { display: none; }
   .house-feature { grid-template-columns: 0.75fr 1.25fr; }
-  .house-feature__content > h2, .house-feature__copy, .house-room-heading h2, .house-project h3 { color: #111; }
+  .house-feature__content > h2, .house-feature__copy, .house-room-heading h2 { color: #111; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .house-feature__art { transform: none; }
-  .house-project__visual img { transition: none; }
 }
