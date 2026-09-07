@@ -36,6 +36,9 @@
     const remaining = room.querySelector('[data-audio-remaining]');
     const landscape = room.querySelector('.progress-landscape');
     const status = room.querySelector('[data-audio-status]');
+    const activeLine = room.querySelector('[data-active-line]');
+    const cueData = room.querySelector('[data-poem-cues]');
+    const cues = cueData ? JSON.parse(cueData.textContent || '[]') : [];
     const lines = [...document.querySelectorAll('[data-poem-lines] [data-line]')];
     let active = -1;
     allAudio.add(audio);
@@ -45,6 +48,14 @@
       landscape.style.setProperty('--progress', `${ratio * 100}%`);
       elapsed.value = format(audio.currentTime);
       remaining.value = `−${format(Math.max(0, duration - audio.currentTime))}`;
+      if (activeLine && cues.length) {
+        const cue = cues.find(entry => ratio >= entry.start && ratio < entry.end) || cues[cues.length - 1];
+        if (activeLine.textContent !== cue.text) {
+          activeLine.classList.remove('is-visible');
+          activeLine.textContent = cue.text;
+          requestAnimationFrame(() => activeLine.classList.add('is-visible'));
+        }
+      }
       if (lines.length) {
         const weights = lines.map(line => Math.max(2, line.textContent.trim().split(/\s+/).length));
         const total = weights.reduce((a,b) => a+b, 0); let sum = 0, next = 0;
