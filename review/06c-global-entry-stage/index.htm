@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="https://meadnyte.com/house/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>House — The House of Meadnyte</title>
+  <meta name="description" content="Enter the project universe of The House of Meadnyte.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="https://aenwede.github.io/meadnyte-02b-preview/review/06c-global-entry-stage/">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../assets/css/rooms/room-shell.css?v=06.4">
+  <link rel="stylesheet" href="../assets/css/house-navigation.css?v=nav.2">
+  <link rel="stylesheet" href="../assets/css/rooms/room-content.css?v=06.3">
+  <link rel="stylesheet" href="../assets/css/rooms/room-media.css?v=media.2">
+  <link rel="stylesheet" href="../assets/css/rooms/room-modules.css?v=06.3">
+  <link rel="stylesheet" href="../assets/css/rooms/house.css?v=06C.6">
+  <link rel="stylesheet" href="../assets/css/project-doorways.css?v=06C.1">
+  <link rel="stylesheet" href="../assets/css/social-portals.css">
+  <style id="candidate-global-entry-stage">
+/*
+  Shared Room Media — Phase 06
+  Images, galleries, video, audio, posters, and captions.
+*/
+.room-media-stage {
+  --room-media-ratio: 16 / 9;
+  position: relative;
+  width: min(100%, 96rem);
+  margin-inline: auto;
+  padding: clamp(0.42rem, 0.75vw, 0.72rem);
+  border: 1px solid rgba(215, 185, 111, 0.48);
+  border-radius: 0.38rem;
+  background:
+    linear-gradient(180deg, rgba(44, 48, 57, 0.96), rgba(6, 8, 13, 0.98) 18%, rgba(2, 3, 7, 0.99) 82%, rgba(34, 37, 44, 0.96));
+  box-shadow:
+    0 2.2rem 6rem rgba(0, 0, 0, 0.62),
+    0 0 0 1px rgba(238, 232, 220, 0.045),
+    0 0 3.5rem rgba(75, 170, 227, 0.075);
+  isolation: isolate;
+}
+
+.room-media-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0.18rem;
+  z-index: 2;
+  border: 1px solid rgba(238, 232, 220, 0.08);
+  border-radius: 0.22rem;
+  pointer-events: none;
+}
+
+.room-media-stage__screen {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(2, 3, 7, 0.96);
+  border-radius: 0.16rem;
+  background:
+    radial-gradient(ellipse at 24% 38%, rgba(75, 170, 227, 0.11), transparent 38%),
+    radial-gradient(ellipse at 82% 64%, rgba(126, 66, 153, 0.1), transparent 42%),
+    #020307;
+  box-shadow:
+    inset 0 0 4.5rem rgba(0, 0, 0, 0.72),
+    inset 0 0 0 1px rgba(238, 232, 220, 0.035);
+}
+
+.room-media-stage--editorial .room-media-stage__screen,
+.room-media-stage--video .room-media-stage__screen {
+  aspect-ratio: var(--room-media-ratio);
+}
+
+.room-media-stage--video video,
+.room-media-stage--video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: contain;
+}
+
+.room-media-stage--audio {
+  --room-media-ratio: 21 / 9;
+}
+
+.room-media-stage--audio .room-media-stage__screen {
+  aspect-ratio: var(--room-media-ratio);
+  display: grid;
+  align-content: center;
+}
+
+.room-media-stage--audio audio {
+  display: block;
+  width: calc(100% - clamp(2rem, 8vw, 8rem));
+  margin-inline: auto;
+  accent-color: var(--house-gold);
+}
+
+@media (max-width: 980px) {
+  .room-media-stage--editorial .room-media-stage__screen {
+    aspect-ratio: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .room-media-stage {
+    padding: 0.38rem;
+    border-radius: 0.28rem;
+  }
+
+  .room-media-stage--audio .room-media-stage__screen {
+    aspect-ratio: auto;
+    min-height: 15rem;
+  }
+}
+
+.media-frame {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--house-rule);
+  background: rgba(0, 0, 0, 0.32);
+}
+.media-frame img,
+.media-frame video,
+.media-frame iframe { display: block; width: 100%; height: auto; }
+.media-frame--video video,
+.media-frame--video iframe { aspect-ratio: 16 / 9; border: 0; object-fit: contain; }
+.media-frame--portrait img { aspect-ratio: 4 / 5; object-fit: cover; }
+.media-frame--square img { aspect-ratio: 1; object-fit: cover; }
+.media-frame audio { display: block; width: calc(100% - 2rem); margin: 1rem; }
+.media-frame figcaption,
+.media-caption {
+  padding: 0.8rem 1rem;
+  color: var(--house-faint);
+  font: 0.68rem/1.55 var(--house-ui);
+  letter-spacing: 0.05em;
+}
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+.media-poster { position: relative; }
+.media-poster__action {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 06C House Room — curated project threshold. Shared House Frame remains untouched. */
+.house-room-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 32%, rgba(75, 170, 227, 0.075), transparent 29rem),
+    radial-gradient(circle at 82% 48%, rgba(114, 168, 62, 0.065), transparent 32rem);
+}
+
+.house-room-stage { --house-stage: 96rem; }
+.house-room-opening { margin-bottom: clamp(5rem, 10vw, 9rem); }
+.house-room-opening .room-opening__inscription { max-width: 43rem; }
+.house-room-field { display: grid; gap: clamp(7rem, 14vw, 13rem); }
+
+.house-feature {
+  position: relative;
+  display: block;
+  isolation: isolate;
+}
+
+.house-feature__screen {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
+  grid-template-areas:
+    "kicker kicker"
+    "art content";
+  column-gap: clamp(2rem, 4.5vw, 4.75rem);
+  row-gap: clamp(0.9rem, 1.5vw, 1.25rem);
+  align-items: stretch;
+  padding: clamp(1.45rem, 2.5vw, 2.8rem);
+}
+
+.house-feature__screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.12), transparent 43%, rgba(0, 0, 0, 0.16)),
+    linear-gradient(180deg, rgba(238, 232, 220, 0.018), transparent 16%, transparent 84%, rgba(0, 0, 0, 0.28));
+}
+
+.house-feature__art {
+  grid-area: art;
+  position: relative;
+  z-index: 1;
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 0;
+  margin: 0;
+  padding: clamp(0.45rem, 0.8vw, 0.7rem);
+  border: 1px solid rgba(215, 185, 111, 0.24);
+  background: rgba(1, 2, 5, 0.9);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.42);
+}
+.house-feature__art::after { content: ""; position: absolute; inset: 0.45rem 0.45rem 2rem; pointer-events: none; box-shadow: inset 0 0 1.8rem rgba(2, 3, 7, 0.16); }
+.house-feature__art img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.house-feature__art figcaption { padding: 0.65rem 0.25rem 0.05rem; color: var(--house-faint); font: 700 0.58rem/1.4 var(--house-ui); letter-spacing: 0.16em; text-transform: uppercase; }
+
+.house-feature__content { position: relative; z-index: 1; grid-area: content; display: flex; min-width: 0; min-height: 0; flex-direction: column; }
+.house-room-kicker { margin: 0 0 1.2rem; color: var(--house-gold); font: 700 0.62rem/1.4 var(--house-ui); letter-spacing: 0.21em; text-transform: uppercase; }
+.house-feature__kicker { position: relative; z-index: 1; grid-area: kicker; margin: 0; }
+.house-feature__content > h2 { margin: 0; color: var(--house-ivory); font-size: clamp(2.55rem, 5.1vw, 5.5rem); font-weight: 400; letter-spacing: -0.035em; line-height: 0.92; text-wrap: balance; }
+.house-feature__content > h2 span { color: var(--house-gold); font-size: 0.7em; }
+.house-feature__subtitle { margin: 0.85rem 0 1.45rem; color: rgba(132, 196, 74, 0.9); font-size: clamp(1.05rem, 1.65vw, 1.4rem); font-style: italic; }
+.house-feature__copy { width: min(39rem, 100%); color: var(--house-ivory-muted); font-size: clamp(1rem, 1.2vw, 1.14rem); line-height: 1.64; }
+.house-feature__copy p { margin: 0 0 0.9em; }
+
+.house-feature__listen { width: min(40rem, 100%); margin-top: auto; padding: clamp(0.85rem, 1.5vw, 1.2rem); border-block: 1px solid rgba(215, 185, 111, 0.22); background: linear-gradient(90deg, rgba(126, 66, 153, 0.09), rgba(3, 5, 10, 0.32)); }
+.house-feature__listen-heading { display: flex; align-items: start; justify-content: space-between; gap: 1rem; }
+.house-feature__listen-heading h3 { margin: 0; color: var(--house-ivory); font-size: 1.35rem; font-weight: 400; }
+.house-feature__listen-label { margin: 0 0 0.25rem; color: var(--house-faint); font: 700 0.55rem/1.3 var(--house-ui); letter-spacing: 0.17em; text-transform: uppercase; }
+.house-feature__listen-heading > span { color: var(--house-faint); font: 700 0.52rem/1.4 var(--house-ui); letter-spacing: 0.12em; text-align: right; text-transform: uppercase; }
+.house-feature__player { display: grid; grid-template-columns: auto minmax(4rem, 1fr); gap: 0.7rem 1rem; align-items: center; margin-top: 0.9rem; }
+.house-feature__player button { grid-row: span 2; display: grid; width: 3rem; height: 3rem; place-items: center; border: 1px solid rgba(215, 185, 111, 0.32); border-radius: 50%; color: var(--house-gold); background: rgba(2, 3, 7, 0.72); cursor: not-allowed; opacity: 0.7; }
+.house-feature__track { height: 1px; background: rgba(238, 232, 220, 0.18); }
+.house-feature__track span { display: block; width: 18%; height: 1px; background: var(--house-gold); }
+.house-feature__player p { margin: 0; color: var(--house-faint); font: 0.67rem/1.4 var(--house-ui); letter-spacing: 0.08em; }
+
+.house-feature__doorway { align-self: flex-start; display: inline-flex; align-items: center; gap: 1rem; margin: 0.35rem 0 clamp(1.25rem, 2vw, 2rem); padding: 0.8rem 1rem; border: 1px solid rgba(215, 185, 111, 0.42); color: var(--house-gold); background: rgba(3, 5, 10, 0.58); font: 700 0.64rem/1.2 var(--house-ui); letter-spacing: 0.18em; text-decoration: none; text-transform: uppercase; }
+.house-feature__doorway::after { content: "→"; color: var(--house-gold-bright); font-size: 1rem; }
+.house-feature__doorway:hover, .house-feature__doorway:focus-visible { color: var(--house-gold-bright); border-color: var(--house-gold); background: rgba(20, 18, 16, 0.78); }
+.house-feature__doorway:focus-visible { outline: 1px solid var(--house-gold); outline-offset: 0.4rem; }
+
+.house-room-heading { width: min(46rem, 100%); margin-bottom: clamp(2.5rem, 6vw, 5rem); }
+.house-room-heading h2 { margin: 0 0 1.3rem; color: var(--house-ivory); font-size: clamp(2.4rem, 6vw, 5.5rem); font-weight: 400; letter-spacing: -0.035em; line-height: 1; }
+.house-room-heading > p:last-child { margin: 0; color: var(--house-ivory-muted); font-size: 1.08rem; }
+
+.house-places { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; border-block: 1px solid var(--house-rule); background: var(--house-rule); }
+.house-place { display: grid; min-height: 10rem; align-content: space-between; padding: clamp(1.4rem, 3vw, 2.2rem); color: inherit; background: rgba(3, 5, 10, 0.9); text-decoration: none; }
+.house-place span { color: var(--house-faint); font: 700 0.58rem/1.4 var(--house-ui); letter-spacing: 0.18em; text-transform: uppercase; }
+.house-place strong { color: var(--house-gold); font-size: clamp(1.5rem, 2.6vw, 2.2rem); font-weight: 400; }
+.house-place:hover, .house-place:focus-visible { background: rgba(15, 16, 20, 0.98); }
+.house-place:focus-visible { outline: 1px solid var(--house-gold); outline-offset: -1px; }
+
+@media (max-width: 820px) {
+  .house-feature__screen { grid-template-columns: minmax(13rem, 0.72fr) minmax(0, 1.28fr); gap: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .house-room-opening { margin-bottom: 4.5rem; }
+  .house-room-field { gap: 7rem; }
+  .house-feature__screen {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "kicker"
+      "art"
+      "content";
+    padding: 1rem;
+  }
+  .house-feature__art { width: min(78vw, 22rem); min-height: 28rem; margin-inline: auto; }
+  .house-feature__listen { margin-top: clamp(2rem, 7vw, 3rem); }
+  .house-feature__content > h2 { font-size: clamp(2.7rem, 14vw, 4.6rem); }
+  .house-feature__listen-heading { flex-direction: column; }
+  .house-feature__listen-heading > span { text-align: left; }
+  .house-places { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 140rem) {
+  .house-room-stage { --house-stage: min(160rem, 86vw); }
+}
+
+@media print {
+  .house-room-page::before, .house-feature__screen::before { display: none; }
+  .house-feature__screen { grid-template-columns: 0.75fr 1.25fr; }
+  .house-feature__content > h2, .house-feature__copy, .house-room-heading h2 { color: #111; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .house-feature__art { transform: none; }
+}
+
+  </style>
+</head>
+<body class="house-page house-room-page">
+  <a class="house-skip" href="#main-content">Skip to the House projects</a>
+  <div class="house-atmosphere" data-room-atmosphere aria-hidden="true"></div>
+
+  <div class="house-frame">
+    <header class="house-frame__header">
+      <a class="house-frame__brand" href="../index.htm" aria-label="Return to the Meadnyte Threshold">
+        <img src="../assets/img/woodmark.png" alt="The House of Meadnyte">
+      </a>
+      <div class="house-navigation">
+        <nav class="house-crumbs" aria-label="Breadcrumb">
+          <a href="../index.htm">Meadnyte</a><span aria-hidden="true">/</span><span aria-current="page">House</span>
+        </nav>
+        <details class="house-menu">
+          <summary>Menu</summary>
+          <nav class="house-menu__panel" aria-label="House rooms">
+            <a href="../about/index.htm">About</a>
+            <a href="index.htm" aria-current="page">House</a>
+            <a href="../listen/index.htm">Listen</a>
+            <a href="../watch/index.htm">Watch</a>
+            <a href="../signals/index.htm">Signals</a>
+            <a href="../contact/index.htm">Contact</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main-content" class="room-stage house-room-stage">
+      <header class="room-opening house-room-opening" data-room-reveal>
+        <p class="room-opening__eyebrow">Room 06C</p>
+        <h1 class="room-opening__title">House</h1>
+        <p class="room-opening__inscription">The central room of Meadnyte—a threshold into the books, sound, images, moving stories, and imagined worlds gathering inside the House.</p>
+      </header>
+
+      <div class="room-content-field house-room-field">
+        <section class="house-feature room-media-stage room-media-stage--editorial" aria-labelledby="house-feature-title" data-feature-id="06C-H03" data-room-reveal>
+          <div class="room-media-stage__screen house-feature__screen">
+            <p class="house-room-kicker house-feature__kicker">Featured Project Chamber · H03</p>
+
+            <figure class="house-feature__art" data-protected-art>
+              <img src="../assets/img/house/chronicles/nwaybulakur-and-the-sneaky-rock.webp" width="480" height="720" draggable="false" alt="Cover of Nwaybulakur and the Sneaky Rock: A Muddy Little Lesson by DJ Meadnyte">
+              <figcaption>Current Feature · The Meadow Chronicles</figcaption>
+            </figure>
+
+            <div class="house-feature__content">
+              <h2 id="house-feature-title">The Meadow<br><span>Chronicles</span></h2>
+              <p class="house-feature__subtitle">Featuring Nwaybulakur and the Sneaky Rock</p>
+              <div class="house-feature__copy">
+                <p>In the Meadow, mischief and old wisdom are never far apart. Its stories carry family memory, playful consequence, and the lessons that arrive disguised as adventure.</p>
+                <p>The current doorway opens with <em>Nwaybulakur and the Sneaky Rock: A Muddy Little Lesson</em>.</p>
+              </div>
+
+              <a class="house-feature__doorway" href="chronicles/index.htm">Enter The Meadow Chronicles</a>
+
+              <section class="house-feature__listen" aria-labelledby="house-listen-title">
+                <div class="house-feature__listen-heading">
+                  <div>
+                    <p class="house-feature__listen-label">Listening edition</p>
+                    <h3 id="house-listen-title">Hear the Chronicle</h3>
+                  </div>
+                  <span>Audio source pending</span>
+                </div>
+                <div class="house-feature__player" aria-label="Listening sample awaiting approved audio">
+                  <button type="button" disabled aria-label="Listening sample is not yet available"><span aria-hidden="true">▶</span></button>
+                  <div class="house-feature__track" aria-hidden="true"><span></span></div>
+                  <p>Listening sample in preparation</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="house-project-collection" aria-labelledby="other-projects" data-room-reveal>
+          <header class="house-room-heading">
+            <p class="house-room-kicker">Other Project Chambers</p>
+            <h2 id="other-projects">Elsewhere in the House</h2>
+            <p>Experience our other House projects.</p>
+          </header>
+
+          <div class="house-projects" role="list" aria-label="House project chambers" data-project-collection="house">
+            <a class="house-project" role="listitem" href="fragments/index.htm">
+              <figure class="house-project__visual">
+                <img src="../assets/img/house/projects/fragments.webp" width="900" height="1272" loading="lazy" decoding="async" alt="Cover of Fragments of a Listening Soul by Aham Efula Ezenwata Nwede">
+              </figure>
+              <div class="house-project__body">
+                <p class="house-project__code">06C-H01</p>
+                <h3>Fragments of a Listening Soul</h3>
+                <p class="house-project__medium">Poetry · Voice · Sound</p>
+                <p class="house-project__tagline">Every silence is carrying something.</p>
+                <p class="house-project__text">Poetry, voice, image, and sound listen for what memory, grief, identity, and love leave behind.</p>
+                <span class="house-project__threshold">Enter project</span>
+              </div>
+            </a>
+
+            <a class="house-project" role="listitem" href="chronicles/index.htm">
+              <figure class="house-project__visual">
+                <img src="../assets/img/house/chronicles/nwaybulakur-and-the-sneaky-rock.webp" width="480" height="720" loading="lazy" decoding="async" alt="Cover of Nwaybulakur and the Sneaky Rock, representing The Meadow Chronicles">
+              </figure>
+              <div class="house-project__body">
+                <p class="house-project__code">06C-H03</p>
+                <h3>The Meadow Chronicles</h3>
+                <p class="house-project__medium">Family Stories · Illustrated Worlds</p>
+                <p class="house-project__tagline">Old wisdom has a mischievous way of finding us.</p>
+                <p class="house-project__text">In the Meadow, family memory becomes playful adventure, and every muddy mistake carries a lesson home.</p>
+                <span class="house-project__threshold">Enter project</span>
+              </div>
+            </a>
+
+            <a class="house-project house-project--full-poster" role="listitem" href="../watch/ydk/index.htm">
+              <figure class="house-project__visual">
+                <img src="../assets/img/house/projects/you-dont-know.webp" width="864" height="1536" loading="lazy" decoding="async" alt="You Don’t Know cover with musicians reaching toward one another in a celestial scene">
+              </figure>
+              <div class="house-project__body">
+                <p class="house-project__code">06C-H05</p>
+                <h3>You Don’t Know</h3>
+                <p class="house-project__medium">Music · Moving Image</p>
+                <p class="house-project__tagline">Some truths can only be heard.</p>
+                <p class="house-project__text">A music-and-image world where longing, revelation, and the unspoken meet between one note and the next.</p>
+                <span class="house-project__threshold">Enter project</span>
+              </div>
+            </a>
+
+            <a class="house-project" role="listitem" href="flawed/index.htm">
+              <figure class="house-project__visual">
+                <img src="../assets/img/house/projects/flawed.webp" width="900" height="1284" loading="lazy" decoding="async" alt="Flawed project cover, The Blueprint of Being">
+              </figure>
+              <div class="house-project__body">
+                <p class="house-project__code">06C-H04</p>
+                <h3>Flawed</h3>
+                <p class="house-project__medium">House Project</p>
+                <p class="house-project__tagline">The fracture may be part of the blueprint.</p>
+                <p class="house-project__text">A meditation on becoming—where imperfection is not the failure of design, but evidence of being alive.</p>
+                <span class="house-project__threshold">Enter project</span>
+              </div>
+            </a>
+
+            <a class="house-project" role="listitem" href="terrapin/index.htm">
+              <figure class="house-project__visual">
+                <img src="../assets/img/house/projects/adventures-of-terrapin.webp" width="900" height="900" loading="lazy" decoding="async" alt="Terrapin walking through a luminous forest">
+              </figure>
+              <div class="house-project__body">
+                <p class="house-project__code">06C-H02</p>
+                <h3>Adventures of Terrapin</h3>
+                <p class="house-project__medium">Character · Story World</p>
+                <p class="house-project__tagline">Slow feet. Quick wit. Trouble close behind.</p>
+                <p class="house-project__text">Terrapin wanders into a world of character, consequence, and adventures that rarely go according to plan.</p>
+                <span class="house-project__threshold">Enter project</span>
+              </div>
+            </a>
+
+            <article class="house-project house-project--forming" role="listitem" aria-label="The Next Riff project room is in formation">
+              <figure class="house-project__visual">
+                <img src="../assets/img/house/projects/the-next-riff.webp" width="900" height="1350" loading="lazy" decoding="async" alt="A nighttime music venue with people lined up beneath The Next Riff sign, its final F unlit">
+              </figure>
+              <div class="house-project__body">
+                <p class="house-project__code">06C-H06</p>
+                <h3>The Next Riff</h3>
+                <p class="house-project__medium">Music · Story</p>
+                <p class="house-project__tagline">The next sound is already waiting inside.</p>
+                <p class="house-project__text">Outside a glowing venue, the line grows longer. Beyond the doors, music gathers toward its next beginning.</p>
+                <span class="house-project__threshold">Room in formation</span>
+              </div>
+            </article>
+
+            <article class="house-project house-project--forming house-project--full-poster" role="listitem" aria-label="8 Billion Murderers project room is in formation">
+              <figure class="house-project__visual">
+                <img src="../assets/img/house/projects/8-billion-murderers.webp" width="900" height="1350" loading="lazy" decoding="async" alt="Final poster artwork for 8 Billion Murderers">
+              </figure>
+              <div class="house-project__body">
+                <p class="house-project__code">06C-H07</p>
+                <h3>8 Billion Murderers</h3>
+                <p class="house-project__medium">Feature Film · Cosmic Tragicomedy</p>
+                <p class="house-project__tagline">Humanity is on trial. The universe is listening.</p>
+                <p class="house-project__text">A restrained cosmic tragicomedy in which law, time, and eight billion human contradictions are summoned before an impossible court.</p>
+                <span class="house-project__threshold">Room in formation</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="house-find" aria-labelledby="find-house" data-room-reveal>
+          <header class="house-room-heading">
+            <p class="house-room-kicker">Shops · Stores · Venues</p>
+            <h2 id="find-house">Find the House</h2>
+            <p>Experience the House on other Portals.</p>
+          </header>
+          <nav class="house-places" aria-label="External destinations for House projects">
+            <a class="house-place" href="https://soundcloud.com/meadnyte" target="_blank" rel="me noopener noreferrer"><span>Listen elsewhere</span><strong>SoundCloud ↗</strong></a>
+            <a class="house-place" href="https://www.youtube.com/@Meadnyte" target="_blank" rel="me noopener noreferrer"><span>Watch elsewhere</span><strong>YouTube ↗</strong></a>
+          </nav>
+        </section>
+      </div>
+    </main>
+
+    <footer class="house-frame__footer" aria-label="Site footer">
+      <div class="house-frame__identity">
+        <p>© 2026 House of Meadnyte. All rights reserved.</p>
+        <nav class="house-frame__legal" aria-label="Legal"><a href="../legal/index.htm">Legal</a><a href="../legal/privacy.htm">Privacy</a></nav>
+      </div>
+      <nav class="house-frame__signals" data-social-portals data-social-variant="quiet" aria-label="Meadnyte signal paths"></nav>
+    </footer>
+  </div>
+
+  <script src="../assets/js/room-atmosphere.js" defer></script>
+  <script src="../assets/js/room-modules.js" defer></script>
+  <script src="../assets/js/social-portals.js" defer></script>
+  <script src="../assets/js/house-navigation.js?v=nav.2" defer></script>
+  <script src="../assets/js/project-doorways.js?v=06C.1" defer></script>
+</body>
+</html>
