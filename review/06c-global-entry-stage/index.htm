@@ -27,16 +27,11 @@
   position: relative;
   width: min(100%, 96rem);
   margin-inline: auto;
-  padding-block: clamp(0.21rem, 0.375vw, 0.36rem);
-  padding-inline: clamp(0.42rem, 0.75vw, 0.72rem);
+  padding: 0;
   border: 0;
   border-radius: 0;
-  background:
-    linear-gradient(180deg, rgba(44, 48, 57, 0.96), rgba(6, 8, 13, 0.98) 18%, rgba(2, 3, 7, 0.99) 82%, rgba(34, 37, 44, 0.96));
-  box-shadow:
-    0 2.2rem 6rem rgba(0, 0, 0, 0.62),
-    0 0 0 1px rgba(238, 232, 220, 0.045),
-    0 0 3.5rem rgba(75, 170, 227, 0.075);
+  background: transparent;
+  box-shadow: none;
   isolation: isolate;
 }
 
@@ -98,11 +93,6 @@
 }
 
 @media (max-width: 640px) {
-  .room-media-stage {
-    padding-block: 0.19rem;
-    padding-inline: 0.38rem;
-  }
-
   .room-media-stage--audio .room-media-stage__screen {
     aspect-ratio: auto;
     min-height: 15rem;
@@ -156,9 +146,9 @@
 }
 
 .house-room-stage { --house-stage: 96rem; }
-.house-room-opening { margin-bottom: clamp(5rem, 10vw, 9rem); }
+.house-room-opening { margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
 .house-room-opening .room-opening__inscription { max-width: 43rem; }
-.house-room-field { display: grid; gap: clamp(7rem, 14vw, 13rem); }
+.house-room-field { display: grid; gap: clamp(3.5rem, 7vw, 6.5rem); }
 
 .house-feature {
   position: relative;
@@ -248,8 +238,8 @@
 }
 
 @media (max-width: 640px) {
-  .house-room-opening { margin-bottom: 4.5rem; }
-  .house-room-field { gap: 7rem; }
+  .house-room-opening { margin-bottom: 2.25rem; }
+  .house-room-field { gap: 3.5rem; }
   .house-feature__screen {
     grid-template-columns: 1fr;
     grid-template-areas:
