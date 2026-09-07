@@ -27,9 +27,10 @@
   position: relative;
   width: min(100%, 96rem);
   margin-inline: auto;
-  padding: clamp(0.42rem, 0.75vw, 0.72rem);
-  border: 1px solid rgba(215, 185, 111, 0.48);
-  border-radius: 0.38rem;
+  padding-block: clamp(0.21rem, 0.375vw, 0.36rem);
+  padding-inline: clamp(0.42rem, 0.75vw, 0.72rem);
+  border: 0;
+  border-radius: 0;
   background:
     linear-gradient(180deg, rgba(44, 48, 57, 0.96), rgba(6, 8, 13, 0.98) 18%, rgba(2, 3, 7, 0.99) 82%, rgba(34, 37, 44, 0.96));
   box-shadow:
@@ -40,13 +41,7 @@
 }
 
 .room-media-stage::before {
-  content: "";
-  position: absolute;
-  inset: 0.18rem;
-  z-index: 2;
-  border: 1px solid rgba(238, 232, 220, 0.08);
-  border-radius: 0.22rem;
-  pointer-events: none;
+  content: none;
 }
 
 .room-media-stage__screen {
@@ -54,8 +49,8 @@
   min-width: 0;
   min-height: 0;
   overflow: hidden;
-  border: 1px solid rgba(2, 3, 7, 0.96);
-  border-radius: 0.16rem;
+  border: 0;
+  border-radius: 0;
   background:
     radial-gradient(ellipse at 24% 38%, rgba(75, 170, 227, 0.11), transparent 38%),
     radial-gradient(ellipse at 82% 64%, rgba(126, 66, 153, 0.1), transparent 42%),
@@ -104,8 +99,8 @@
 
 @media (max-width: 640px) {
   .room-media-stage {
-    padding: 0.38rem;
-    border-radius: 0.28rem;
+    padding-block: 0.19rem;
+    padding-inline: 0.38rem;
   }
 
   .room-media-stage--audio .room-media-stage__screen {
@@ -214,7 +209,7 @@
 
 .house-feature__content { position: relative; z-index: 1; grid-area: content; display: flex; min-width: 0; min-height: 0; flex-direction: column; }
 .house-room-kicker { margin: 0 0 1.2rem; color: var(--house-gold); font: 700 0.62rem/1.4 var(--house-ui); letter-spacing: 0.21em; text-transform: uppercase; }
-.house-feature__kicker { position: relative; z-index: 1; grid-area: kicker; margin: 0; }
+.house-feature__kicker { position: relative; z-index: 1; grid-area: kicker; margin: 0; text-align: center; }
 .house-feature__content > h2 { margin: 0; color: var(--house-ivory); font-size: clamp(2.55rem, 5.1vw, 5.5rem); font-weight: 400; letter-spacing: -0.035em; line-height: 0.92; text-wrap: balance; }
 .house-feature__content > h2 span { color: var(--house-gold); font-size: 0.7em; }
 .house-feature__subtitle { margin: 0.85rem 0 1.45rem; color: rgba(132, 196, 74, 0.9); font-size: clamp(1.05rem, 1.65vw, 1.4rem); font-style: italic; }
