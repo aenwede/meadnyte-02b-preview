@@ -2,45 +2,46 @@
   "schemaVersion": 1,
   "slug": "time-in-retrospect",
   "audioDuration": 240.624,
-  "alignmentModel": "base.en",
+  "alignmentModel": "small.en",
   "status": "machine-aligned-needs-editorial-review",
-  "coverage": 0.875,
+  "coverage": 0.9167,
   "cues": [
     {
       "start": 9.34,
-      "end": 10.07,
+      "end": 10.35,
       "text": "Time . . . is relative",
       "matchedWords": 3
     },
     {
-      "start": 10.07,
-      "end": 13.75,
+      "start": 10.35,
+      "end": 14.01,
       "text": "Life is the only true essence",
       "matchedWords": 6
     },
     {
-      "start": 13.75,
-      "end": 17.11,
+      "start": 14.01,
+      "end": 17.36,
       "text": "In retrospect",
       "matchedWords": 2
     },
     {
-      "start": 21.55,
-      "end": 22.22,
+      "start": 17.36,
+      "end": 22.42,
       "text": "Time, does not exist",
       "matchedWords": 3
     },
     {
-      "start": 22.22,
-      "end": 29.15,
+      "start": 22.42,
+      "end": 29.41,
       "text": "It becomes a quantum of energy",
       "matchedWords": 6
     },
     {
-      "start": 45.64,
-      "end": 46.8,
+      "start": 45.9,
+      "end": 89.01,
       "text": "In the mind.",
-      "matchedWords": 1
+      "matchedWords": 2
     }
-  ]
+  ],
+  "selectedFrom": "small.en"
 }
