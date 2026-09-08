@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>FOLS Timing Workbench — House of Meadnyte</title>
   <meta name="description" content="Editorial calibration tool for the Fragments of a Listening Soul lyric timings.">
-  <link rel="stylesheet" href="workbench.css?v=1.1">
+  <link rel="stylesheet" href="workbench.css?v=1.2">
 </head>
 <body>
   <header class="workbench-header">
@@ -81,12 +81,23 @@
           <button type="button" class="danger" data-delete>Delete selected line</button>
           <button type="button" class="quiet" data-undo disabled>Undo</button>
         </div>
+        <fieldset class="block-actions">
+          <legend>Repeated lyric block</legend>
+          <p data-block-status>No block selected.</p>
+          <div>
+            <button type="button" class="quiet" data-block-start>Mark first line</button>
+            <button type="button" class="quiet" data-block-end>Mark last line</button>
+            <label>Additional repetitions <input type="number" min="1" max="20" step="1" value="1" data-repeat-count></label>
+            <button type="button" data-duplicate-block disabled>Duplicate block</button>
+            <button type="button" class="quiet" data-clear-block disabled>Clear selection</button>
+          </div>
+        </fieldset>
         <div class="validation" data-validation role="status"></div>
         <details class="shortcuts"><summary>Keyboard shortcuts</summary><p><kbd>Space</kbd> play/pause · <kbd>[</kbd> mark start · <kbd>]</kbd> mark end · <kbd>J</kbd>/<kbd>L</kbd> back/forward 0.25 second · <kbd>N</kbd> next cue · <kbd>R</kbd> replay entry · <kbd>Ctrl</kbd>+<kbd>Z</kbd> undo.</p></details>
       </section>
     </section>
   </main>
   <footer><span>Corrections autosave in this browser.</span><span>Exported JSON is the publication handoff.</span></footer>
-  <script src="workbench.js?v=1.1" defer></script>
+  <script src="workbench.js?v=1.2" defer></script>
 </body>
 </html>
