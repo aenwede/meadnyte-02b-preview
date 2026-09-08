@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "slug": "faulting",
+  "audioDuration": 178.68,
+  "alignmentModel": "small.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.7786,
+  "cues": [
+    {
+      "start": 4.1,
+      "end": 5.35,
+      "text": "Too many people",
+      "matchedWords": 3
+    },
+    {
+      "start": 5.35,
+      "end": 9.65,
+      "text": "Want to change the world",
+      "matchedWords": 5
+    },
+    {
+      "start": 9.65,
+      "end": 14.51,
+      "text": "They find faults",
+      "matchedWords": 3
+    },
+    {
+      "start": 14.51,
+      "end": 18.41,
+      "text": "In the way the system is run",
+      "matchedWords": 7
+    },
+    {
+      "start": 18.41,
+      "end": 23.2,
+      "text": "They find faults",
+      "matchedWords": 3
+    },
+    {
+      "start": 23.2,
+      "end": 26.22,
+      "text": "In the products of the system",
+      "matchedWords": 3
+    },
+    {
+      "start": 26.22,
+      "end": 34.86,
+      "text": "Yeah, they find faults",
+      "matchedWords": 3
+    },
+    {
+      "start": 34.86,
+      "end": 38.92,
+      "text": "In everything, everywhere",
+      "matchedWords": 3
+    },
+    {
+      "start": 38.92,
+      "end": 41.9,
+      "text": "In every which way",
+      "matchedWords": 4
+    },
+    {
+      "start": 41.9,
+      "end": 51.2,
+      "text": "Nothing, but one thing, is sacrosanct",
+      "matchedWords": 4
+    },
+    {
+      "start": 51.2,
+      "end": 55.25,
+      "text": "No other selves, but themselves",
+      "matchedWords": 5
+    },
+    {
+      "start": 55.25,
+      "end": 58.27,
+      "text": "Is immune from their meticulous faulting",
+      "matchedWords": 6
+    },
+    {
+      "start": 58.27,
+      "end": 64.71,
+      "text": "Must be a shame",
+      "matchedWords": 4
+    },
+    {
+      "start": 64.71,
+      "end": 69.25,
+      "text": "People never learn from history",
+      "matchedWords": 5
+    },
+    {
+      "start": 69.25,
+      "end": 73.63,
+      "text": "The past is the mother of the present",
+      "matchedWords": 8
+    },
+    {
+      "start": 73.63,
+      "end": 77.44,
+      "text": "The present the mother of the future",
+      "matchedWords": 7
+    },
+    {
+      "start": 78.82,
+      "end": 83.28,
+      "text": "History must repeat itself",
+      "matchedWords": 3
+    },
+    {
+      "start": 88.94,
+      "end": 90.0,
+      "text": "Surely it is true",
+      "matchedWords": 3
+    },
+    {
+      "start": 91.53,
+      "end": 94.73,
+      "text": "Wisdom cannot be found in books",
+      "matchedWords": 6
+    },
+    {
+      "start": 96.36,
+      "end": 98.23,
+      "text": "But yet the wise will glean",
+      "matchedWords": 6
+    },
+    {
+      "start": 98.23,
+      "end": 101.67,
+      "text": "Much wisdom from some books",
+      "matchedWords": 5
+    },
+    {
+      "start": 101.67,
+      "end": 106.59,
+      "text": "Could not be in vain",
+      "matchedWords": 5
+    },
+    {
+      "start": 106.59,
+      "end": 111.17,
+      "text": "That the sages of ages past",
+      "matchedWords": 6
+    },
+    {
+      "start": 111.17,
+      "end": 116.425,
+      "text": "Warned . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 116.425,
+      "end": 121.68,
+      "text": "That . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 121.68,
+      "end": 126.935,
+      "text": "The fault . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 126.935,
+      "end": 132.19,
+      "text": "Lies not in the stars",
+      "matchedWords": 0
+    },
+    {
+      "start": 132.19,
+      "end": 137.445,
+      "text": "But in ourselves",
+      "matchedWords": 0
+    },
+    {
+      "start": 137.445,
+      "end": 142.7,
+      "text": "For we are the culprits",
+      "matchedWords": 0
+    },
+    {
+      "start": 142.7,
+      "end": 143.6,
+      "text": "Of the faults we find",
+      "matchedWords": 2
+    },
+    {
+      "start": 143.6,
+      "end": 178.68,
+      "text": "In the system",
+      "matchedWords": 0
+    }
+  ],
+  "selectedFrom": "small.en"
+}

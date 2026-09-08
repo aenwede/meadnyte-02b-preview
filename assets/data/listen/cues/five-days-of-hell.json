@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "slug": "five-days-of-hell",
+  "audioDuration": 143.832,
+  "alignmentModel": "medium.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.7848,
+  "cues": [
+    {
+      "start": 0.32,
+      "end": 4.52,
+      "text": "While you were gone",
+      "matchedWords": 4
+    },
+    {
+      "start": 6.72,
+      "end": 8.45,
+      "text": "I threw a ball",
+      "matchedWords": 4
+    },
+    {
+      "start": 8.45,
+      "end": 12.7,
+      "text": "I invited one and all",
+      "matchedWords": 5
+    },
+    {
+      "start": 12.7,
+      "end": 18.29,
+      "text": "But it was no fun",
+      "matchedWords": 5
+    },
+    {
+      "start": 18.29,
+      "end": 32.87,
+      "text": "While you were gone",
+      "matchedWords": 4
+    },
+    {
+      "start": 32.87,
+      "end": 34.43,
+      "text": "The sky was overcast",
+      "matchedWords": 4
+    },
+    {
+      "start": 34.43,
+      "end": 38.33,
+      "text": "The days stood fast",
+      "matchedWords": 4
+    },
+    {
+      "start": 38.33,
+      "end": 41.38,
+      "text": "All nature seemed to mourn",
+      "matchedWords": 5
+    },
+    {
+      "start": 41.38,
+      "end": 53.525,
+      "text": "While you were gone",
+      "matchedWords": 0
+    },
+    {
+      "start": 53.525,
+      "end": 65.67,
+      "text": "Nothing remained the same",
+      "matchedWords": 0
+    },
+    {
+      "start": 65.67,
+      "end": 67.88,
+      "text": "The sane became insane",
+      "matchedWords": 4
+    },
+    {
+      "start": 67.88,
+      "end": 71.26,
+      "text": "Misery and sadness found fame",
+      "matchedWords": 5
+    },
+    {
+      "start": 71.26,
+      "end": 75.13,
+      "text": "Joy and delight became lame",
+      "matchedWords": 5
+    },
+    {
+      "start": 79.8,
+      "end": 82.3,
+      "text": "Life stopped being a game",
+      "matchedWords": 3
+    },
+    {
+      "start": 82.56,
+      "end": 85.9,
+      "text": "Living suddenly was a pain",
+      "matchedWords": 5
+    },
+    {
+      "start": 90.11,
+      "end": 92.73,
+      "text": "Mind discipline was but in vain",
+      "matchedWords": 5
+    },
+    {
+      "start": 92.73,
+      "end": 143.832,
+      "text": "As the heart awaited your return",
+      "matchedWords": 0
+    }
+  ],
+  "selectedFrom": "medium.en"
+}

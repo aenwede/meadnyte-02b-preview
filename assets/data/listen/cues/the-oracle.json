@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "slug": "the-oracle",
+  "audioDuration": 218.64,
+  "alignmentModel": "medium.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.448,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 14.59,
+      "text": "Be silent!",
+      "matchedWords": 0
+    },
+    {
+      "start": 14.59,
+      "end": 16.77,
+      "text": "Raging rivers of waters",
+      "matchedWords": 4
+    },
+    {
+      "start": 16.77,
+      "end": 30.18,
+      "text": "Waves that froth and crash",
+      "matchedWords": 0
+    },
+    {
+      "start": 30.18,
+      "end": 32.93,
+      "text": "Ancient habitat of Leviathan",
+      "matchedWords": 4
+    },
+    {
+      "start": 32.93,
+      "end": 35.62,
+      "text": "Be still and harken",
+      "matchedWords": 2
+    },
+    {
+      "start": 35.62,
+      "end": 46.78,
+      "text": "Thundering and crackling clouds",
+      "matchedWords": 0
+    },
+    {
+      "start": 46.78,
+      "end": 48.79,
+      "text": "Riding upon the wings",
+      "matchedWords": 4
+    },
+    {
+      "start": 48.79,
+      "end": 50.95,
+      "text": "Of whirling and twirling winds",
+      "matchedWords": 5
+    },
+    {
+      "start": 50.95,
+      "end": 53.02,
+      "text": "Upon an endless journey.",
+      "matchedWords": 4
+    },
+    {
+      "start": 53.02,
+      "end": 66.38,
+      "text": "Be still and harken",
+      "matchedWords": 0
+    },
+    {
+      "start": 66.38,
+      "end": 68.66,
+      "text": "Erupting infernos of molten rock",
+      "matchedWords": 4
+    },
+    {
+      "start": 69.54,
+      "end": 70.71,
+      "text": "Spewn from the bowels",
+      "matchedWords": 3
+    },
+    {
+      "start": 70.71,
+      "end": 72.87,
+      "text": "Of the rumbling and hurtling planet",
+      "matchedWords": 6
+    },
+    {
+      "start": 72.87,
+      "end": 75.9,
+      "text": "Spinning stories of awe",
+      "matchedWords": 4
+    },
+    {
+      "start": 75.9,
+      "end": 86.36,
+      "text": "Be still and harken",
+      "matchedWords": 0
+    },
+    {
+      "start": 86.36,
+      "end": 96.82,
+      "text": "The harbinger of good tidings",
+      "matchedWords": 0
+    },
+    {
+      "start": 96.82,
+      "end": 98.06,
+      "text": "Crusader against any evil",
+      "matchedWords": 2
+    },
+    {
+      "start": 100.17,
+      "end": 100.89,
+      "text": "That destiny may have",
+      "matchedWords": 2
+    },
+    {
+      "start": 102.85,
+      "end": 103.75,
+      "text": "Waiting in the distant future",
+      "matchedWords": 1
+    },
+    {
+      "start": 103.75,
+      "end": 112.7,
+      "text": "I am the Oracle!",
+      "matchedWords": 0
+    },
+    {
+      "start": 112.7,
+      "end": 116.2,
+      "text": "Ancient sage of eons gone by",
+      "matchedWords": 6
+    },
+    {
+      "start": 123.5,
+      "end": 124.98,
+      "text": "Sole advisor of your elders",
+      "matchedWords": 3
+    },
+    {
+      "start": 127.4,
+      "end": 128.86,
+      "text": "Keeper of the sacred truths",
+      "matchedWords": 2
+    },
+    {
+      "start": 128.86,
+      "end": 143.823,
+      "text": "Gods, demigods, and men seek",
+      "matchedWords": 0
+    },
+    {
+      "start": 143.823,
+      "end": 158.787,
+      "text": "Guardian of immortality",
+      "matchedWords": 0
+    },
+    {
+      "start": 158.787,
+      "end": 173.75,
+      "text": "Executor of justice",
+      "matchedWords": 0
+    },
+    {
+      "start": 173.75,
+      "end": 188.713,
+      "text": "Invincible power of the universes",
+      "matchedWords": 0
+    },
+    {
+      "start": 188.713,
+      "end": 203.677,
+      "text": "I am the Oracle!",
+      "matchedWords": 0
+    },
+    {
+      "start": 203.677,
+      "end": 218.64,
+      "text": "Behold! . . . I am speaking.",
+      "matchedWords": 0
+    }
+  ],
+  "selectedFrom": "medium.en"
+}

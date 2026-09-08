@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slug": "living-life",
+  "audioDuration": 94.08,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.8592,
+  "cues": [
+    {
+      "start": 7.52,
+      "end": 8.75,
+      "text": "Before the day",
+      "matchedWords": 3
+    },
+    {
+      "start": 8.75,
+      "end": 11.05,
+      "text": "Is the dark night",
+      "matchedWords": 4
+    },
+    {
+      "start": 11.05,
+      "end": 11.05,
+      "text": "Mother of the morning light",
+      "matchedWords": 0
+    },
+    {
+      "start": 11.05,
+      "end": 21.16,
+      "text": "Raise your head",
+      "matchedWords": 3
+    },
+    {
+      "start": 21.16,
+      "end": 23.64,
+      "text": "Look straight ahead",
+      "matchedWords": 3
+    },
+    {
+      "start": 23.64,
+      "end": 27.38,
+      "text": "Search for the pin-point of light",
+      "matchedWords": 7
+    },
+    {
+      "start": 27.38,
+      "end": 32.98,
+      "text": "Ignore the darkness around you",
+      "matchedWords": 5
+    },
+    {
+      "start": 34.22,
+      "end": 36.99,
+      "text": "Look within, for therein",
+      "matchedWords": 4
+    },
+    {
+      "start": 36.99,
+      "end": 40.41,
+      "text": "Is the beginning of the dawning",
+      "matchedWords": 6
+    },
+    {
+      "start": 40.41,
+      "end": 47.78,
+      "text": "The darkness cannot last forever",
+      "matchedWords": 5
+    },
+    {
+      "start": 47.78,
+      "end": 47.78,
+      "text": "Neither will the day",
+      "matchedWords": 0
+    },
+    {
+      "start": 47.78,
+      "end": 59.38,
+      "text": "But like the days of summer",
+      "matchedWords": 6
+    },
+    {
+      "start": 59.38,
+      "end": 62.58,
+      "text": "Your nights can be shorter",
+      "matchedWords": 5
+    },
+    {
+      "start": 62.58,
+      "end": 67.69,
+      "text": "And your days longer",
+      "matchedWords": 4
+    },
+    {
+      "start": 67.69,
+      "end": 77.25,
+      "text": "Life . . . is what you make of it!",
+      "matchedWords": 6
+    }
+  ],
+  "selectedFrom": "base.en"
+}

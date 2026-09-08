@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "slug": "in-transit-take-two",
+  "audioDuration": 127.344,
+  "alignmentModel": "small.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.8471,
+  "cues": [
+    {
+      "start": 5.5,
+      "end": 14.05,
+      "text": "The sound",
+      "matchedWords": 2
+    },
+    {
+      "start": 14.05,
+      "end": 17.19,
+      "text": "Of the howling wind",
+      "matchedWords": 4
+    },
+    {
+      "start": 17.19,
+      "end": 20.52,
+      "text": "Is all around me",
+      "matchedWords": 4
+    },
+    {
+      "start": 22.63,
+      "end": 23.76,
+      "text": "And I feel",
+      "matchedWords": 3
+    },
+    {
+      "start": 23.76,
+      "end": 28.05,
+      "text": "A gust of cold air",
+      "matchedWords": 5
+    },
+    {
+      "start": 29.07,
+      "end": 31.91,
+      "text": "Whip across my exposed face",
+      "matchedWords": 5
+    },
+    {
+      "start": 38.34,
+      "end": 39.91,
+      "text": "Turning around",
+      "matchedWords": 2
+    },
+    {
+      "start": 39.91,
+      "end": 44.65,
+      "text": "I take refuge inside",
+      "matchedWords": 4
+    },
+    {
+      "start": 44.65,
+      "end": 48.15,
+      "text": "The wind shelter",
+      "matchedWords": 3
+    },
+    {
+      "start": 52.94,
+      "end": 54.35,
+      "text": "Wind shelter?",
+      "matchedWords": 2
+    },
+    {
+      "start": 54.35,
+      "end": 56.91,
+      "text": "Funny name",
+      "matchedWords": 2
+    },
+    {
+      "start": 56.91,
+      "end": 59.93,
+      "text": "The structure itself",
+      "matchedWords": 3
+    },
+    {
+      "start": 59.93,
+      "end": 62.69,
+      "text": "Needs to be sheltered",
+      "matchedWords": 4
+    },
+    {
+      "start": 62.69,
+      "end": 65.3,
+      "text": "From the wind",
+      "matchedWords": 3
+    },
+    {
+      "start": 72.95,
+      "end": 75.3,
+      "text": "Time seems to stand still",
+      "matchedWords": 5
+    },
+    {
+      "start": 75.3,
+      "end": 78.08,
+      "text": "The waiting eternal",
+      "matchedWords": 3
+    },
+    {
+      "start": 78.08,
+      "end": 81.26,
+      "text": "These buses are no good",
+      "matchedWords": 5
+    },
+    {
+      "start": 81.26,
+      "end": 84.59,
+      "text": "They do not come on time",
+      "matchedWords": 6
+    },
+    {
+      "start": 86.64,
+      "end": 88.13,
+      "text": "If they come at all",
+      "matchedWords": 5
+    },
+    {
+      "start": 88.13,
+      "end": 88.13,
+      "text": "Bravely I grit my teeth",
+      "matchedWords": 0
+    },
+    {
+      "start": 88.13,
+      "end": 88.13,
+      "text": "And huddle inside my jacket",
+      "matchedWords": 0
+    },
+    {
+      "start": 88.13,
+      "end": 88.13,
+      "text": "An isolated object . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 88.13,
+      "end": 120.14,
+      "text": "In Transit!",
+      "matchedWords": 2
+    }
+  ],
+  "selectedFrom": "small.en"
+}

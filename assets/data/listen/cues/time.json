@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slug": "time",
+  "audioDuration": 56.544,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 1.0,
+  "cues": [
+    {
+      "start": 1.38,
+      "end": 2.26,
+      "text": "Time . . .",
+      "matchedWords": 1
+    },
+    {
+      "start": 4.26,
+      "end": 5.41,
+      "text": "Progressive sequence of events",
+      "matchedWords": 4
+    },
+    {
+      "start": 5.41,
+      "end": 8.91,
+      "text": "Consistent and Persistent",
+      "matchedWords": 3
+    },
+    {
+      "start": 8.91,
+      "end": 13.51,
+      "text": "Movement of bodies thru space",
+      "matchedWords": 5
+    },
+    {
+      "start": 13.51,
+      "end": 16.09,
+      "text": "Incidental clashing and crashing",
+      "matchedWords": 4
+    },
+    {
+      "start": 16.09,
+      "end": 17.79,
+      "text": "Of minuscule particles",
+      "matchedWords": 3
+    },
+    {
+      "start": 17.79,
+      "end": 23.03,
+      "text": "Generating deafening volumes of sound",
+      "matchedWords": 5
+    },
+    {
+      "start": 23.03,
+      "end": 26.55,
+      "text": "Invisible and invincible",
+      "matchedWords": 3
+    },
+    {
+      "start": 26.55,
+      "end": 30.79,
+      "text": "Servant, yet master of mankind",
+      "matchedWords": 5
+    },
+    {
+      "start": 30.79,
+      "end": 34.89,
+      "text": "Announcing its dreadful march",
+      "matchedWords": 4
+    },
+    {
+      "start": 34.89,
+      "end": 37.49,
+      "text": "In the weathering and wearing",
+      "matchedWords": 5
+    },
+    {
+      "start": 37.49,
+      "end": 41.7,
+      "text": "Of sentient and transient bodies",
+      "matchedWords": 5
+    }
+  ],
+  "selectedFrom": "base.en"
+}
