@@ -48,11 +48,12 @@
       seek.value = String(Math.round(ratio * 1000));
       landscape.style.setProperty('--progress', `${ratio * 100}%`);
       elapsed.value = format(audio.currentTime);
-      remaining.value = `−${format(Math.max(0, duration - audio.currentTime))}`;
+      remaining.value = format(Math.max(0, duration - audio.currentTime));
       if (activeLine && cues.length) {
         const position = cuesUseSeconds ? audio.currentTime : ratio;
         const cue = cues.find(entry => position >= entry.start && position < entry.end);
-        const text = cue ? cue.text : (audio.currentTime === 0 ? 'Press play to begin.' : '');
+        const atRest = audio.paused && audio.currentTime === 0;
+        const text = atRest ? 'Press play to begin.' : (cue ? cue.text : '');
         if (activeLine.textContent !== text) {
           activeLine.classList.remove('is-visible');
           activeLine.textContent = text;
