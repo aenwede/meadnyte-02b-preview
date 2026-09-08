@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "slug": "agony",
+  "audioDuration": 78.12,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.7317,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.0,
+      "text": "Knock . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 0.0,
+      "end": 0.0,
+      "text": "knock . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 0.0,
+      "end": 0.4,
+      "text": "  knock . . .",
+      "matchedWords": 1
+    },
+    {
+      "start": 6.24,
+      "end": 7.17,
+      "text": "Fear grips my heart",
+      "matchedWords": 4
+    },
+    {
+      "start": 7.17,
+      "end": 10.42,
+      "text": "I dread to look out",
+      "matchedWords": 5
+    },
+    {
+      "start": 10.42,
+      "end": 13.53,
+      "text": "Who could it be this time",
+      "matchedWords": 6
+    },
+    {
+      "start": 14.79,
+      "end": 15.73,
+      "text": "Loneliness . . .",
+      "matchedWords": 1
+    },
+    {
+      "start": 16.55,
+      "end": 17.29,
+      "text": "Sorrow . . .",
+      "matchedWords": 1
+    },
+    {
+      "start": 17.29,
+      "end": 21.24,
+      "text": "Or Pain",
+      "matchedWords": 0
+    },
+    {
+      "start": 21.24,
+      "end": 23.29,
+      "text": "Who of these three torturers",
+      "matchedWords": 5
+    },
+    {
+      "start": 23.29,
+      "end": 24.02,
+      "text": "Could be knocking",
+      "matchedWords": 3
+    },
+    {
+      "start": 25.04,
+      "end": 25.87,
+      "text": "On my door",
+      "matchedWords": 3
+    },
+    {
+      "start": 25.87,
+      "end": 32.41,
+      "text": "Waves of grief",
+      "matchedWords": 3
+    },
+    {
+      "start": 32.41,
+      "end": 35.47,
+      "text": "Roll over my despairing soul",
+      "matchedWords": 5
+    },
+    {
+      "start": 35.47,
+      "end": 37.61,
+      "text": "The body frame is tired",
+      "matchedWords": 5
+    },
+    {
+      "start": 37.61,
+      "end": 39.25,
+      "text": "The heart grows faint",
+      "matchedWords": 4
+    },
+    {
+      "start": 39.25,
+      "end": 41.6,
+      "text": "The mind is dizzy",
+      "matchedWords": 4
+    },
+    {
+      "start": 42.62,
+      "end": 45.21,
+      "text": "From the thunderbolts of anxiety",
+      "matchedWords": 5
+    },
+    {
+      "start": 45.21,
+      "end": 48.34,
+      "text": "Confusion reigns supreme",
+      "matchedWords": 3
+    },
+    {
+      "start": 48.34,
+      "end": 49.927,
+      "text": "Knock . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 49.927,
+      "end": 51.513,
+      "text": "  knock . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 51.513,
+      "end": 53.1,
+      "text": "  knock . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 53.1,
+      "end": 53.92,
+      "text": "Oh God!",
+      "matchedWords": 2
+    },
+    {
+      "start": 53.92,
+      "end": 78.12,
+      "text": "Who . . . who . . . w h o o o . . . iisss . . . i i i t t t t?",
+      "matchedWords": 0
+    }
+  ]
+}

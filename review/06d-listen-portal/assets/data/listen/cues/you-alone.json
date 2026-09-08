@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "slug": "you-alone",
+  "audioDuration": 122.136,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.6522,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 8.99,
+      "text": "You alone!",
+      "matchedWords": 0
+    },
+    {
+      "start": 8.99,
+      "end": 9.8,
+      "text": "Honey, it's you alone",
+      "matchedWords": 3
+    },
+    {
+      "start": 9.8,
+      "end": 13.59,
+      "text": "That can make me feel",
+      "matchedWords": 4
+    },
+    {
+      "start": 13.59,
+      "end": 13.59,
+      "text": "The way I do",
+      "matchedWords": 0
+    },
+    {
+      "start": 13.59,
+      "end": 21.34,
+      "text": "You alone!",
+      "matchedWords": 2
+    },
+    {
+      "start": 21.34,
+      "end": 26.17,
+      "text": "Can knock my heart",
+      "matchedWords": 0
+    },
+    {
+      "start": 26.17,
+      "end": 27.4,
+      "text": "Out of the strong grip",
+      "matchedWords": 5
+    },
+    {
+      "start": 27.4,
+      "end": 29.68,
+      "text": "Of its keepers",
+      "matchedWords": 3
+    },
+    {
+      "start": 29.68,
+      "end": 33.23,
+      "text": "You alone!",
+      "matchedWords": 2
+    },
+    {
+      "start": 34.81,
+      "end": 37.03,
+      "text": "Can turn me inside out",
+      "matchedWords": 5
+    },
+    {
+      "start": 38.18,
+      "end": 39.91,
+      "text": "Disorienting me",
+      "matchedWords": 2
+    },
+    {
+      "start": 39.91,
+      "end": 43.29,
+      "text": "From my very self",
+      "matchedWords": 4
+    },
+    {
+      "start": 43.29,
+      "end": 65.13,
+      "text": "I feel like a feather",
+      "matchedWords": 5
+    },
+    {
+      "start": 65.13,
+      "end": 69.15,
+      "text": "Tossed about by the winds",
+      "matchedWords": 3
+    },
+    {
+      "start": 69.15,
+      "end": 69.15,
+      "text": "Lost to the world",
+      "matchedWords": 0
+    },
+    {
+      "start": 69.15,
+      "end": 69.15,
+      "text": "I am lost to myself",
+      "matchedWords": 0
+    },
+    {
+      "start": 69.15,
+      "end": 96.04,
+      "text": "I live just to be with",
+      "matchedWords": 6
+    },
+    {
+      "start": 96.04,
+      "end": 96.55,
+      "text": "You alone!",
+      "matchedWords": 1
+    }
+  ]
+}

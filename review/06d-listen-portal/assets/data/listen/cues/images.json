@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "slug": "images",
+  "audioDuration": 88.152,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.9103,
+  "cues": [
+    {
+      "start": 1.6,
+      "end": 2.86,
+      "text": "Minds in turmoil",
+      "matchedWords": 3
+    },
+    {
+      "start": 6.49,
+      "end": 7.6,
+      "text": "Emanating chaotic images",
+      "matchedWords": 2
+    },
+    {
+      "start": 7.6,
+      "end": 11.6,
+      "text": "Emotions unleashed",
+      "matchedWords": 2
+    },
+    {
+      "start": 11.6,
+      "end": 15.14,
+      "text": "Wreaking untold havoc",
+      "matchedWords": 3
+    },
+    {
+      "start": 15.14,
+      "end": 19.28,
+      "text": "The genesis of the terror",
+      "matchedWords": 5
+    },
+    {
+      "start": 19.28,
+      "end": 23.08,
+      "text": " ",
+      "matchedWords": 0
+    },
+    {
+      "start": 23.08,
+      "end": 24.39,
+      "text": "Apprehension grips the earth",
+      "matchedWords": 3
+    },
+    {
+      "start": 24.39,
+      "end": 27.69,
+      "text": "Hearts hang in suspense",
+      "matchedWords": 4
+    },
+    {
+      "start": 27.69,
+      "end": 33.61,
+      "text": "A sudden ennui permeates all",
+      "matchedWords": 5
+    },
+    {
+      "start": 33.61,
+      "end": 35.27,
+      "text": "Conjuring into existence",
+      "matchedWords": 3
+    },
+    {
+      "start": 35.27,
+      "end": 40.83,
+      "text": "A chilling state of limbo",
+      "matchedWords": 5
+    },
+    {
+      "start": 40.83,
+      "end": 43.32,
+      "text": " ",
+      "matchedWords": 0
+    },
+    {
+      "start": 43.32,
+      "end": 47.43,
+      "text": "Formless, yet displacing the visible",
+      "matchedWords": 5
+    },
+    {
+      "start": 47.43,
+      "end": 50.96,
+      "text": "Reeking of mind-boggling odors",
+      "matchedWords": 5
+    },
+    {
+      "start": 51.04,
+      "end": 53.15,
+      "text": "Radiating an unearthly chill",
+      "matchedWords": 4
+    },
+    {
+      "start": 53.15,
+      "end": 58.5,
+      "text": "That scorches body and soul",
+      "matchedWords": 5
+    },
+    {
+      "start": 62.26,
+      "end": 63.14,
+      "text": "The terror stalks the earth",
+      "matchedWords": 2
+    },
+    {
+      "start": 63.14,
+      "end": 64.63,
+      "text": " ",
+      "matchedWords": 0
+    },
+    {
+      "start": 64.63,
+      "end": 66.12,
+      "text": "Hate!",
+      "matchedWords": 0
+    },
+    {
+      "start": 66.12,
+      "end": 66.6,
+      "text": "Ugly specter",
+      "matchedWords": 1
+    },
+    {
+      "start": 70.9,
+      "end": 72.61,
+      "text": "Perverted psychic projections",
+      "matchedWords": 3
+    },
+    {
+      "start": 72.61,
+      "end": 74.84,
+      "text": "Issuing out of deranged minds",
+      "matchedWords": 5
+    },
+    {
+      "start": 78.79,
+      "end": 82.65,
+      "text": "Essence of the image . . . the Terror",
+      "matchedWords": 6
+    }
+  ]
+}

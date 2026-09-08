@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "slug": "ode-to-success",
+  "audioDuration": 123.024,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.5784,
+  "cues": [
+    {
+      "start": 3.46,
+      "end": 4.57,
+      "text": "Fall . . . . . . . . . . and rise",
+      "matchedWords": 3
+    },
+    {
+      "start": 4.57,
+      "end": 9.71,
+      "text": "Fall . . . . . . and rise",
+      "matchedWords": 3
+    },
+    {
+      "start": 9.71,
+      "end": 9.71,
+      "text": "Fall down . . . and get up",
+      "matchedWords": 0
+    },
+    {
+      "start": 9.71,
+      "end": 9.71,
+      "text": "Get up . . . Get up . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 9.71,
+      "end": 9.71,
+      "text": "Get up and fight",
+      "matchedWords": 0
+    },
+    {
+      "start": 9.71,
+      "end": 28.05,
+      "text": "Fight for what you believe in",
+      "matchedWords": 6
+    },
+    {
+      "start": 28.05,
+      "end": 32.07,
+      "text": "Do not ever let up",
+      "matchedWords": 5
+    },
+    {
+      "start": 35.55,
+      "end": 37.08,
+      "text": "Feel the discomfort",
+      "matchedWords": 3
+    },
+    {
+      "start": 37.08,
+      "end": 39.86,
+      "text": "And the agony of failure",
+      "matchedWords": 5
+    },
+    {
+      "start": 39.86,
+      "end": 43.74,
+      "text": "Feel it wash over you",
+      "matchedWords": 5
+    },
+    {
+      "start": 43.74,
+      "end": 46.83,
+      "text": "Drown you and overwhelm you",
+      "matchedWords": 5
+    },
+    {
+      "start": 50.31,
+      "end": 53.14,
+      "text": "Soak it in, watch it carefully",
+      "matchedWords": 6
+    },
+    {
+      "start": 53.14,
+      "end": 56.42,
+      "text": "Draw strength from its depths",
+      "matchedWords": 5
+    },
+    {
+      "start": 56.42,
+      "end": 60.14,
+      "text": "Surmount its oppressive weight",
+      "matchedWords": 4
+    },
+    {
+      "start": 60.14,
+      "end": 60.14,
+      "text": "And Rise . . . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 60.14,
+      "end": 68.7,
+      "text": "Like the rising sun",
+      "matchedWords": 3
+    },
+    {
+      "start": 68.7,
+      "end": 73.03,
+      "text": "With full glory and exhilaration",
+      "matchedWords": 5
+    },
+    {
+      "start": 73.03,
+      "end": 73.03,
+      "text": "Rise up… Stand high",
+      "matchedWords": 0
+    },
+    {
+      "start": 73.03,
+      "end": 73.03,
+      "text": "Reach up… Reach out",
+      "matchedWords": 0
+    },
+    {
+      "start": 73.03,
+      "end": 73.03,
+      "text": "Embrace the skies",
+      "matchedWords": 0
+    },
+    {
+      "start": 73.03,
+      "end": 73.03,
+      "text": "High above the clouds",
+      "matchedWords": 0
+    },
+    {
+      "start": 73.03,
+      "end": 73.03,
+      "text": "Feel the warmth and joy",
+      "matchedWords": 0
+    },
+    {
+      "start": 73.03,
+      "end": 73.34,
+      "text": "As you rise up",
+      "matchedWords": 1
+    },
+    {
+      "start": 73.34,
+      "end": 123.024,
+      "text": "Never to fall again",
+      "matchedWords": 0
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "slug": "rain",
+  "audioDuration": 83.304,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.8298,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 0.71,
+      "text": "Bear witness!",
+      "matchedWords": 2
+    },
+    {
+      "start": 0.71,
+      "end": 4.57,
+      "text": "Children of nature bear witness",
+      "matchedWords": 5
+    },
+    {
+      "start": 4.57,
+      "end": 9.43,
+      "text": "The clouds have gathered",
+      "matchedWords": 3
+    },
+    {
+      "start": 9.43,
+      "end": 11.77,
+      "text": "In solemn congregation",
+      "matchedWords": 3
+    },
+    {
+      "start": 11.77,
+      "end": 15.77,
+      "text": "The big clouds and the small clouds",
+      "matchedWords": 7
+    },
+    {
+      "start": 15.77,
+      "end": 18.01,
+      "text": "Of all shapes and sizes",
+      "matchedWords": 5
+    },
+    {
+      "start": 18.01,
+      "end": 22.91,
+      "text": "The mood is dark",
+      "matchedWords": 4
+    },
+    {
+      "start": 22.91,
+      "end": 26.43,
+      "text": "The sun has taken shelter",
+      "matchedWords": 5
+    },
+    {
+      "start": 26.43,
+      "end": 30.02,
+      "text": "Awed by the gathering",
+      "matchedWords": 4
+    },
+    {
+      "start": 31.91,
+      "end": 34.02,
+      "text": "Lightning has been summoned",
+      "matchedWords": 4
+    },
+    {
+      "start": 34.02,
+      "end": 36.63,
+      "text": "To lead with its flashes",
+      "matchedWords": 5
+    },
+    {
+      "start": 38.96,
+      "end": 40.88,
+      "text": "Thunder follows behind",
+      "matchedWords": 3
+    },
+    {
+      "start": 41.42,
+      "end": 43.22,
+      "text": "Kettle drums roaring",
+      "matchedWords": 3
+    },
+    {
+      "start": 44.86,
+      "end": 47.2,
+      "text": "The procession is on the move",
+      "matchedWords": 6
+    },
+    {
+      "start": 53.52,
+      "end": 55.32,
+      "text": "Cascades of water descend",
+      "matchedWords": 4
+    },
+    {
+      "start": 56.3,
+      "end": 57.96,
+      "text": "The thirsty earth drinks",
+      "matchedWords": 4
+    },
+    {
+      "start": 59.18,
+      "end": 61.1,
+      "text": "All the children of nature rejoice",
+      "matchedWords": 6
+    },
+    {
+      "start": 77.93,
+      "end": 78.06,
+      "text": "A great applause is heard",
+      "matchedWords": 2
+    },
+    {
+      "start": 78.06,
+      "end": 78.06,
+      "text": "From rooftops, from dirt",
+      "matchedWords": 0
+    },
+    {
+      "start": 78.06,
+      "end": 78.06,
+      "text": "And from paved surfaces",
+      "matchedWords": 0
+    },
+    {
+      "start": 78.06,
+      "end": 78.06,
+      "text": "A show of appreciation",
+      "matchedWords": 0
+    },
+    {
+      "start": 78.06,
+      "end": 78.95,
+      "text": "For the rain",
+      "matchedWords": 3
+    }
+  ]
+}

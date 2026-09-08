@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "slug": "santa-monica-boardwalk",
+  "audioDuration": 52.944,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.9324,
+  "cues": [
+    {
+      "start": 3.71,
+      "end": 5.16,
+      "text": "Waves rolling in and out",
+      "matchedWords": 5
+    },
+    {
+      "start": 5.16,
+      "end": 6.89,
+      "text": "A pervading whooooosh",
+      "matchedWords": 2
+    },
+    {
+      "start": 7.19,
+      "end": 10.81,
+      "text": "Dominates and permeates",
+      "matchedWords": 3
+    },
+    {
+      "start": 12.57,
+      "end": 14.31,
+      "text": "Silent footfalls . . .",
+      "matchedWords": 2
+    },
+    {
+      "start": 15.79,
+      "end": 16.86,
+      "text": "People walking to and fro",
+      "matchedWords": 5
+    },
+    {
+      "start": 16.86,
+      "end": 19.85,
+      "text": "Thumping footfalls . . .",
+      "matchedWords": 2
+    },
+    {
+      "start": 20.19,
+      "end": 21.06,
+      "text": "People jogging along",
+      "matchedWords": 3
+    },
+    {
+      "start": 21.06,
+      "end": 23.98,
+      "text": "The tinkling of keys",
+      "matchedWords": 4
+    },
+    {
+      "start": 23.98,
+      "end": 25.48,
+      "text": "As arms pendulate",
+      "matchedWords": 3
+    },
+    {
+      "start": 25.48,
+      "end": 26.75,
+      "text": "From their shoulder sockets",
+      "matchedWords": 4
+    },
+    {
+      "start": 28.69,
+      "end": 30.84,
+      "text": "Loud roars from overrun engines",
+      "matchedWords": 5
+    },
+    {
+      "start": 30.84,
+      "end": 34.15,
+      "text": "The gentle purring of luxury cars",
+      "matchedWords": 6
+    },
+    {
+      "start": 34.95,
+      "end": 37.06,
+      "text": "An occasional voice impinges",
+      "matchedWords": 4
+    },
+    {
+      "start": 37.06,
+      "end": 38.52,
+      "text": "The unsilent silence",
+      "matchedWords": 2
+    },
+    {
+      "start": 38.52,
+      "end": 41.08,
+      "text": "Of Santa Monica Beachfront walk",
+      "matchedWords": 4
+    },
+    {
+      "start": 41.08,
+      "end": 44.64,
+      "text": "Punctuated by the total absence",
+      "matchedWords": 5
+    },
+    {
+      "start": 44.64,
+      "end": 45.66,
+      "text": "Of singing birds",
+      "matchedWords": 3
+    },
+    {
+      "start": 45.66,
+      "end": 49.59,
+      "text": "At 6 o'clock p.m. on a spring evening",
+      "matchedWords": 7
+    }
+  ]
+}

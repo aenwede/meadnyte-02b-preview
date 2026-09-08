@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 1,
+  "slug": "identity-crises",
+  "audioDuration": 183.624,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.932,
+  "cues": [
+    {
+      "start": 3.9,
+      "end": 4.7,
+      "text": "A black void",
+      "matchedWords": 2
+    },
+    {
+      "start": 6.76,
+      "end": 8.76,
+      "text": "Seemingly without boundaries",
+      "matchedWords": 3
+    },
+    {
+      "start": 10.28,
+      "end": 12.84,
+      "text": "Seeps through and smothers",
+      "matchedWords": 4
+    },
+    {
+      "start": 13.8,
+      "end": 15.97,
+      "text": "All the senses of mind and body",
+      "matchedWords": 5
+    },
+    {
+      "start": 15.97,
+      "end": 22.66,
+      "text": "At the center of the heart",
+      "matchedWords": 6
+    },
+    {
+      "start": 23.94,
+      "end": 25.82,
+      "text": "A numbness begins to grow",
+      "matchedWords": 5
+    },
+    {
+      "start": 27.34,
+      "end": 29.16,
+      "text": "Suppressing the realization of self",
+      "matchedWords": 5
+    },
+    {
+      "start": 29.98,
+      "end": 32.34,
+      "text": "Devouring the cold light of logic",
+      "matchedWords": 6
+    },
+    {
+      "start": 33.36,
+      "end": 34.52,
+      "text": "Mother of identity",
+      "matchedWords": 3
+    },
+    {
+      "start": 37.68,
+      "end": 39.58,
+      "text": "Estranged from the environment",
+      "matchedWords": 4
+    },
+    {
+      "start": 40.78,
+      "end": 42.81,
+      "text": "In the midst of alien activities",
+      "matchedWords": 6
+    },
+    {
+      "start": 42.81,
+      "end": 45.19,
+      "text": "The mind is enmeshed",
+      "matchedWords": 4
+    },
+    {
+      "start": 45.19,
+      "end": 47.31,
+      "text": "In a mind boggling sequence",
+      "matchedWords": 5
+    },
+    {
+      "start": 47.31,
+      "end": 49.94,
+      "text": "Of over-reacting and under-reacting",
+      "matchedWords": 6
+    },
+    {
+      "start": 50.02,
+      "end": 53.23,
+      "text": "Building up to an electric frenzy",
+      "matchedWords": 6
+    },
+    {
+      "start": 53.23,
+      "end": 56.13,
+      "text": "That erupts with a crashing explosion",
+      "matchedWords": 6
+    },
+    {
+      "start": 56.13,
+      "end": 58.8,
+      "text": "Into an enigmatic identity crises",
+      "matchedWords": 4
+    },
+    {
+      "start": 62.7,
+      "end": 64.24,
+      "text": "Paralysis ensues",
+      "matchedWords": 2
+    },
+    {
+      "start": 65.4,
+      "end": 67.44,
+      "text": "The mind is severed from the body",
+      "matchedWords": 7
+    },
+    {
+      "start": 67.82,
+      "end": 69.27,
+      "text": "Impotent in its efforts",
+      "matchedWords": 4
+    },
+    {
+      "start": 69.27,
+      "end": 71.94,
+      "text": "To instill order and coordination",
+      "matchedWords": 5
+    },
+    {
+      "start": 72.0,
+      "end": 74.92,
+      "text": "Over the activities of the body",
+      "matchedWords": 6
+    },
+    {
+      "start": 77.83,
+      "end": 79.57,
+      "text": "The intellect begins to roam",
+      "matchedWords": 5
+    },
+    {
+      "start": 79.85,
+      "end": 82.43,
+      "text": "Engaging the outermost limits of reason",
+      "matchedWords": 6
+    },
+    {
+      "start": 82.75,
+      "end": 85.61,
+      "text": "Unable to contact the physical universe",
+      "matchedWords": 6
+    },
+    {
+      "start": 86.05,
+      "end": 88.13,
+      "text": "Futile in expressing itself",
+      "matchedWords": 4
+    },
+    {
+      "start": 89.17,
+      "end": 90.99,
+      "text": "Lacking control of the neuro systems",
+      "matchedWords": 4
+    },
+    {
+      "start": 95.03,
+      "end": 97.33,
+      "text": "Isolated from the command center",
+      "matchedWords": 5
+    },
+    {
+      "start": 97.65,
+      "end": 99.53,
+      "text": "Body parts itch and twitch",
+      "matchedWords": 5
+    },
+    {
+      "start": 99.85,
+      "end": 102.33,
+      "text": "Executing meaningless and erratic motions",
+      "matchedWords": 5
+    },
+    {
+      "start": 102.71,
+      "end": 105.03,
+      "text": "Frantically attempting to communicate",
+      "matchedWords": 4
+    },
+    {
+      "start": 105.29,
+      "end": 107.93,
+      "text": "Residual thought impulses from the mind",
+      "matchedWords": 6
+    },
+    {
+      "start": 108.13,
+      "end": 111.41,
+      "text": "Creating only a distraught state of confusion",
+      "matchedWords": 6
+    },
+    {
+      "start": 113.15,
+      "end": 114.61,
+      "text": "Attempted mutiny",
+      "matchedWords": 2
+    },
+    {
+      "start": 114.87,
+      "end": 116.21,
+      "text": "The subconscious engages",
+      "matchedWords": 3
+    },
+    {
+      "start": 116.71,
+      "end": 118.45,
+      "text": "Taking control in stages",
+      "matchedWords": 4
+    },
+    {
+      "start": 118.79,
+      "end": 121.17,
+      "text": "Seeking dominance over the conscious mind",
+      "matchedWords": 6
+    },
+    {
+      "start": 121.73,
+      "end": 123.63,
+      "text": "Breaking through its restraining binds",
+      "matchedWords": 5
+    },
+    {
+      "start": 124.07,
+      "end": 126.61,
+      "text": "Establishing an alternate identity",
+      "matchedWords": 4
+    },
+    {
+      "start": 129.78,
+      "end": 131.51,
+      "text": "Weary, the ego battles to grasp",
+      "matchedWords": 5
+    },
+    {
+      "start": 131.51,
+      "end": 134.94,
+      "text": "The essence of its identity",
+      "matchedWords": 5
+    },
+    {
+      "start": 135.02,
+      "end": 138.06,
+      "text": "Trapped in the vortex of the crises",
+      "matchedWords": 6
+    },
+    {
+      "start": 142.4,
+      "end": 144.78,
+      "text": "Emotional responses become unpredictable",
+      "matchedWords": 4
+    },
+    {
+      "start": 145.88,
+      "end": 148.9,
+      "text": "Energy patterns disperse and disintegrate",
+      "matchedWords": 5
+    },
+    {
+      "start": 149.88,
+      "end": 151.61,
+      "text": "The universes seem to collapse",
+      "matchedWords": 3
+    },
+    {
+      "start": 151.61,
+      "end": 154.7,
+      "text": "As the reference points become unstable",
+      "matchedWords": 6
+    },
+    {
+      "start": 156.52,
+      "end": 158.3,
+      "text": "Changing aspects and positions",
+      "matchedWords": 3
+    },
+    {
+      "start": 161.58,
+      "end": 165.1,
+      "text": "Creation is an impossible exercise",
+      "matchedWords": 5
+    },
+    {
+      "start": 167.57,
+      "end": 168.89,
+      "text": "Not having any tangible substance",
+      "matchedWords": 2
+    },
+    {
+      "start": 171.25,
+      "end": 174.21,
+      "text": "Dissolved in the void of identity crises.",
+      "matchedWords": 5
+    }
+  ]
+}

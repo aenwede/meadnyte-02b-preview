@@ -28,7 +28,7 @@
     audio.addEventListener('ended', () => choose(1));
   });
 
-  document.querySelectorAll('[data-audio-room]').forEach(room => {
+  document.querySelectorAll('[data-audio-room]').forEach(async room => {
     const audio = room.querySelector('audio');
     const play = room.querySelector('[data-audio-play]');
     const seek = room.querySelector('[data-audio-seek]');
@@ -38,7 +38,8 @@
     const status = room.querySelector('[data-audio-status]');
     const activeLine = room.querySelector('[data-active-line]');
     const cueData = room.querySelector('[data-poem-cues]');
-    const cues = cueData ? JSON.parse(cueData.textContent || '[]') : [];
+    let cues = cueData ? JSON.parse(cueData.textContent || '[]') : [];
+    let cuesUseSeconds = false;
     const lines = [...document.querySelectorAll('[data-poem-lines] [data-line]')];
     let active = -1;
     allAudio.add(audio);
@@ -49,10 +50,12 @@
       elapsed.value = format(audio.currentTime);
       remaining.value = `−${format(Math.max(0, duration - audio.currentTime))}`;
       if (activeLine && cues.length) {
-        const cue = cues.find(entry => ratio >= entry.start && ratio < entry.end) || cues[cues.length - 1];
-        if (activeLine.textContent !== cue.text) {
+        const position = cuesUseSeconds ? audio.currentTime : ratio;
+        const cue = cues.find(entry => position >= entry.start && position < entry.end);
+        const text = cue ? cue.text : (audio.currentTime === 0 ? 'Press play to begin.' : '');
+        if (activeLine.textContent !== text) {
           activeLine.classList.remove('is-visible');
-          activeLine.textContent = cue.text;
+          activeLine.textContent = text;
           requestAnimationFrame(() => activeLine.classList.add('is-visible'));
         }
       }
@@ -74,5 +77,20 @@
     audio.addEventListener('pause', () => { room.classList.remove('is-playing'); play.innerHTML='<span aria-hidden="true">▶</span><span class="sr-only">Play</span>'; status.textContent=audio.ended?'Complete':'Paused'; });
     audio.addEventListener('waiting', () => status.textContent='Gathering the stream…');
     audio.addEventListener('error', () => status.textContent='This recording could not be loaded.');
+    if (room.dataset.cuesSrc) {
+      try {
+        const response = await fetch(room.dataset.cuesSrc);
+        if (!response.ok) throw new Error(`Cue request returned ${response.status}`);
+        const payload = await response.json();
+        cues = Array.isArray(payload) ? payload : (payload.cues || []);
+        cuesUseSeconds = !Array.isArray(payload) && payload.schemaVersion >= 1;
+        room.dataset.cueStatus = payload.status || 'loaded';
+        sync();
+      } catch (error) {
+        room.dataset.cueStatus = 'unavailable';
+        if (activeLine) activeLine.textContent = 'Press play to listen.';
+        console.warn('Lyric timing could not be loaded.', error);
+      }
+    }
   });
 })();

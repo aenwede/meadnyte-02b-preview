@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "slug": "in-transit",
+  "audioDuration": 105.984,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.8934,
+  "cues": [
+    {
+      "start": 4.48,
+      "end": 6.11,
+      "text": "Hear the wind howling",
+      "matchedWords": 4
+    },
+    {
+      "start": 6.11,
+      "end": 10.65,
+      "text": "A gust of cold air",
+      "matchedWords": 5
+    },
+    {
+      "start": 13.24,
+      "end": 15.99,
+      "text": "Whips across my exposed face",
+      "matchedWords": 5
+    },
+    {
+      "start": 15.99,
+      "end": 23.65,
+      "text": "Time seems to stand still",
+      "matchedWords": 4
+    },
+    {
+      "start": 23.65,
+      "end": 26.87,
+      "text": "Eternity is here",
+      "matchedWords": 3
+    },
+    {
+      "start": 26.87,
+      "end": 30.35,
+      "text": "And this ordeal has no end",
+      "matchedWords": 6
+    },
+    {
+      "start": 30.35,
+      "end": 36.45,
+      "text": "In a city of Mercedes Benz's",
+      "matchedWords": 6
+    },
+    {
+      "start": 36.45,
+      "end": 40.11,
+      "text": "And cars of all shapes and sizes",
+      "matchedWords": 7
+    },
+    {
+      "start": 40.11,
+      "end": 42.93,
+      "text": "Where a walking man",
+      "matchedWords": 4
+    },
+    {
+      "start": 42.93,
+      "end": 45.51,
+      "text": "Is an unusual sight",
+      "matchedWords": 4
+    },
+    {
+      "start": 45.51,
+      "end": 50.04,
+      "text": "I feel like the only one",
+      "matchedWords": 6
+    },
+    {
+      "start": 50.04,
+      "end": 52.83,
+      "text": "Using a Leggedes Benz",
+      "matchedWords": 4
+    },
+    {
+      "start": 57.26,
+      "end": 59.28,
+      "text": "The buses do not come in time",
+      "matchedWords": 7
+    },
+    {
+      "start": 59.64,
+      "end": 61.6,
+      "text": "If they do come at all",
+      "matchedWords": 6
+    },
+    {
+      "start": 62.86,
+      "end": 64.16,
+      "text": "The waiting is endless",
+      "matchedWords": 4
+    },
+    {
+      "start": 64.44,
+      "end": 65.52,
+      "text": "Gritting my teeth",
+      "matchedWords": 3
+    },
+    {
+      "start": 67.0,
+      "end": 68.98,
+      "text": "And huddling inside my jacket",
+      "matchedWords": 5
+    },
+    {
+      "start": 69.94,
+      "end": 71.38,
+      "text": "I put on a bravado",
+      "matchedWords": 5
+    },
+    {
+      "start": 72.04,
+      "end": 73.03,
+      "text": "I do not feel at all",
+      "matchedWords": 4
+    },
+    {
+      "start": 73.03,
+      "end": 73.03,
+      "text": "But once inside the bus",
+      "matchedWords": 0
+    },
+    {
+      "start": 73.03,
+      "end": 82.06,
+      "text": "The feeling of isolation disappears",
+      "matchedWords": 5
+    },
+    {
+      "start": 82.94,
+      "end": 85.07,
+      "text": "As I become one with a multitude",
+      "matchedWords": 7
+    },
+    {
+      "start": 85.07,
+      "end": 86.88,
+      "text": "Of people who like me",
+      "matchedWords": 5
+    },
+    {
+      "start": 86.88,
+      "end": 105.984,
+      "text": "Have nothing but Leggedes Benz's",
+      "matchedWords": 0
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "slug": "contemplation",
+  "audioDuration": 67.512,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.7353,
+  "cues": [
+    {
+      "start": 4.99,
+      "end": 6.09,
+      "text": "When in the midst of trouble",
+      "matchedWords": 5
+    },
+    {
+      "start": 7.62,
+      "end": 11.24,
+      "text": "Emotions well up, and overflow",
+      "matchedWords": 5
+    },
+    {
+      "start": 13.93,
+      "end": 15.02,
+      "text": "Feelings block out perceptions",
+      "matchedWords": 4
+    },
+    {
+      "start": 15.02,
+      "end": 17.56,
+      "text": "And the intellect",
+      "matchedWords": 3
+    },
+    {
+      "start": 17.56,
+      "end": 19.98,
+      "text": "Takes a forced break",
+      "matchedWords": 4
+    },
+    {
+      "start": 19.98,
+      "end": 23.46,
+      "text": "Futile in its efforts to be heard",
+      "matchedWords": 7
+    },
+    {
+      "start": 23.46,
+      "end": 23.46,
+      "text": "Then . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 23.46,
+      "end": 23.46,
+      "text": "Is the time . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 23.46,
+      "end": 23.46,
+      "text": "To stop . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 23.46,
+      "end": 37.42,
+      "text": "And take a deep breath . . .",
+      "matchedWords": 4
+    },
+    {
+      "start": 37.42,
+      "end": 43.01,
+      "text": "And start",
+      "matchedWords": 0
+    },
+    {
+      "start": 43.01,
+      "end": 44.16,
+      "text": "To control and to change",
+      "matchedWords": 4
+    },
+    {
+      "start": 44.16,
+      "end": 45.74,
+      "text": "The source of the upset",
+      "matchedWords": 5
+    },
+    {
+      "start": 45.74,
+      "end": 50.99,
+      "text": "By listening to the heartbeat",
+      "matchedWords": 3
+    },
+    {
+      "start": 53.1,
+      "end": 54.29,
+      "text": "Of your innermost self",
+      "matchedWords": 4
+    },
+    {
+      "start": 54.29,
+      "end": 54.29,
+      "text": "And . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 54.29,
+      "end": 54.29,
+      "text": "The silence . . .",
+      "matchedWords": 0
+    },
+    {
+      "start": 54.29,
+      "end": 62.47,
+      "text": "Of the universes.....within!",
+      "matchedWords": 2
+    }
+  ]
+}

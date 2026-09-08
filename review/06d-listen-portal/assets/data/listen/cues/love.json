@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "slug": "love",
+  "audioDuration": 159.96,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.6296,
+  "cues": [
+    {
+      "start": 2.85,
+      "end": 4.23,
+      "text": "Here I stand",
+      "matchedWords": 3
+    },
+    {
+      "start": 7.55,
+      "end": 10.0,
+      "text": "Enveloped in a misty world",
+      "matchedWords": 5
+    },
+    {
+      "start": 10.0,
+      "end": 11.76,
+      "text": "Of doubts that assail me",
+      "matchedWords": 5
+    },
+    {
+      "start": 11.76,
+      "end": 16.13,
+      "text": "And fears that stab at me",
+      "matchedWords": 6
+    },
+    {
+      "start": 16.13,
+      "end": 19.87,
+      "text": "From all directions",
+      "matchedWords": 3
+    },
+    {
+      "start": 19.87,
+      "end": 27.03,
+      "text": "I turn around for help",
+      "matchedWords": 5
+    },
+    {
+      "start": 27.03,
+      "end": 30.65,
+      "text": "There is none can comfort me",
+      "matchedWords": 6
+    },
+    {
+      "start": 30.65,
+      "end": 34.45,
+      "text": "For my plight is strange",
+      "matchedWords": 5
+    },
+    {
+      "start": 34.45,
+      "end": 37.95,
+      "text": "Even to the wisest of those",
+      "matchedWords": 6
+    },
+    {
+      "start": 37.95,
+      "end": 41.96,
+      "text": "Who around me have gathered",
+      "matchedWords": 3
+    },
+    {
+      "start": 41.96,
+      "end": 52.245,
+      "text": "Victim of a strange affliction",
+      "matchedWords": 0
+    },
+    {
+      "start": 52.245,
+      "end": 62.53,
+      "text": "Blown about by winds",
+      "matchedWords": 0
+    },
+    {
+      "start": 62.53,
+      "end": 63.82,
+      "text": "That bear shafts of agony",
+      "matchedWords": 4
+    },
+    {
+      "start": 63.82,
+      "end": 66.83,
+      "text": "On their very soft wings",
+      "matchedWords": 5
+    },
+    {
+      "start": 69.03,
+      "end": 70.59,
+      "text": "Cursed by Cupid to remain",
+      "matchedWords": 4
+    },
+    {
+      "start": 71.79,
+      "end": 73.77,
+      "text": "On this strange island",
+      "matchedWords": 3
+    },
+    {
+      "start": 73.77,
+      "end": 86.68,
+      "text": "Yet a smile on my face remains",
+      "matchedWords": 0
+    },
+    {
+      "start": 86.68,
+      "end": 88.46,
+      "text": "Voices that rise and fall",
+      "matchedWords": 5
+    },
+    {
+      "start": 91.62,
+      "end": 91.91,
+      "text": "Ringing in mourning notes",
+      "matchedWords": 1
+    },
+    {
+      "start": 91.91,
+      "end": 93.48,
+      "text": "Of distress and grief",
+      "matchedWords": 4
+    },
+    {
+      "start": 96.07,
+      "end": 96.76,
+      "text": "Carrying messages",
+      "matchedWords": 1
+    },
+    {
+      "start": 96.76,
+      "end": 99.88,
+      "text": "Of deceitful aberrations",
+      "matchedWords": 3
+    },
+    {
+      "start": 99.88,
+      "end": 103.54,
+      "text": "Yet to come to pass",
+      "matchedWords": 5
+    },
+    {
+      "start": 105.8,
+      "end": 107.76,
+      "text": "Impress themselves upon me",
+      "matchedWords": 3
+    },
+    {
+      "start": 107.76,
+      "end": 116.46,
+      "text": "But I give not heed to them",
+      "matchedWords": 0
+    },
+    {
+      "start": 116.46,
+      "end": 125.16,
+      "text": "For I live",
+      "matchedWords": 0
+    },
+    {
+      "start": 125.16,
+      "end": 133.86,
+      "text": "In the knowledge",
+      "matchedWords": 0
+    },
+    {
+      "start": 133.86,
+      "end": 142.56,
+      "text": "And the understanding",
+      "matchedWords": 0
+    },
+    {
+      "start": 142.56,
+      "end": 151.26,
+      "text": "Of what I am",
+      "matchedWords": 0
+    },
+    {
+      "start": 151.26,
+      "end": 159.96,
+      "text": "For I am . . . Love",
+      "matchedWords": 0
+    }
+  ]
+}

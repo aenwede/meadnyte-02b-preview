@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "slug": "stripe-man",
+  "audioDuration": 100.344,
+  "alignmentModel": "base.en",
+  "status": "machine-aligned-needs-editorial-review",
+  "coverage": 0.6522,
+  "cues": [
+    {
+      "start": 0.61,
+      "end": 1.8,
+      "text": "The stripe man",
+      "matchedWords": 3
+    },
+    {
+      "start": 1.8,
+      "end": 6.4,
+      "text": "Dresses in stripes",
+      "matchedWords": 3
+    },
+    {
+      "start": 6.4,
+      "end": 11.28,
+      "text": "From head to toe",
+      "matchedWords": 2
+    },
+    {
+      "start": 11.28,
+      "end": 15.09,
+      "text": "Wears a hat of stripes",
+      "matchedWords": 5
+    },
+    {
+      "start": 15.09,
+      "end": 20.44,
+      "text": "Talks in stripes",
+      "matchedWords": 3
+    },
+    {
+      "start": 20.44,
+      "end": 20.44,
+      "text": "Looks in stripes",
+      "matchedWords": 0
+    },
+    {
+      "start": 20.44,
+      "end": 30.27,
+      "text": "Lives within stripes",
+      "matchedWords": 2
+    },
+    {
+      "start": 30.27,
+      "end": 35.21,
+      "text": "His hair",
+      "matchedWords": 2
+    },
+    {
+      "start": 35.21,
+      "end": 38.13,
+      "text": "Is like stripes",
+      "matchedWords": 3
+    },
+    {
+      "start": 38.13,
+      "end": 38.13,
+      "text": "On his scalp",
+      "matchedWords": 0
+    },
+    {
+      "start": 38.13,
+      "end": 38.13,
+      "text": "And over his skin",
+      "matchedWords": 0
+    },
+    {
+      "start": 38.13,
+      "end": 38.13,
+      "text": "He truly is",
+      "matchedWords": 0
+    },
+    {
+      "start": 38.13,
+      "end": 38.13,
+      "text": "The stripe man",
+      "matchedWords": 0
+    },
+    {
+      "start": 38.13,
+      "end": 55.67,
+      "text": "He tapers away gently",
+      "matchedWords": 3
+    },
+    {
+      "start": 55.67,
+      "end": 60.31,
+      "text": "And disappears into nothingness",
+      "matchedWords": 4
+    },
+    {
+      "start": 60.31,
+      "end": 65.19,
+      "text": "Look to the Rainbow",
+      "matchedWords": 2
+    },
+    {
+      "start": 65.19,
+      "end": 69.56,
+      "text": "Within which lives",
+      "matchedWords": 3
+    },
+    {
+      "start": 69.56,
+      "end": 73.62,
+      "text": "The stripe man",
+      "matchedWords": 3
+    },
+    {
+      "start": 73.62,
+      "end": 81.0,
+      "text": "In a make-believe world",
+      "matchedWords": 3
+    },
+    {
+      "start": 84.0,
+      "end": 85.46,
+      "text": "Of his own creation",
+      "matchedWords": 4
+    }
+  ]
+}
