@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FOLS Timing Workbench — House of Meadnyte</title>
+  <meta name="description" content="Editorial calibration tool for the Fragments of a Listening Soul lyric timings.">
+  <link rel="stylesheet" href="workbench.css?v=1.0">
+</head>
+<body>
+  <header class="workbench-header">
+    <div>
+      <p class="eyebrow">House of Meadnyte · Editorial Tool</p>
+      <h1>FOLS Timing Workbench</h1>
+    </div>
+    <div class="header-actions">
+      <span class="save-state" data-save-state>Loading collection…</span>
+      <button type="button" class="quiet" data-reset>Reset poem</button>
+      <button type="button" data-export>Export corrected cue file</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="collection-bar" aria-label="Poem selection">
+      <label>Poem <select data-poem-select></select></label>
+      <button type="button" class="quiet" data-prev-poem>← Previous</button>
+      <button type="button" class="quiet" data-next-poem>Next →</button>
+      <label class="import-control">Import corrected cue file<input type="file" accept="application/json,.json" data-import></label>
+    </section>
+
+    <section class="audition-stage" data-stage>
+      <div class="art-field"><img data-art-backdrop alt=""><img data-art alt=""></div>
+      <div class="stage-copy"><p data-position></p><h2 data-title></h2></div>
+      <div class="lyric-preview" aria-live="polite"><span data-preview-line>Press play to begin.</span></div>
+      <div class="player-deck">
+        <canvas data-waveform aria-label="Audio waveform and timing cursor"></canvas>
+        <div class="counter-row"><output data-elapsed>0:00.000</output><output data-remaining>0:00.000</output></div>
+        <input class="seek" type="range" min="0" max="1000" value="0" aria-label="Seek through recording" data-seek>
+        <div class="transport">
+          <button type="button" data-back>−5</button>
+          <button type="button" class="play" data-play>▶ <span>Play</span></button>
+          <button type="button" data-forward>+5</button>
+          <button type="button" class="quiet" data-loop>Loop cue: off</button>
+        </div>
+        <audio preload="metadata" data-audio></audio>
+      </div>
+    </section>
+
+    <section class="editor-grid">
+      <aside class="cue-list-panel">
+        <div class="panel-heading"><div><p class="eyebrow">Timing map</p><h2>Lyric lines</h2></div><span data-progress-label></span></div>
+        <ol class="cue-list" data-cue-list></ol>
+      </aside>
+
+      <section class="cue-editor" aria-label="Selected cue editor">
+        <div class="panel-heading"><div><p class="eyebrow">Selected cue</p><h2 data-cue-number>Line 1</h2></div><span class="quality" data-quality></span></div>
+        <label class="line-text">Displayed lyric<textarea rows="3" data-text></textarea></label>
+        <div class="time-columns">
+          <fieldset>
+            <legend>Line begins</legend>
+            <input type="number" min="0" step="0.01" data-start>
+            <button type="button" data-mark-start>Use playhead</button>
+            <div class="nudges" data-nudge-start><button type="button" value="-0.1">−0.10</button><button type="button" value="-0.01">−0.01</button><button type="button" value="0.01">+0.01</button><button type="button" value="0.1">+0.10</button></div>
+          </fieldset>
+          <fieldset>
+            <legend>Line ends</legend>
+            <input type="number" min="0" step="0.01" data-end>
+            <button type="button" data-mark-end>Use playhead</button>
+            <div class="nudges" data-nudge-end><button type="button" value="-0.1">−0.10</button><button type="button" value="-0.01">−0.01</button><button type="button" value="0.01">+0.01</button><button type="button" value="0.1">+0.10</button></div>
+          </fieldset>
+        </div>
+        <div class="cue-actions">
+          <button type="button" class="quiet" data-preview-cue>Play selected cue</button>
+          <button type="button" class="quiet" data-replay>Replay around entry</button>
+          <button type="button" data-save-cue>Apply correction</button>
+          <button type="button" class="quiet" data-next-cue>Apply & next line</button>
+        </div>
+        <div class="validation" data-validation role="status"></div>
+        <details class="shortcuts"><summary>Keyboard shortcuts</summary><p><kbd>Space</kbd> play/pause · <kbd>[</kbd> mark start · <kbd>]</kbd> mark end · <kbd>J</kbd>/<kbd>L</kbd> back/forward five seconds · <kbd>N</kbd> next cue · <kbd>R</kbd> replay entry.</p></details>
+      </section>
+    </section>
+  </main>
+  <footer><span>Corrections autosave in this browser.</span><span>Exported JSON is the publication handoff.</span></footer>
+  <script src="workbench.js?v=1.0" defer></script>
+</body>
+</html>
