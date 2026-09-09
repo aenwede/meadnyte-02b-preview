@@ -12,14 +12,14 @@
   let segmentStop=null;
   const fmt=(s,ms=false)=>{s=Math.max(0,Number(s)||0);const m=Math.floor(s/60),v=ms?s%60:(Math.floor(s)%60);return `${m}:${v.toFixed(ms?3:0).padStart(ms?6:2,'0')}`};
   const storageKey=slug=>`${slug==='the-oracle'?'fols-timing-v2':'fols-timing-v1'}:${slug}`;
-  const audioUrl=slug=>slug==='the-oracle'?'assets/the-oracle-workbench.mp3?v=web-20260909':`${ROOT}/assets/audio/listen/fragments/${slug}.mp3`;
+  const audioUrl=slug=>slug==='the-oracle'?'assets/oracle-fols-drive-v2.mp3':`${ROOT}/assets/audio/listen/fragments/${slug}.mp3`;
   select.innerHTML=poems.map(([slug,title],i)=>`<option value="${i}">${String(i+1).padStart(2,'0')} · ${title}</option>`).join('');
 
   async function loadPoem(index){
     state.poem=(index+poems.length)%poems.length; state.cue=0; state.loop=false; state.history=[]; state.blockStart=null; state.blockEnd=null; updateUndo(); updateBlockControls(); $('[data-loop]').textContent='Loop cue: off'; select.value=state.poem;
     const [slug,title]=poems[state.poem]; $('[data-title]').textContent=title; $('[data-position]').textContent=`Fragments of a Listening Soul · ${String(state.poem+1).padStart(2,'0')} of 24`;
     const art=`${ROOT}/assets/img/listen/fragments/${slug}.png`; $('[data-art]').src=art; $('[data-art-backdrop]').src=art; $('[data-art]').alt=`Artwork for ${title}`;
-    audio.pause(); audio.src=audioUrl(slug); audio.currentTime=0; $('[data-preview-line]').textContent='Press play to begin.';
+    clearSegmentStop(); audio.pause(); audio.src=audioUrl(slug); audio.load(); audio.currentTime=0; $('[data-preview-line]').textContent='Press play to begin.';
     const response=await fetch(`${ROOT}/assets/data/listen/cues/${slug}.json?v=${Date.now()}`); if(!response.ok)throw new Error(`Cue file returned ${response.status}`);
     const payload=await response.json(); state.original=structuredClone(payload); const saved=localStorage.getItem(storageKey(slug)); state.cues=saved?JSON.parse(saved).cues:structuredClone(payload.cues); state.dirty=Boolean(saved); setSaveState(); renderList(); selectCue(0); decodeWave();
   }
