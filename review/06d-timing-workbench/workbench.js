@@ -10,14 +10,15 @@
   const audio=$('[data-audio]'), select=$('[data-poem-select]'), list=$('[data-cue-list]'), canvas=$('[data-waveform]'), ctx=canvas.getContext('2d');
   const state={poem:0,cue:0,cues:[],original:null,duration:0,loop:false,dirty:false,peaks:[],history:[],blockStart:null,blockEnd:null};
   const fmt=(s,ms=false)=>{s=Math.max(0,Number(s)||0);const m=Math.floor(s/60),v=ms?s%60:(Math.floor(s)%60);return `${m}:${v.toFixed(ms?3:0).padStart(ms?6:2,'0')}`};
-  const storageKey=slug=>`fols-timing-v1:${slug}`;
+  const storageKey=slug=>`${slug==='the-oracle'?'fols-timing-v2':'fols-timing-v1'}:${slug}`;
+  const audioUrl=slug=>`${ROOT}/assets/audio/listen/fragments/${slug}.mp3${slug==='the-oracle'?'?v=fols-20260909':''}`;
   select.innerHTML=poems.map(([slug,title],i)=>`<option value="${i}">${String(i+1).padStart(2,'0')} · ${title}</option>`).join('');
 
   async function loadPoem(index){
     state.poem=(index+poems.length)%poems.length; state.cue=0; state.loop=false; state.history=[]; state.blockStart=null; state.blockEnd=null; updateUndo(); updateBlockControls(); $('[data-loop]').textContent='Loop cue: off'; select.value=state.poem;
     const [slug,title]=poems[state.poem]; $('[data-title]').textContent=title; $('[data-position]').textContent=`Fragments of a Listening Soul · ${String(state.poem+1).padStart(2,'0')} of 24`;
     const art=`${ROOT}/assets/img/listen/fragments/${slug}.png`; $('[data-art]').src=art; $('[data-art-backdrop]').src=art; $('[data-art]').alt=`Artwork for ${title}`;
-    audio.pause(); audio.src=`${ROOT}/assets/audio/listen/fragments/${slug}.mp3`; audio.currentTime=0; $('[data-preview-line]').textContent='Press play to begin.';
+    audio.pause(); audio.src=audioUrl(slug); audio.currentTime=0; $('[data-preview-line]').textContent='Press play to begin.';
     const response=await fetch(`${ROOT}/assets/data/listen/cues/${slug}.json?v=${Date.now()}`); if(!response.ok)throw new Error(`Cue file returned ${response.status}`);
     const payload=await response.json(); state.original=structuredClone(payload); const saved=localStorage.getItem(storageKey(slug)); state.cues=saved?JSON.parse(saved).cues:structuredClone(payload.cues); state.dirty=Boolean(saved); setSaveState(); renderList(); selectCue(0); decodeWave();
   }
@@ -79,7 +80,7 @@
     remember();state.cues.splice(last+1,0,...copies);persist();state.cue=last+1;clearBlock();renderList();selectCue(state.cue);
   }
   function sync(){const current=audio.currentTime,duration=audio.duration||state.duration||0;state.duration=duration;$('[data-elapsed]').value=fmt(current,true);$('[data-remaining]').value=fmt(duration-current,true);$('[data-seek]').value=duration?String(Math.round(current/duration*1000)):'0';const cue=state.cues.findIndex(c=>current>=c.start&&current<c.end);$('[data-preview-line]').textContent=audio.paused&&current===0?'Press play to begin.':cue>=0?state.cues[cue].text:'';if(cue>=0&&cue!==state.cue){state.cue=cue;renderList();drawWave()}if(state.loop&&current>=state.cues[state.cue].end)audio.currentTime=Math.max(0,state.cues[state.cue].start-.2);drawWave()}
-  async function decodeWave(){state.peaks=[];drawWave();try{const [slug]=poems[state.poem],buffer=await fetch(`${ROOT}/assets/audio/listen/fragments/${slug}.mp3`).then(r=>r.arrayBuffer()),ac=new AudioContext(),decoded=await ac.decodeAudioData(buffer),data=decoded.getChannelData(0),bins=900,step=Math.max(1,Math.floor(data.length/bins));for(let i=0;i<bins;i++){let peak=0;for(let j=0;j<step;j+=8)peak=Math.max(peak,Math.abs(data[i*step+j]||0));state.peaks.push(peak)}ac.close();drawWave()}catch(e){console.warn('Waveform unavailable',e)}}
+  async function decodeWave(){state.peaks=[];drawWave();try{const [slug]=poems[state.poem],buffer=await fetch(audioUrl(slug)).then(r=>r.arrayBuffer()),ac=new AudioContext(),decoded=await ac.decodeAudioData(buffer),data=decoded.getChannelData(0),bins=900,step=Math.max(1,Math.floor(data.length/bins));for(let i=0;i<bins;i++){let peak=0;for(let j=0;j<step;j+=8)peak=Math.max(peak,Math.abs(data[i*step+j]||0));state.peaks.push(peak)}ac.close();drawWave()}catch(e){console.warn('Waveform unavailable',e)}}
   function drawWave(){const rect=canvas.getBoundingClientRect(),dpr=devicePixelRatio||1;canvas.width=Math.max(1,rect.width*dpr);canvas.height=Math.max(1,rect.height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);const w=rect.width,h=rect.height;ctx.clearRect(0,0,w,h);ctx.fillStyle='rgba(215,184,120,.42)';const peaks=state.peaks.length?state.peaks:Array(300).fill(.08);peaks.forEach((p,i)=>{const x=i/peaks.length*w,bh=Math.max(1,p*h*.82);ctx.fillRect(x,(h-bh)/2,Math.max(1,w/peaks.length),bh)});if(state.duration){const c=state.cues[state.cue];ctx.fillStyle='rgba(121,201,210,.2)';ctx.fillRect(c.start/state.duration*w,0,Math.max(2,(c.end-c.start)/state.duration*w),h);ctx.fillStyle='#f4ede0';ctx.fillRect(audio.currentTime/state.duration*w,0,2,h)}}
   function nudge(which,delta){const input=$(which==='start'?'[data-start]':'[data-end]');input.value=(Number(input.value)+delta).toFixed(3);validateDraft()}
   function playSegment(start,end){audio.currentTime=Math.max(0,start);audio.play();const stop=()=>{if(audio.currentTime>=end){audio.pause();audio.removeEventListener('timeupdate',stop)}};audio.addEventListener('timeupdate',stop)}
