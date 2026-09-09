@@ -3,68 +3,78 @@
   "slug": "five-days-of-hell",
   "audioDuration": 143.832,
   "alignmentModel": "medium.en",
-  "status": "machine-aligned-needs-editorial-review",
+  "status": "editorially-adjusted",
   "coverage": 0.7848,
   "cues": [
     {
-      "start": 0.32,
-      "end": 4.52,
+      "start": 3.02,
+      "end": 4.767,
       "text": "While you were gone",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 6.72,
-      "end": 8.45,
+      "start": 7.334,
+      "end": 8.487,
       "text": "I threw a ball",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 8.45,
-      "end": 12.7,
+      "start": 11.073,
+      "end": 12.551,
       "text": "I invited one and all",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 12.7,
+      "start": 16.51,
       "end": 18.29,
       "text": "But it was no fun",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 18.29,
-      "end": 32.87,
+      "start": 25.021,
+      "end": 29.277,
       "text": "While you were gone",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 32.87,
+      "start": 31.78,
       "end": 34.43,
       "text": "The sky was overcast",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 34.43,
+      "start": 35.95,
       "end": 38.33,
       "text": "The days stood fast",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
       "start": 38.33,
-      "end": 41.38,
+      "end": 47.888,
       "text": "All nature seemed to mourn",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 41.38,
-      "end": 53.525,
+      "start": 47.888,
+      "end": 58.895,
       "text": "While you were gone",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 53.525,
-      "end": 65.67,
+      "start": 61.69,
+      "end": 63.486,
       "text": "Nothing remained the same",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
       "start": 65.67,
@@ -73,10 +83,11 @@
       "matchedWords": 4
     },
     {
-      "start": 67.88,
+      "start": 68.852,
       "end": 71.26,
       "text": "Misery and sadness found fame",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
       "start": 71.26,
@@ -85,10 +96,11 @@
       "matchedWords": 5
     },
     {
-      "start": 79.8,
+      "start": 78.659,
       "end": 82.3,
       "text": "Life stopped being a game",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
       "start": 82.56,
@@ -97,17 +109,20 @@
       "matchedWords": 5
     },
     {
-      "start": 90.11,
+      "start": 89.587,
       "end": 92.73,
       "text": "Mind discipline was but in vain",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 92.73,
-      "end": 143.832,
+      "start": 121.799,
+      "end": 128.725,
       "text": "As the heart awaited your return",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     }
   ],
-  "selectedFrom": "medium.en"
+  "selectedFrom": "medium.en",
+  "editedAt": "2026-09-08T20:08:35.010Z"
 }

@@ -3,69 +3,79 @@
   "slug": "day-youll-finally-be-mine",
   "audioDuration": 217.2,
   "alignmentModel": "base.en",
-  "status": "machine-aligned-needs-editorial-review",
+  "status": "editorially-adjusted",
   "coverage": 0.9111,
   "cues": [
     {
-      "start": 0.0,
+      "start": 0,
       "end": 1.11,
       "text": "My Island of Patmos",
       "matchedWords": 4
     },
     {
-      "start": 1.11,
-      "end": 5.27,
+      "start": 4.131,
+      "end": 5.863,
       "text": "Came into existence",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
-      "start": 5.27,
+      "start": 9.51,
       "end": 11.02,
       "text": "The very day I met you",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 11.02,
-      "end": 24.45,
+      "start": 18.459,
+      "end": 19.762,
       "text": "On it I know",
-      "matchedWords": 2
+      "matchedWords": 2,
+      "edited": true
     },
     {
-      "start": 24.45,
+      "start": 23.67,
       "end": 24.87,
       "text": "Neither friend nor foe",
-      "matchedWords": 2
+      "matchedWords": 2,
+      "edited": true
     },
     {
-      "start": 24.87,
+      "start": 27.579,
       "end": 29.67,
       "text": "But peace of mind eludes me",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 29.67,
+      "start": 33.514,
       "end": 35.13,
       "text": "For your presence is absent",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 35.13,
+      "start": 38.654,
       "end": 40.4,
       "text": "And I pine away",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 40.4,
+      "start": 43.866,
       "end": 45.13,
       "text": "Longing for the day",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 45.13,
-      "end": 50.24,
+      "start": 48.644,
+      "end": 50.43,
       "text": "You will finally be mine",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     }
   ],
-  "selectedFrom": "base.en"
+  "selectedFrom": "base.en",
+  "editedAt": "2026-09-09T02:24:33.988Z"
 }

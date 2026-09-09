@@ -3,7 +3,7 @@
   "slug": "time-in-retrospect",
   "audioDuration": 240.624,
   "alignmentModel": "small.en",
-  "status": "machine-aligned-needs-editorial-review",
+  "status": "editorially-adjusted",
   "coverage": 0.9167,
   "cues": [
     {
@@ -13,35 +13,41 @@
       "matchedWords": 3
     },
     {
-      "start": 10.35,
+      "start": 12.108,
       "end": 14.01,
       "text": "Life is the only true essence",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 14.01,
+      "start": 16.226,
       "end": 17.36,
       "text": "In retrospect",
-      "matchedWords": 2
+      "matchedWords": 2,
+      "edited": true
     },
     {
-      "start": 17.36,
+      "start": 19.729,
       "end": 22.42,
       "text": "Time, does not exist",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
-      "start": 22.42,
+      "start": 27.359,
       "end": 29.41,
       "text": "It becomes a quantum of energy",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 45.9,
-      "end": 89.01,
+      "start": 32.94,
+      "end": 33.915,
       "text": "In the mind.",
-      "matchedWords": 2
+      "matchedWords": 2,
+      "edited": true
     }
   ],
-  "selectedFrom": "small.en"
+  "selectedFrom": "small.en",
+  "editedAt": "2026-09-08T21:23:30.970Z"
 }

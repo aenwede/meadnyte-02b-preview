@@ -3,14 +3,15 @@
   "slug": "procrastination",
   "audioDuration": 104.712,
   "alignmentModel": "base.en",
-  "status": "machine-aligned-needs-editorial-review",
+  "status": "editorially-adjusted",
   "coverage": 0.8295,
   "cues": [
     {
-      "start": 0.0,
-      "end": 15.36,
+      "start": 12.771,
+      "end": 14.129,
       "text": "Wait!",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
       "start": 15.36,
@@ -19,101 +20,118 @@
       "matchedWords": 5
     },
     {
-      "start": 16.23,
-      "end": 20.31,
-      "text": "But there is always another day",
-      "matchedWords": 6
+      "start": 18.842,
+      "end": 20.099,
+      "text": "But there's always another day",
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 20.31,
+      "start": 23.03,
       "end": 24.1,
       "text": "It could be done now",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 24.1,
+      "start": 25.961,
       "end": 27.37,
       "text": "But could as well be done later",
-      "matchedWords": 7
+      "matchedWords": 7,
+      "edited": true
     },
     {
-      "start": 27.37,
+      "start": 30.462,
       "end": 31.74,
       "text": "There really is no deadline",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 31.74,
+      "start": 34.44,
       "end": 35.84,
       "text": "Just a subject of whim",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 35.84,
+      "start": 38.522,
       "end": 39.99,
       "text": "Taking it easy is the game",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 39.99,
+      "start": 42.814,
       "end": 44.12,
       "text": "Yet there is no gain",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 49.44,
+      "start": 48.781,
       "end": 49.99,
       "text": "The longer it takes",
-      "matchedWords": 2
+      "matchedWords": 2,
+      "edited": true
     },
     {
-      "start": 49.99,
-      "end": 49.99,
+      "start": 52.445,
+      "end": 54.215,
       "text": "The harder it gets",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 49.99,
+      "start": 58.202,
       "end": 59.77,
       "text": "Eventually it will get done",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 59.77,
+      "start": 61.971,
       "end": 63.63,
       "text": "By then the joy will be gone",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 63.63,
+      "start": 67.205,
       "end": 69.26,
       "text": "The appreciation will be less",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 69.26,
+      "start": 71.392,
       "end": 73.57,
       "text": "The effort just a jest",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 73.57,
+      "start": 77.777,
       "end": 79.28,
       "text": "So stop procrastinating",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
-      "start": 79.28,
-      "end": 79.28,
+      "start": 83.011,
+      "end": 85.468,
       "text": "Get on the ball, start doing",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 79.28,
+      "start": 89.397,
       "end": 90.57,
       "text": "The wait is over",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     }
   ],
-  "selectedFrom": "base.en"
+  "selectedFrom": "base.en",
+  "editedAt": "2026-09-09T02:38:12.103Z"
 }

@@ -3,20 +3,22 @@
   "slug": "love",
   "audioDuration": 159.96,
   "alignmentModel": "small.en",
-  "status": "machine-aligned-needs-editorial-review",
+  "status": "editorially-adjusted",
   "coverage": 0.6296,
   "cues": [
     {
-      "start": 2.85,
+      "start": 3.038,
       "end": 4.39,
       "text": "Here I stand",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
-      "start": 7.71,
+      "start": 7.996,
       "end": 10.08,
       "text": "Enveloped in a misty world",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
       "start": 10.08,
@@ -37,52 +39,60 @@
       "matchedWords": 3
     },
     {
-      "start": 20.17,
+      "start": 25.747,
       "end": 27.13,
       "text": "I turn around for help",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 27.13,
+      "start": 28.626,
       "end": 31.1,
       "text": "There is none can comfort me",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 32.56,
+      "start": 33.103,
       "end": 34.88,
       "text": "For my plight is strange",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 35.68,
+      "start": 35.982,
       "end": 38.3,
       "text": "Even to the wisest of those",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 41.4,
+      "start": 39.5,
       "end": 42.26,
       "text": "Who around me have gathered",
-      "matchedWords": 2
+      "matchedWords": 2,
+      "edited": true
     },
     {
-      "start": 42.26,
+      "start": 46.217,
       "end": 52.415,
       "text": "Victim of a strange affliction",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 52.415,
-      "end": 62.57,
+      "start": 54.853,
+      "end": 58.515,
       "text": "Blown about by winds",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 62.57,
+      "start": 62.049,
       "end": 64.11,
       "text": "That bear shafts of agony",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
       "start": 65.07,
@@ -103,10 +113,11 @@
       "matchedWords": 4
     },
     {
-      "start": 73.91,
-      "end": 86.72,
+      "start": 76.602,
+      "end": 83.139,
       "text": "Yet a smile on my face remains",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
       "start": 86.72,
@@ -115,10 +126,11 @@
       "matchedWords": 5
     },
     {
-      "start": 91.88,
+      "start": 90.355,
       "end": 92.01,
       "text": "Ringing in mourning notes",
-      "matchedWords": 1
+      "matchedWords": 1,
+      "edited": true
     },
     {
       "start": 92.01,
@@ -127,16 +139,18 @@
       "matchedWords": 4
     },
     {
-      "start": 96.21,
+      "start": 96.112,
       "end": 96.98,
       "text": "Carrying messages",
-      "matchedWords": 1
+      "matchedWords": 1,
+      "edited": true
     },
     {
-      "start": 96.98,
+      "start": 98.031,
       "end": 100.29,
       "text": "Of deceitful aberrations",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
       "start": 101.94,
@@ -151,41 +165,48 @@
       "matchedWords": 3
     },
     {
-      "start": 107.71,
-      "end": 108.0,
+      "start": 114.023,
+      "end": 115.904,
       "text": "But I give not heed to them",
-      "matchedWords": 1
+      "matchedWords": 1,
+      "edited": true
     },
     {
-      "start": 108.0,
+      "start": 117.861,
       "end": 118.392,
       "text": "For I live",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 118.392,
-      "end": 128.784,
+      "start": 119.78,
+      "end": 120.74,
       "text": "In the knowledge",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 128.784,
-      "end": 139.176,
+      "start": 122.819,
+      "end": 123.61,
       "text": "And the understanding",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 139.176,
-      "end": 149.568,
+      "start": 125.377,
+      "end": 126.316,
       "text": "Of what I am",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 149.568,
-      "end": 159.96,
+      "start": 127.296,
+      "end": 147.637,
       "text": "For I am . . . Love",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     }
   ],
-  "selectedFrom": "small.en"
+  "selectedFrom": "small.en",
+  "editedAt": "2026-09-09T00:58:47.375Z"
 }

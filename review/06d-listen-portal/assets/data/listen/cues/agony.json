@@ -3,50 +3,57 @@
   "slug": "agony",
   "audioDuration": 78.12,
   "alignmentModel": "base.en",
-  "status": "machine-aligned-needs-editorial-review",
+  "status": "editorially-adjusted",
   "coverage": 0.7317,
   "cues": [
     {
-      "start": 0.0,
-      "end": 0.0,
+      "start": 0,
+      "end": 0.487,
       "text": "Knock . . .",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 0.0,
-      "end": 0.0,
+      "start": 1.796,
+      "end": 2.349,
       "text": "knock . . .",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 0.0,
-      "end": 0.4,
-      "text": "  knock . . .",
-      "matchedWords": 1
+      "start": 3.279,
+      "end": 3.826,
+      "text": "knock . . .",
+      "matchedWords": 1,
+      "edited": true
     },
     {
-      "start": 6.24,
-      "end": 7.17,
+      "start": 5.934,
+      "end": 7.624,
       "text": "Fear grips my heart",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 7.17,
+      "start": 9.135,
       "end": 10.42,
       "text": "I dread to look out",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 10.42,
+      "start": 11.946,
       "end": 13.53,
       "text": "Who could it be this time",
-      "matchedWords": 6
+      "matchedWords": 6,
+      "edited": true
     },
     {
-      "start": 14.79,
+      "start": 14.991,
       "end": 15.73,
       "text": "Loneliness . . .",
-      "matchedWords": 1
+      "matchedWords": 1,
+      "edited": true
     },
     {
       "start": 16.55,
@@ -55,16 +62,18 @@
       "matchedWords": 1
     },
     {
-      "start": 17.29,
-      "end": 21.24,
+      "start": 18.895,
+      "end": 19.754,
       "text": "Or Pain",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 21.24,
+      "start": 21.55,
       "end": 23.29,
       "text": "Who of these three torturers",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
       "start": 23.29,
@@ -79,22 +88,25 @@
       "matchedWords": 3
     },
     {
-      "start": 25.87,
+      "start": 31.31,
       "end": 32.41,
       "text": "Waves of grief",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
-      "start": 32.41,
+      "start": 33.395,
       "end": 35.47,
       "text": "Roll over my despairing soul",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 35.47,
+      "start": 35.995,
       "end": 37.61,
       "text": "The body frame is tired",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
       "start": 37.61,
@@ -109,28 +121,18 @@
       "matchedWords": 4
     },
     {
-      "start": 42.62,
+      "start": 43.178,
       "end": 45.21,
       "text": "From the thunderbolts of anxiety",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 45.21,
+      "start": 46.301,
       "end": 48.34,
       "text": "Confusion reigns supreme",
-      "matchedWords": 3
-    },
-    {
-      "start": 48.34,
-      "end": 49.927,
-      "text": "Knock . . .",
-      "matchedWords": 0
-    },
-    {
-      "start": 49.927,
-      "end": 51.513,
-      "text": "  knock . . .",
-      "matchedWords": 0
+      "matchedWords": 3,
+      "edited": true
     },
     {
       "start": 51.513,
@@ -146,10 +148,60 @@
     },
     {
       "start": 53.92,
-      "end": 78.12,
+      "end": 56.757,
       "text": "Who . . . who . . . w h o o o . . . iisss . . . i i i t t t t?",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
+    },
+    {
+      "text": "Knock...",
+      "start": 62.776,
+      "end": 63.259,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
+    },
+    {
+      "text": "Knock...",
+      "start": 63.401,
+      "end": 64.092,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
+    },
+    {
+      "text": "Knock...",
+      "start": 64.26,
+      "end": 64.745,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
+    },
+    {
+      "text": "Knock... Knock... Knock... Knock.",
+      "start": 64.806,
+      "end": 69.131,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
+    },
+    {
+      "text": "Knock.",
+      "start": 70.819,
+      "end": 71.053,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
+    },
+    {
+      "text": "Knock.",
+      "start": 72.224,
+      "end": 72.536,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
     }
   ],
-  "selectedFrom": "base.en"
+  "selectedFrom": "base.en",
+  "editedAt": "2026-09-09T00:38:36.910Z"
 }

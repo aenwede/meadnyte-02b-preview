@@ -3,44 +3,50 @@
   "slug": "you-alone",
   "audioDuration": 122.136,
   "alignmentModel": "base.en",
-  "status": "machine-aligned-needs-editorial-review",
+  "status": "editorially-adjusted",
   "coverage": 0.6522,
   "cues": [
     {
-      "start": 0.0,
-      "end": 8.99,
+      "start": 3.419,
+      "end": 4.523,
       "text": "You alone!",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 8.99,
-      "end": 9.8,
+      "start": 7.448,
+      "end": 10.094,
       "text": "Honey, it's you alone",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
-      "start": 9.8,
+      "start": 12.698,
       "end": 13.59,
       "text": "That can make me feel",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 13.59,
-      "end": 13.59,
+      "start": 16.361,
+      "end": 17.282,
       "text": "The way I do",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 13.59,
+      "start": 20.634,
       "end": 21.34,
       "text": "You alone!",
-      "matchedWords": 2
+      "matchedWords": 2,
+      "edited": true
     },
     {
-      "start": 21.34,
-      "end": 26.17,
+      "start": 23.442,
+      "end": 24.663,
       "text": "Can knock my heart",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
       "start": 26.17,
@@ -49,16 +55,18 @@
       "matchedWords": 5
     },
     {
-      "start": 27.4,
+      "start": 28.814,
       "end": 29.68,
       "text": "Of its keepers",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
-      "start": 29.68,
+      "start": 32.355,
       "end": 33.23,
       "text": "You alone!",
-      "matchedWords": 2
+      "matchedWords": 2,
+      "edited": true
     },
     {
       "start": 34.81,
@@ -73,47 +81,79 @@
       "matchedWords": 2
     },
     {
-      "start": 39.91,
+      "start": 42,
       "end": 43.29,
       "text": "From my very self",
-      "matchedWords": 4
+      "matchedWords": 4,
+      "edited": true
     },
     {
-      "start": 43.29,
+      "text": "You alone...",
+      "start": 46.151,
+      "end": 53.301,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
+    },
+    {
+      "start": 64.221,
       "end": 65.13,
       "text": "I feel like a feather",
-      "matchedWords": 5
+      "matchedWords": 5,
+      "edited": true
     },
     {
-      "start": 65.13,
+      "start": 67.884,
       "end": 69.15,
       "text": "Tossed about by the winds",
-      "matchedWords": 3
+      "matchedWords": 3,
+      "edited": true
     },
     {
-      "start": 69.15,
-      "end": 69.15,
+      "start": 71.303,
+      "end": 72.603,
       "text": "Lost to the world",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 69.15,
-      "end": 69.15,
+      "start": 74.111,
+      "end": 76.395,
       "text": "I am lost to myself",
-      "matchedWords": 0
+      "matchedWords": 0,
+      "edited": true
     },
     {
-      "start": 69.15,
-      "end": 96.04,
+      "start": 82.534,
+      "end": 88.425,
+      "text": "You alone...",
+      "matchedWords": 6,
+      "edited": true
+    },
+    {
       "text": "I live just to be with",
-      "matchedWords": 6
+      "start": 94.622,
+      "end": 96.474,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
     },
     {
-      "start": 96.04,
-      "end": 96.55,
+      "start": 97.919,
+      "end": 100.526,
       "text": "You alone!",
-      "matchedWords": 1
+      "matchedWords": 1,
+      "edited": true
+    },
+    {
+      "text": "You alone.",
+      "start": 119.774,
+      "end": 120.873,
+      "matchedWords": 0,
+      "edited": true,
+      "inserted": true
     }
   ],
-  "selectedFrom": "base.en"
+  "selectedFrom": "base.en",
+  "editedAt": "2026-09-09T02:10:42.407Z"
 }
