@@ -12,7 +12,7 @@
   let segmentStop=null;
   const fmt=(s,ms=false)=>{s=Math.max(0,Number(s)||0);const m=Math.floor(s/60),v=ms?s%60:(Math.floor(s)%60);return `${m}:${v.toFixed(ms?3:0).padStart(ms?6:2,'0')}`};
   const storageKey=slug=>`${slug==='the-oracle'?'fols-timing-v2':'fols-timing-v1'}:${slug}`;
-  const audioUrl=slug=>slug==='the-oracle'?'assets/oracle-fols-drive-v2.m4a':`${ROOT}/assets/audio/listen/fragments/${slug}.mp3`;
+  const audioUrl=slug=>slug==='the-oracle'?'assets/oracle-fols-drive-complete.mp3':`${ROOT}/assets/audio/listen/fragments/${slug}.mp3`;
   select.innerHTML=poems.map(([slug,title],i)=>`<option value="${i}">${String(i+1).padStart(2,'0')} · ${title}</option>`).join('');
 
   async function loadPoem(index){
